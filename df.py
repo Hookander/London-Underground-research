@@ -23,12 +23,21 @@ class CSVHandler():
         plt.show()
     
     def plot_load_line(self, line : str, time: str, direction : str):
+
+        #Filtering the dataframe
         filtered_df = self.df[(self.df['Line'] == line) & (self.df['Dir'] == direction)]
+
+        #Get the column corresponding to the time and filtering the dataframe
         time_columns = self.df.columns[self.df.columns.get_loc(time)]
         filtered_df = filtered_df[time_columns]
+        #the values of load might be strings, so we convert them to int for plotting
+        #? modify directly the dataframe ?
         
-        plt.plot([_ for _ in range(len(filtered_df))], filtered_df)
-        plt.xlabel('Time')
+        filtered_df = filtered_df.map(lambda x: int(x) if x != ' ' else 0)
+
+        print(filtered_df.values)
+        plt.plot([_ for _ in range(len(filtered_df))], filtered_df.values)
+        plt.xlabel('Stations')
         plt.ylabel('Load')
         plt.title(f'Load on line {line} at {time}, direction {direction}')
         plt.legend([f'Load on line {line} at {time}'])
@@ -37,4 +46,4 @@ class CSVHandler():
         
 
 handler = CSVHandler('data/NUMBAT/2016/NBT16MTT/Outputs.csv')
-handler.plot_load_line('Bakerloo', '0500-0515', 'NB')
+handler.plot_load_line('Bakerloo', '0700-0715', 'NB')
