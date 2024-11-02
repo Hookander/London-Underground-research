@@ -29,14 +29,13 @@ class CSVHandler():
 
         #Get the column corresponding to the time and filtering the dataframe
         time_columns = self.df.columns[self.df.columns.get_loc(time)]
-        filtered_df = filtered_df[time_columns]
+        time_df = filtered_df[time_columns]
         #the values of load might be strings, so we convert them to int for plotting
         #? modify directly the dataframe ?
         
-        filtered_df = filtered_df.map(lambda x: int(x) if x != ' ' else 0)
-
-        print(filtered_df.values)
-        plt.plot([_ for _ in range(len(filtered_df))], filtered_df.values)
+        time_df = time_df.map(lambda x: int(x) if x != ' ' else 0)
+        plt.plot(filtered_df['From Station'], time_df.values)
+        plt.xticks(rotation=60)
         plt.xlabel('Stations')
         plt.ylabel('Load')
         plt.title(f'Load on line {line} at {time}, direction {direction}')
