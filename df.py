@@ -31,9 +31,11 @@ class CSVHandler():
         time_columns = self.df.columns[self.df.columns.get_loc(time)]
         time_df = filtered_df[time_columns]
         #the values of load might be strings, so we convert them to int for plotting
+        #and the strings might be 1 303 (not 1303)..
         #? modify directly the dataframe ?
-        
-        time_df = time_df.map(lambda x: int(x) if x != ' ' else 0)
+        time_df = time_df.apply(lambda x: x.replace(' ', '').replace('\u202f', '') if isinstance(x, str) else x)
+        print(time_df)
+        time_df = time_df.map(lambda x: int(x) if x != '' else 0)
         plt.plot(filtered_df['From Station'], time_df.values)
         plt.xticks(rotation=60)
         plt.xlabel('Stations')
@@ -45,4 +47,4 @@ class CSVHandler():
         
 
 handler = CSVHandler('data/NUMBAT/2016/NBT16MTT/Outputs.csv')
-handler.plot_load_line('Bakerloo', '0700-0715', 'NB')
+handler.plot_load_line('Central', '0700-0715', 'EB')
