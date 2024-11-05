@@ -1,0 +1,20 @@
+vehicleId,arrival_year,arrival_month,arrival_day,arrival_hour,arrival_min,arrival_sec,direction,destinationId,destinationName,timeToStation,timestamp,stationId,stationName,lineName,lineId,expectedArrival
+1,2024,11,5,18,8,53,inbound,940GZZLUWRP,West Ruislip Underground Station,1231,2024-11-05T17:48:22.1901951Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:08:53Z
+25,2024,11,5,17,54,53,outbound,940GZZLUEPG,Epping Underground Station,391,2024-11-05T17:48:22.1901951Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T17:54:53Z
+26,2024,11,5,18,1,53,outbound,940GZZLUEPG,Epping Underground Station,811,2024-11-05T17:48:22.1901951Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:01:53Z
+33,2024,11,5,17,51,23,inbound,940GZZLUWRP,West Ruislip Underground Station,181,2024-11-05T17:48:22.1901951Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T17:51:23Z
+34,2024,11,5,18,45,12,outbound,940GZZLUEPG,Epping Underground Station,940,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:45:12Z
+35,2024,11,5,18,3,53,inbound,940GZZLUWRP,West Ruislip Underground Station,931,2024-11-05T17:48:22.1901951Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:03:53Z
+61,2024,11,5,17,47,24,inbound,940GZZLUEBY,Ealing Broadway Underground Station,10,2024-11-05T17:47:14.2867289Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T17:47:24Z
+62,2024,11,5,18,2,53,inbound,940GZZLUEBY,Ealing Broadway Underground Station,871,2024-11-05T17:48:22.1901951Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:02:53Z
+63,2024,11,5,18,32,42,outbound,940GZZLUHLT,Hainault Underground Station,190,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:32:42Z
+2,2024,11,5,18,16,53,inbound,940GZZLUWRP,West Ruislip Underground Station,1711,2024-11-05T17:48:22.1901951Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:16:53Z
+5,2024,11,5,18,37,12,inbound,940GZZLUWRP,West Ruislip Underground Station,460,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:37:12Z
+6,2024,11,5,18,46,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1000,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:46:12Z
+7,2024,11,5,18,49,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1180,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:49:12Z
+10,2024,11,5,18,54,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1480,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:54:12Z
+33,2024,11,5,18,36,12,outbound,940GZZLUEPG,Epping Underground Station,400,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:36:12Z
+65,2024,11,5,18,31,42,inbound,940GZZLUEBY,Ealing Broadway Underground Station,130,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:31:42Z
+66,2024,11,5,18,41,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,700,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:41:12Z
+67,2024,11,5,18,47,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1060,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:47:12Z
+70,2024,11,5,18,56,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1600,2024-11-05T18:29:32.3626316Z,940GZZLUNAN,North Acton Underground Station,Central,central,2024-11-05T18:56:12Z
