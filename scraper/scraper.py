@@ -1,8 +1,9 @@
-from api import APIHandler
+from tools.api import APIHandler
 from typing import Dict, List
 import pandas as pd
+import time
 
-class scraper():
+class Scraper():
     def __init__(self, api_handler : APIHandler):
         self.api = api_handler
 
@@ -45,13 +46,6 @@ class scraper():
         
         return trains
     
-    def get_ids(self, line: str):
-        """
-        Get the station ids of the line
-        """
-        answer = self.api.send_get_request(f'https://api.tfl.gov.uk/Line/{line}/StopPoints')
-        return [station['naptanId'] for station in answer.json()]
-        #return stations
     
     def parse_date(self, date : str):
         """
@@ -72,7 +66,11 @@ class scraper():
         """
  
         for station_id in station_ids:
-            incoming_trains = self.get_arrivals_time(line, station_id)
+            try:
+                incoming_trains = self.get_arrivals_time(line, station_id)
+            except:
+                print(f"Error with station {station_id}")
+                incoming_trains = []
             for train in incoming_trains:
 
                 #We need to make sure we haven't already added this train
@@ -88,7 +86,8 @@ class scraper():
                 else:
                     df = df._append(train, ignore_index=True)
         return df
-    def scrap_line(self, line: str, df : pd.DataFrame) -> None:
+    
+    def scrap_line(self, line: str, df : pd.DataFrame) -> pd.DataFrame:
         """
         Scrap the data for the given line
         Creates a csv file with the data
@@ -96,16 +95,20 @@ class scraper():
         vehicle id, expected arrival time and date, direction, destination id and name, time to station,
         timestanp
         """
-        stations = self.get_ids(line)
+        stations = self.api.get_ids(line)
         return self.scrap_stations(line, stations, df)
 
+    def continuous_scrap(self, interval_sec, amount, line, path:str = './test_scrap.csv') -> None:
+        """
+        Scraps continuously for period amount of time
+        """
+        df = pd.read_csv(path)
+        for i in range(amount):
+            df = self.scrap_line(line, df)
+            df.to_csv(path, index = False)
+            print(f"Scrapped {i} times")
+            time.sleep(interval_sec)
 
-scrapy = scraper(APIHandler())
-df = pd.DataFrame(columns=[
-            'vehicleId', 'arrival_year', 'arrival_month', 'arrival_day', 'arrival_hour', 'arrival_min', 'arrival_sec',
-            'direction', 'destinationId', 'destinationName', 'timeToStation', 'timestamp', 'stationId', 'stationName',
-            'lineName', 'lineId', 'expectedArrival'
-        ])
-df = pd.read_csv('./test_scrap.csv')
-df = scrapy.scrap_line('central',df)
-df.to_csv('./test_scrap.csv', index = False)
+
+
+
