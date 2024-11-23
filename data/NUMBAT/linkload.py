@@ -54,13 +54,15 @@ class LinkLoadHandler():
         filtered_df = df[(df['From Station'] == start_station) & 
                             (df['To Station'] == end_station)]
         
+        if filtered_df.empty:
+            raise ValueError(f'get_avg_link_load, Invalid stations: {start_station}, {end_station}')
+        
         if quaterhour not in filtered_df.columns:
-            return {'entries': 0, 'exits': 0}
+            raise ValueError(f'get_avg_link_load, Invalid time: {quaterhour}')
 
         linkload = filtered_df[quaterhour].values[0]
 
-        if filtered_df.empty:
-            return {'entries': 0, 'exits': 0}
+        
 
         return linkload
     
