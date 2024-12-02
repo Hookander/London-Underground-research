@@ -18,7 +18,7 @@ class CSVProcesser():
         self.LinkLoadHandler = LinkLoadHandler()
         self.tapsHandler = tapsHandler()
 
-    def get_passenger_count(self, from_station: str, to_station: str, date: str) -> Dict:
+    def get_passenger_count(self, from_station: str, to_station: str, direction:str, date: str) -> Dict:
         """
         Returns the number of passengers that went from a station to another at a given time of the day
         """

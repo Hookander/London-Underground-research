@@ -65,7 +65,25 @@ class LinkLoadHandler():
         
         return linkload
     
+    def get_inbetween_stations(self, start_station:str, end_station:str) -> list:
+        """
+        Returns the stations inbetween start_station and end_station
+        """
+        stations = [start_station]
+        current_station = start_station
+        i = 0
+        # We iterate over all links
+        while current_station != end_station and i<100:
+            current_station = self.dfs['MTT'][self.dfs['MTT']['From Station'] == current_station]['To Station'].values[0]
+            stations.append(current_station)
+            i+=1
+        
+        if i == 100:
+            print(stations)
+            raise ValueError(f'get_inbetween_stations, Invalid stations: {start_station}, {end_station}')
+
+        return stations
     
 #llh = LinkLoadHandler()
-#print(llh.get_quaterhour(746))
+#print(llh.get_inbetween_stations("North Acton", "Queensway"))
 #print(llh.get_avg_link_load('Buckhurst Hill', 'Loughton', 746, 'Friday'))
