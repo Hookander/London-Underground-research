@@ -8,7 +8,7 @@ class LinkLoadHandler():
             self.dfs[type_of_day] = pd.read_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs.csv', encoding='utf-8', on_bad_lines='skip', sep=';', skiprows=2)
             # We only consider the Central line
             self.dfs[type_of_day] = self.dfs[type_of_day][self.dfs[type_of_day]['Line'] == 'Central']
-    
+
     def get_quaterhour(self, time:int)->str:
         """
         Returns the quaterhour for the given time
@@ -63,9 +63,9 @@ class LinkLoadHandler():
         linkload = filtered_df[quaterhour].values[0]
 
         
-
         return linkload
     
-llh = LinkLoadHandler()
-print(llh.get_quaterhour(746))
-print(llh.get_avg_link_load('Buckhurst Hill', 'Loughton', 746, 'Friday'))
+    
+#llh = LinkLoadHandler()
+#print(llh.get_quaterhour(746))
+#print(llh.get_avg_link_load('Buckhurst Hill', 'Loughton', 746, 'Friday'))

@@ -2,7 +2,7 @@ import pandas as pd
 from typing import Dict, List
 
 class tapsHandler():
-    def __init__(self, path):
+    def __init__(self, path = './data/Taps/merged_taps_2019-2024.csv'):
         self.df = pd.read_csv(path, encoding='utf-8', on_bad_lines='skip', sep=',')
     
     def merge_csvs(self):
@@ -36,9 +36,10 @@ class tapsHandler():
 
         return {'entries' : entries, 'exits' : exits}
 
+    
 
 
 
-taps = tapsHandler('./data/Taps/merged_taps_2019-2024.csv')
-print(taps.get_entries_exits('Notting Hill Gate', '01/01/2019'))
+#taps = tapsHandler('./data/Taps/merged_taps_2019-2024.csv')
+#print(taps.get_entries_exits('Notting Hill Gate', '01/01/2019'))
 
