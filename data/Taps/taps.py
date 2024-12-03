@@ -42,7 +42,7 @@ class tapsHandler():
 
         return {'entries' : entries, 'exits' : exits}
 
-    def get_outputs_sum(self, stations: List[str], date:str) -> int:
+    def get_total_output(self, stations: List[str], date:str) -> int:
         """
         Returns the total number of outputs for the given stations and date
         """

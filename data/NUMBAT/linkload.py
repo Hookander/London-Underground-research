@@ -40,6 +40,7 @@ class LinkLoadHandler():
 
             df.to_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs_cleaned.csv', index=False)
 
+
     def get_quaterhour(self, time:int)->str:
         """
         Returns the quaterhour for the given time
