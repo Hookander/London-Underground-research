@@ -40,7 +40,10 @@ class CSVProcesser():
         different_stations = [station for station in all_stations if station != from_station]
 
         output_sum = self.tapsHandler.get_outputs_sum(different_stations, date)
-        print(f'outputs: {outputs}, inputs: {inputs}, output_sum: {output_sum}')
+
+        estimated_outputs = inputs * outputs / output_sum
+
+        return estimated_outputs
         
         #day_of_week = self.tapsHandler.get_day_of_week(date)
         #time = self.tapsHandler.get_time_of_day(time)
