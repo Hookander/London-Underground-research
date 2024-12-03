@@ -5,10 +5,40 @@ import numpy as np
 class LinkLoadHandler():
     def __init__(self):
         self.dfs = {}
+        try :
+            for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
+                self.dfs[type_of_day] = pd.read_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
+        except:
+            print("Cleaning dataframes...")
+            self.clean_dfs()
+            for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
+                self.dfs[type_of_day] = pd.read_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
+        
+    
+    def clean_dfs(self) -> pd.DataFrame:
+        """
+        Cleans the dataframes :
+            - Removes stations from other lines than the Central Line
+            - Convert all stations names to a standard format (mainly removing the "LU" at the end sometimes)
+        Then saves the cleaned dataframe to a csv file to gain time
+        """
         for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
-            self.dfs[type_of_day] = pd.read_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs.csv', encoding='utf-8', on_bad_lines='skip', sep=';', skiprows=2)
-            # We only consider the Central line
-            self.dfs[type_of_day] = self.dfs[type_of_day][self.dfs[type_of_day]['Line'] == 'Central']
+            df = pd.read_csv(f'./data/NUMBAT/2019/raw/NBT19{type_of_day}_Outputs.csv', encoding='utf-8', on_bad_lines='skip', sep=';', skiprows=2)
+            df = df[df['Line'] == 'Central']
+
+            # Removes the LU at the end if it exists
+            df['From Station'] = df['From Station'].apply(lambda x: x[:-3] if x[-2:] == 'LU' else x)
+            df['To Station'] = df['To Station'].apply(lambda x: x[:-3] if x[-2:] == 'LU' else x)
+
+            # Remove aporstrophes and dots
+            df['From Station'] = df['From Station'].apply(lambda x: x.replace("'", "").replace(".", ""))
+            df['To Station'] = df['To Station'].apply(lambda x: x.replace("'", "").replace(".", ""))
+
+            # "Bank and Monument is actually Bank"
+            df['From Station'] = df['From Station'].apply(lambda x: 'Bank' if x == 'Bank and Monument' else x)
+            df['To Station'] = df['To Station'].apply(lambda x: 'Bank' if x == 'Bank and Monument' else x)
+
+            df.to_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs_cleaned.csv', index=False)
 
     def get_quaterhour(self, time:int)->str:
         """
@@ -146,5 +176,5 @@ class LinkLoadHandler():
         """
         return self.dfs['MTT']['From Station'].unique()
     
-llh = LinkLoadHandler()
+#llh = LinkLoadHandler()
 #print(llh.get_inbetween_stations("EB", "Leyton", "Woodford"))
