@@ -2,8 +2,14 @@ import pandas as pd
 from typing import Dict, List
 
 class tapsHandler():
-    def __init__(self, path = './data/Taps/merged_taps_2019-2024.csv'):
-        self.df = pd.read_csv(path, encoding='utf-8', on_bad_lines='skip', sep=',')
+    def __init__(self):
+        self.path = './data/Taps/merged_taps_2019-2024.csv'
+        try:
+            self.df = pd.read_csv(self.path, encoding='utf-8', on_bad_lines='skip', sep=',')
+        except:
+            self.merge_csvs()
+            print("Merging taps csvs...")
+            self.df = pd.read_csv(self.path, encoding='utf-8', on_bad_lines='skip', sep=',')
     
     def merge_csvs(self):
         """
@@ -14,9 +20,9 @@ class tapsHandler():
 
         for year in range(2019, 2024):
             df = pd.read_csv(f'./data/Taps/TAPS-daily-rail-station-entryexit-{year}.csv')
-            df = df[df['ServedBy'] == 'Tube']
+            df = df[df['ServedBy'].str.contains('Tube', na=False)]
             df_full = pd.concat([df_full, df], ignore_index=True)
-        df_full.to_csv('./data/Taps/merged_taps_2019-2024.csv', index=False)
+        df_full.to_csv(self.path, index=False)
     
     def get_entries_exits(self, station:str, date:str) -> Dict[str, int]:
         """
@@ -36,10 +42,18 @@ class tapsHandler():
 
         return {'entries' : entries, 'exits' : exits}
 
-    
+    def get_outputs_sum(self, stations: List[str], date:str) -> int:
+        """
+        Returns the total number of outputs for the given stations and date
+        """
+        total_outputs = 0
+        for station in stations:
+            print(station)
+            total_outputs += self.get_entries_exits(station, date)['exits']
+        return total_outputs
 
 
 
-#taps = tapsHandler('./data/Taps/merged_taps_2019-2024.csv')
+#taps = tapsHandler()
 #print(taps.get_entries_exits('Notting Hill Gate', '01/01/2019'))
 

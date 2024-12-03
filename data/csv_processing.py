@@ -11,7 +11,8 @@ Processes CSV files of 2 types
 
 import pandas as pd
 from typing import Dict
-from data import LinkLoadHandler, tapsHandler
+from data.Taps.taps import tapsHandler
+from data.NUMBAT.linkload import LinkLoadHandler
 
 class CSVProcesser():
     def __init__(self):
@@ -21,9 +22,27 @@ class CSVProcesser():
     def get_passenger_count(self, from_station: str, to_station: str, date: str) -> Dict:
         """
         Returns the number of passengers that went from a station to another at a given time of the day
+
+        This function is the most important one for this model, because it will be used to obtain the number
+        of passengers on a link (by summing), so it must be simple but realistic.
+        
+        Here, we consider that the number of passengers exiting to_station from from_station is 
+        proportional to the number of passengers exiting to_station from all different stations.
         """
+        # The outputs in the end station
         outputs = self.tapsHandler.get_entries_exits(from_station, date)['exits']
+
+        # The inputs in the start station
         inputs = self.tapsHandler.get_entries_exits(to_station, date)['entries']
-        day_of_week = self.tapsHandler.get_day_of_week(date)
-        time = self.tapsHandler.get_time_of_day(time)
-        return self.LinkLoadHandler.get_passenger_count(from_station, to_station, day_of_week, time)
+        
+        # We want all the stations other than from station (londoners don't make mistakes.)
+        all_stations = self.LinkLoadHandler.get_all_stations()
+        different_stations = [station for station in all_stations if station != from_station]
+
+        output_sum = self.tapsHandler.get_outputs_sum(different_stations, date)
+        print(f'outputs: {outputs}, inputs: {inputs}, output_sum: {output_sum}')
+        
+        #day_of_week = self.tapsHandler.get_day_of_week(date)
+        #time = self.tapsHandler.get_time_of_day(time)
+        #return self.LinkLoadHandler.get_passenger_count(from_station, to_station, day_of_week, time)
+

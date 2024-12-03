@@ -140,6 +140,11 @@ class LinkLoadHandler():
 
         return stations
     
+    def get_all_stations(self):
+        """
+        Returns all the stations in the Central line
+        """
+        return self.dfs['MTT']['From Station'].unique()
+    
 llh = LinkLoadHandler()
-print(llh.get_inbetween_stations("EB", "Leyton", "Woodford"))
-#print(llh.get_avg_link_load('Buckhurst Hill', 'Loughton', 746, 'Friday'))
+#print(llh.get_inbetween_stations("EB", "Leyton", "Woodford"))
