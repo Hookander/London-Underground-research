@@ -66,15 +66,17 @@ class LinkLoadHandler():
         
         return linkload
     
-    def get_inbetween_stations(self, direction : str, start_station:str = None, end_station:str = None) -> list:
+    def get_inbetween_stations(self, direction : str, start_station:str = None, end_station:str = None, branching=False) -> list:
         """
         Returns the stations inbetween start_station and end_station
         If either of those two is None, then returns all stations starting/ending at the other station, 
         in the current direction
+
+        If branching is True, then we are checking 2 branches at once so one might not go to end_station
+
         """
         assert start_station is not None or end_station is not None, "get_inbetween_stations, start_station and end_station cannot be None at the same time"
         stations = [start_station]
-        current_station = start_station
         
         # Gets all stations starting from start_station in direction
         if end_station is None:
@@ -110,19 +112,34 @@ class LinkLoadHandler():
         # We iterate over all links
         # A problem might accur here, for example if the end_station is on a branch
         # Then the path splits and we need to consider both branches
+        current_station = start_station
         while current_station != end_station and i<100:
-            current_station = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == current_station)
+
+            # Check for the number of next stops for possible branching
+            nexts = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == current_station)
                                               & (self.dfs['MTT']['Dir'] == direction)
-                                              ]['To Station'].values[0]
-            stations.append(current_station)
+                                              ]['To Station'].values
+            
+            if len(nexts)==2: # We are branching at this station
+                path1 = stations + self.get_inbetween_stations(direction, nexts[0], end_station, branching = True)
+                path2 = stations + self.get_inbetween_stations(direction, nexts[1], end_station, branching = True)
+                if end_station in path1:
+                    return path1
+                else:
+                    return path2
+            elif len(nexts)==1:
+                current_station = nexts[0]
+                stations.append(current_station)
             i+=1
         
         if i == 100:
-            print(stations)
-            raise ValueError(f'get_inbetween_stations, Invalid stations: {start_station}, {end_station}')
+            if branching:
+                return []
+            else:
+                raise ValueError(f'get_inbetween_stations, Invalid stations: {start_station}, {end_station}')
 
         return stations
     
 llh = LinkLoadHandler()
-print(llh.get_inbetween_stations("WB", "North Acton", "Ealing Broadway"))
+print(llh.get_inbetween_stations("EB", "Leyton", "Woodford"))
 #print(llh.get_avg_link_load('Buckhurst Hill', 'Loughton', 746, 'Friday'))
