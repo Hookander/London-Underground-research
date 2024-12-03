@@ -1,5 +1,6 @@
 import pandas as pd
 from typing import Dict
+import numpy as np
 
 class LinkLoadHandler():
     def __init__(self):
@@ -65,16 +66,54 @@ class LinkLoadHandler():
         
         return linkload
     
-    def get_inbetween_stations(self, start_station:str, end_station:str) -> list:
+    def get_inbetween_stations(self, direction : str, start_station:str = None, end_station:str = None) -> list:
         """
         Returns the stations inbetween start_station and end_station
+        If either of those two is None, then returns all stations starting/ending at the other station, 
+        in the current direction
         """
+        assert start_station is not None or end_station is not None, "get_inbetween_stations, start_station and end_station cannot be None at the same time"
         stations = [start_station]
         current_station = start_station
+        
+        # Gets all stations starting from start_station in direction
+        if end_station is None:
+            
+            next_stations = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == start_station)
+                                            & (self.dfs['MTT']['Dir'] == direction)
+                                            ]['To Station'].values
+            
+            while len(next_stations) != 0 :           
+                # There might be multiple branches because of the Central line
+                # We check for those here
+                current_station, next_stations = next_stations[0], next_stations[1:]
+
+                #Because of the branches, we might have already added the station
+                if not(current_station in stations):
+                    stations.append(current_station)
+                next = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == current_station)
+                                       & (self.dfs['MTT']['Dir'] == direction)
+                                        ]['To Station'].values
+                next_stations = np.concatenate([next_stations,next])
+                
+            return stations
+        # Gets all stations ending at end_station in direction
+        # We can just inverse the result of the previous case (in the other direction)
+        if start_station is None:
+            if direction == 'EB':
+                new_direction = 'WB'
+            if direction == 'WB':
+                new_direction = 'EB'
+            return self.get_inbetween_stations(new_direction, end_station, None)[::-1]
+
         i = 0
         # We iterate over all links
+        # A problem might accur here, for example if the end_station is on a branch
+        # Then the path splits and we need to consider both branches
         while current_station != end_station and i<100:
-            current_station = self.dfs['MTT'][self.dfs['MTT']['From Station'] == current_station]['To Station'].values[0]
+            current_station = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == current_station)
+                                              & (self.dfs['MTT']['Dir'] == direction)
+                                              ]['To Station'].values[0]
             stations.append(current_station)
             i+=1
         
@@ -84,6 +123,6 @@ class LinkLoadHandler():
 
         return stations
     
-#llh = LinkLoadHandler()
-#print(llh.get_inbetween_stations("North Acton", "Queensway"))
+llh = LinkLoadHandler()
+print(llh.get_inbetween_stations("WB", "North Acton", "Ealing Broadway"))
 #print(llh.get_avg_link_load('Buckhurst Hill', 'Loughton', 746, 'Friday'))
