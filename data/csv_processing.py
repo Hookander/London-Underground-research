@@ -11,10 +11,10 @@ Processes CSV files of 2 types
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import time
 from typing import Dict, List, Tuple
 from data.Taps.taps import tapsHandler
 from data.NUMBAT.linkload import LinkLoadHandler
+from tools.utils import *
 
 class CSVProcesser():
     def __init__(self):
@@ -88,7 +88,7 @@ class CSVProcesser():
         estimated_flows = []
         estimated_outputs = {}
         for station in stations[:-1]: # We don't want the last station because we want it's successor
-            begin = time.time()
+
             link_load = 0
             next_stations = self.LinkLoadHandler.get_inbetween_stations(direction, start_station = station)
             # Remove station from the list
@@ -100,7 +100,7 @@ class CSVProcesser():
                 for end_station in next_stations:
                     link_load += estimated_outputs[start_station][end_station]
             estimated_flows.append((station, next_stations[0], link_load))
-            print(station, next_stations[0], link_load, time.time() - begin)
+            print(station, next_stations[0], link_load)
             
         return estimated_flows
     
@@ -110,11 +110,12 @@ class CSVProcesser():
         compared to the daily mean
         """
         estimated_flows = self.estimate_flow__line(date, direction)
+        type_of_day = get_type_of_day(get_day_of_week(date))
         errors = []
         for station, next_station, link_load in estimated_flows:
             # Get the average daily link load between station and next_station
             #! need to adapt the type of day to the date ! (really easy)
-            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, 'MTT')
+            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day)
             # Calculate the relative error to the average
             error = abs(link_load - daily_mean) / daily_mean * 100
             errors.append(error)

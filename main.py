@@ -6,6 +6,6 @@ import time
 
 
 csvp = CSVProcesser()
-day = '01/04/2019'
+day = '07/09/2019'
 print(day, get_day_of_week(day))
 csvp.plot_dist_to_daily_mean(day, 'EB')
