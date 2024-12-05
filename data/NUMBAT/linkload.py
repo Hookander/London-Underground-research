@@ -47,6 +47,8 @@ class LinkLoadHandler():
         if time = 1714 (17:14), returns '1700-1715'
         if time = 15 (00:15), return '0015-0030'
         """
+        if time == 2345:
+            return '2345-0000'
         s_time = str(time)
         if len(s_time) == 1:
             s_time = '000' + s_time
@@ -56,21 +58,21 @@ class LinkLoadHandler():
             s_time = '0' + s_time
         mins = int(s_time[-2:])
         if mins < 15:
-            return s_time[:2] + '00-0015'
+            return s_time[:2] + '00-' + s_time[:2] + '15'
         elif mins < 30:
-            return s_time[:2] + '15-0030'
+            return s_time[:2] + '15-' + s_time[:2] + '30'
         elif mins < 45:
-            return s_time[:2] + '30-0045'
+            return s_time[:2] + '30-' + s_time[:2] + '45'
         else:
             end = str(int(s_time[:-2])+1) + '00'
             end = '0' + end if len(end) == 3 else end
             return s_time[:2] + '45-' + end
-        
+    
     
     def get_avg_link_load(self, start_station: str, end_station: str, time: int or str, day_of_week:str) -> Dict[str, int]:
         """
-        Returns the link load for the given station and time
-        time format: hhmm (e.g., '1714' for 17:14)
+        Returns the link load for the given station and time (averaged over a year)
+        time format: hhmm (e.g., 1714 or '1714' for 17:14)
         """
         match day_of_week:
             case 'Friday':
@@ -94,9 +96,30 @@ class LinkLoadHandler():
 
         linkload = filtered_df[quaterhour].values[0]
 
+        # Sometimes the linkload is a string with a weird space in it
+        if type(linkload) == str:
+            linkload = int(linkload.replace('\u202f', ''))
         
         return linkload
     
+    def get_avg_daily_link_load(self, start_station: str, end_station: str, day_of_week: str) -> int:
+        """
+        Returns the daily link load for the given station
+        Sums over all the quaterhours
+        """
+        df = self.dfs[day_of_week]
+        filtered_df = df[(df['From Station'] == start_station) &
+                            (df['To Station'] == end_station)]
+        linkload = 0
+        for hour in range(24):
+            for mins in range(0, 60, 15):
+                time = hour*100 + mins
+                l = self.get_avg_link_load(start_station, end_station, time, day_of_week)
+                linkload += l
+        return linkload
+
+
+
     def get_inbetween_stations(self, direction : str, start_station:str = None, end_station:str = None, branching=False) -> list:
         """
         Returns the stations inbetween start_station and end_station
@@ -177,5 +200,5 @@ class LinkLoadHandler():
         """
         return self.dfs['MTT']['From Station'].unique()
     
-#llh = LinkLoadHandler()
+
 #print(llh.get_inbetween_stations("EB", "Leyton", "Woodford"))

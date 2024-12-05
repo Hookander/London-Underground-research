@@ -19,7 +19,7 @@ class CSVProcesser():
         self.LinkLoadHandler = LinkLoadHandler()
         self.tapsHandler = tapsHandler()
 
-    def get_passenger_count(self, from_station: str, direction: str, date: str) -> Dict[str, float]:
+    def passenger_flow_from(self, from_station: str, direction: str, date: str) -> Dict[str, float]:
         """
         Returns the number of passengers that went from a station to another at a given time of the day
         
@@ -49,7 +49,7 @@ class CSVProcesser():
 
         return estimated_outputs
     
-    def get_daily_estimated_link_load(self, from_station: str, to_station: str, date: str, direction:str) -> int:
+    def estimate_flow_between_stations(self, from_station: str, to_station: str, date: str, direction:str) -> int:
         """
         Returns the estimated link load between 2 stations at a given time of the day
         To do so, we consider every possible path a passenger could have taken, so coming from 
@@ -64,9 +64,9 @@ class CSVProcesser():
 
         link_load = 0
         for start_station in previous_stations:
-            print(start_station)
+            #print(start_station)
             # We get the estimated outputs for each station (passengers exiting from start_station)
-            estimated_outputs = self.get_passenger_count(start_station, direction, date)
+            estimated_outputs = self.passenger_flow_from(start_station, direction, date)
             for end_station in next_stations:
                 # We sum the estimated outputs for each station (passengers exiting from start_station)
                 link_load += estimated_outputs[end_station]
