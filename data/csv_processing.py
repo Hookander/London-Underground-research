@@ -10,7 +10,9 @@ Processes CSV files of 2 types
 """
 
 import pandas as pd
-from typing import Dict
+import matplotlib.pyplot as plt
+import time
+from typing import Dict, List, Tuple
 from data.Taps.taps import tapsHandler
 from data.NUMBAT.linkload import LinkLoadHandler
 
@@ -73,4 +75,48 @@ class CSVProcesser():
 
         return link_load
     
+    def estimate_flow__line(self, date:str, direction: str) -> List[Tuple[str, str, int]]:
+        """
+        Returns the estimated link load between all consecutives stations for a given time of the day
+        This function is quiker than just running estimate_flow_between_stations for each pair of stations
+        because it uses the results of the previous calculations (the estimated outputs)
 
+        Returns [(from_station, to_station, estimated_link_load), ...]
+
+        """
+        stations = self.LinkLoadHandler.get_all_stations()
+        estimated_flows = []
+        estimated_outputs = {}
+        for station in stations[:-1]: # We don't want the last station because we want it's successor
+            begin = time.time()
+            link_load = 0
+            next_stations = self.LinkLoadHandler.get_inbetween_stations(direction, start_station = station)
+            # Remove station from the list
+            next_stations = [s for s in next_stations if s != station]
+            previous_stations = self.LinkLoadHandler.get_inbetween_stations(direction, end_station = station)
+            for start_station in previous_stations:
+                if start_station not in estimated_outputs:
+                    estimated_outputs[start_station] = self.passenger_flow_from(start_station, direction, date)
+                for end_station in next_stations:
+                    link_load += estimated_outputs[start_station][end_station]
+            estimated_flows.append((station, next_stations[0], link_load))
+            print(station, next_stations[0], link_load, time.time() - begin)
+            
+        return estimated_flows
+    
+    def plot_dist_to_daily_mean(self, date:str, direction:str):
+        """
+        Plots the distribution of the link load between stations for a given time of the day
+        compared to the daily mean
+        """
+        estimated_flows = self.estimate_flow__line(date, direction)
+        errors = []
+        for station, next_station, link_load in estimated_flows:
+            # Get the average daily link load between station and next_station
+            #! need to adapt the type of day to the date ! (really easy)
+            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, 'MTT')
+            # Calculate the relative error to the average
+            error = abs(link_load - daily_mean) / daily_mean * 100
+            errors.append(error)
+        plt.scatter(range(len(errors)), errors)
+        plt.show()

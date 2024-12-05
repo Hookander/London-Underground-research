@@ -118,7 +118,16 @@ class LinkLoadHandler():
                 linkload += l
         return linkload
 
-
+    def get_next_station(self, station:str, direction:str) -> str:
+        """
+        Returns the next station in the given direction
+        """
+        next_stations = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == station) 
+                                        & (self.dfs['MTT']['Dir'] == direction)
+                                        ]['To Station'].values
+        if len(next_stations) == 0:
+            raise ValueError(f'get_next_station, {station} does not have a successor in direction {direction}')
+        return next_stations[0]
 
     def get_inbetween_stations(self, direction : str, start_station:str = None, end_station:str = None, branching=False) -> list:
         """
