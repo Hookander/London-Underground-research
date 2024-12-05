@@ -39,7 +39,7 @@ class CSVProcesser():
         total_output = self.tapsHandler.get_total_output(different_stations, date)
 
         # The entries at from_station
-        inputs = self.tapsHandler.get_entries_exits(from_station, date)['exits']
+        inputs = self.tapsHandler.get_entries_exits(from_station, date)['entries']
 
         estimated_outputs = {}
 
