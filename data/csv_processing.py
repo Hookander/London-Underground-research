@@ -89,18 +89,27 @@ class CSVProcesser():
         estimated_outputs = {}
         for station in stations: 
 
-            link_load = 0
-            next_stations = self.LinkLoadHandler.get_inbetween_stations(direction, start_station = station)
-            # Remove station from the list
-            next_stations = [s for s in next_stations if s != station]
-            previous_stations = self.LinkLoadHandler.get_inbetween_stations(direction, end_station = station)
-            for start_station in previous_stations:
-                if start_station not in estimated_outputs:
-                    estimated_outputs[start_station] = self.passenger_flow_from(start_station, direction, date)
-                for end_station in next_stations:
-                    link_load += estimated_outputs[start_station][end_station]
-            if len(next_stations) > 0:
-                estimated_flows.append((station, next_stations[0], link_load))
+            # get the stricly next stations (we'll use those for the farther stations, rather than the current station,
+            # because otherwise the stations in a other branch might be considered as next stations, but we don't want that)
+            # For example, with this, we won't consider Wanstead, ... when we are at Leytonstone going to Snaresbrook
+
+            next_consecutive_stations = self.LinkLoadHandler.get_next_consecutive_stations(station, direction)
+            print(station, next_consecutive_stations)
+            for next_consecutive in next_consecutive_stations:
+
+                link_load = 0
+
+                next_stations = self.LinkLoadHandler.get_inbetween_stations(direction, start_station = next_consecutive)
+
+                previous_stations = self.LinkLoadHandler.get_inbetween_stations(direction, end_station = station)
+
+                for start_station in previous_stations:
+                    if start_station not in estimated_outputs:
+                        estimated_outputs[start_station] = self.passenger_flow_from(start_station, direction, date)
+                    for end_station in next_stations:
+                        link_load += estimated_outputs[start_station][end_station]
+
+                estimated_flows.append((station, next_consecutive, link_load))
                 print(station, next_stations[0], link_load)
             
         return estimated_flows

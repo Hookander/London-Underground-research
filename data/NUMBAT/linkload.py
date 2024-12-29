@@ -204,11 +204,21 @@ class LinkLoadHandler():
 
         return stations
     
+    def get_next_consecutive_stations(self, station:str, direction:str) -> list:
+        """
+        Returns the next stations in the given direction, 
+        there might be multiple next stations because of the branches
+        """
+        next_stations = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == station) & (self.dfs['MTT']['Dir'] == direction)
+                                        ]['To Station'].values
+        return next_stations
+
     def get_all_stations(self):
         """
         Returns all the stations in the Central line
         """
         return self.dfs['MTT']['From Station'].unique()
     
-
-#print(llh.get_inbetween_stations("EB", "Leyton", "Woodford"))
+#llh = LinkLoadHandler()
+#print(llh.get_next_consecutive_stations('Leytonstone', 'EB'))
+#print(llh.get_inbetween_stations('EB', 'Leytonstone'))

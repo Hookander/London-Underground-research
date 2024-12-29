@@ -41,9 +41,9 @@ class LineGraphist():
         self.line_stations = [
             "West Ruislip", "Ruislip Gardens", "South Ruislip", "Northolt", "Greenford", 
             "Perivale", "Hanger Lane", "North Acton", "East Acton", "White City", 
-            "Shepherd's Bush", "Holland Park", "Notting Hill Gate", "Queensway", 
+            "Shepherds Bush", "Holland Park", "Notting Hill Gate", "Queensway", 
             "Lancaster Gate", "Marble Arch", "Bond Street", "Oxford Circus", 
-            "Tottenham Court Road", "Holborn", "Chancery Lane", "St. Paul's", 
+            "Tottenham Court Road", "Holborn", "Chancery Lane", "St Pauls", 
             "Bank", "Liverpool Street", "Bethnal Green", "Mile End", "Stratford", 
             "Leyton", "Leytonstone", "Snaresbrook", "South Woodford", "Woodford",
             "Buckhurst Hill", "Loughton", "Debden", "Theydon Bois", "Epping"
@@ -106,7 +106,6 @@ class LineGraphist():
         self.define_positions()
         G = nx.Graph()
         G.add_edges_from(self.edges)
-        print(G.edges)
         colors = []
         if model_evaluation:
             edge_colors = self.get_edges_colors(date)
