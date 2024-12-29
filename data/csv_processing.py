@@ -23,7 +23,7 @@ class CSVProcesser():
 
     def passenger_flow_from(self, from_station: str, direction: str, date: str) -> Dict[str, float]:
         """
-        Returns the number of passengers that went from a station to another at a given time of the day
+        Returns the number of passengers that went from a station to another on a gievn day
         
         This function is the most important one for this model, because it will be used to obtain the number
         of passengers on a link (by summing), so it must be simple but realistic.
@@ -77,7 +77,7 @@ class CSVProcesser():
     
     def estimate_flow__line(self, date:str, direction: str) -> List[Tuple[str, str, int]]:
         """
-        Returns the estimated link load between all consecutives stations for a given time of the day
+        Returns the estimated link load between all consecutives stations for a given day
         This function is quiker than just running estimate_flow_between_stations for each pair of stations
         because it uses the results of the previous calculations (the estimated outputs)
 
@@ -105,6 +105,27 @@ class CSVProcesser():
             
         return estimated_flows
     
+    def get_linkload_error_to_daily_mean(self, date:str, direction:str) -> Dict[Tuple[str, str], float]:
+        """
+        Returns the error (in %) between : 
+            - the estimated link load between stations for a given day (see estimate_flow__line), this is the model
+            - the average daily link load between stations, obtained by summing over all the quarter hours of the day, 
+                there is no model here, it is the real data
+        
+        Returns {(from_station, to_station) : error, ...}
+        """
+        estimated_flows = self.estimate_flow__line(date, direction)
+        type_of_day = get_type_of_day(get_day_of_week(date))
+        errors = {}
+        for station, next_station, link_load in estimated_flows:
+            # Get the average daily link load between station and next_station
+            #! need to adapt the type of day to the date ! (really easy)
+            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day)
+            # Calculate the relative error to the average
+            error = abs(link_load - daily_mean) / daily_mean * 100
+            errors[(station, next_station)] = error
+        return errors
+
     def plot_dist_to_daily_mean(self, date:str, direction:str):
         """
         Plots the distribution of the link load between stations for a given time of the day

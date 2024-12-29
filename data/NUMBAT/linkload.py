@@ -106,6 +106,7 @@ class LinkLoadHandler():
         """
         Returns the daily link load for the given station
         Sums over all the quaterhours
+        It is an average because each load at a given time is averaged over a year
         """
         df = self.dfs[day_of_week]
         filtered_df = df[(df['From Station'] == start_station) &

@@ -1,5 +1,9 @@
 import matplotlib.pyplot as plt
 import networkx as nx
+from typing import List, Tuple
+from tools import *
+from scraper import *
+from data import *
 
 class LineGraphist():
     """
@@ -11,13 +15,13 @@ class LineGraphist():
             ("South Ruislip", "Northolt"), ("Northolt", "Greenford"), ("Greenford", "Perivale"), 
             ("Perivale", "Hanger Lane"), ("Hanger Lane", "North Acton"), 
             ("North Acton", "East Acton"), ("East Acton", "White City"), 
-            ("White City", "Shepherd's Bush"), ("Shepherd's Bush", "Holland Park"), 
+            ("White City", "Shepherds Bush"), ("Shepherds Bush", "Holland Park"), 
             ("Holland Park", "Notting Hill Gate"), ("Notting Hill Gate", "Queensway"), 
             ("Queensway", "Lancaster Gate"), ("Lancaster Gate", "Marble Arch"), 
             ("Marble Arch", "Bond Street"), ("Bond Street", "Oxford Circus"), 
             ("Oxford Circus", "Tottenham Court Road"), ("Tottenham Court Road", "Holborn"), 
-            ("Holborn", "Chancery Lane"), ("Chancery Lane", "St. Paul's"), 
-            ("St. Paul's", "Bank"), ("Bank", "Liverpool Street"), 
+            ("Holborn", "Chancery Lane"), ("Chancery Lane", "St Pauls"), 
+            ("St Pauls", "Bank"), ("Bank", "Liverpool Street"), 
             ("Liverpool Street", "Bethnal Green"), ("Bethnal Green", "Mile End"), 
             ("Mile End", "Stratford"), ("Stratford", "Leyton"), ("Leyton", "Leytonstone"), 
             ("Leytonstone", "Wanstead"), ("Wanstead", "Redbridge"), 
@@ -69,28 +73,54 @@ class LineGraphist():
         for i, station in enumerate(self.west_branch):
             self.pos[station] = (self.line_stations.index("West Ruislip") + 2 * i * self.branch_spacing, self.branch_offset)
 
-    def get_edge_color(self, value: int) -> str:
+    def color_from_error(self, error: float) -> str:
         """
-        Returns the color of the edge based on the value
+        Returns the color based on the percentage error
         """
-        colors = ['red', 'orange', 'yellow', 'green', 'blue']
-        return colors[value]
+        if error <=10:
+            return 'green'
+        elif error <= 20:
+            return 'yellow'
+        elif error <= 50:
+            return 'orange'
+        elif error <= 100:
+            return 'red'
+        else:
+            return 'black'
+
+    def get_edges_colors(self, date) -> List:
+        """
+        Returns the color of the edge based on the error betwwen the real data and the model used to predict the link load
+        """
+        csvp = CSVProcesser()
+        errors = csvp.get_linkload_error_to_daily_mean(date, 'EB')
+        colors = {edge: self.color_from_error(error) for edge, error in errors.items()}
+        return colors
     
-    def draw_graph(self) -> None:
+    def draw_graph(self, model_evaluation = True, date : str = '17/09/2019') -> None:
         """
         Draw the graph
+        If model_evaluation is True, the edges colors will be based on the error between the real data, 
+        and the model used to predict the link load on a given day at a given time (see data/csv_processing.py)
         """
         self.define_positions()
         G = nx.Graph()
         G.add_edges_from(self.edges)
-
-        edge_values = {edge: i % 5 for i, edge in enumerate(G.edges)}
-
-        edge_colors = [self.get_edge_color(edge_values[edge]) for edge in G.edges]
+        print(G.edges)
+        colors = []
+        if model_evaluation:
+            edge_colors = self.get_edges_colors(date)
+            for edge in G.edges:
+                if edge in edge_colors:
+                    colors.append(edge_colors[edge])
+                elif (edge[1], edge[0]) in edge_colors:
+                    colors.append(edge_colors[(edge[1], edge[0])])
+                else:
+                    colors.append('purple')
 
         plt.figure(figsize=(15, 8))
         nx.draw_networkx_nodes(G, self.pos, node_size=100, node_color='black')
-        nx.draw_networkx_edges(G, self.pos, edge_color=edge_colors, width=2)
+        nx.draw_networkx_edges(G, self.pos, edge_color=colors, width=2)
 
         # Add labels with specific positions and rotations for branches
         for station, (x, y) in self.pos.items():
