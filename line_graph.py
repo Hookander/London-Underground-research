@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import networkx as nx
+import matplotlib.patches as mpatches
 from typing import List, Tuple
 from tools import *
 from scraper import *
@@ -137,7 +138,21 @@ class LineGraphist():
             )
 
         plt.axis("off")
+        # Create a legend for the colors
+        legend_labels = {
+            'green': '0-10% error',
+            'yellow': '10-20% error',
+            'orange': '20-50% error',
+            'red': '50-100% error',
+            'black': '>100% error',
+            'purple': 'No data'
+        }
+
+        patches = [mpatches.Patch(color=color, label=label) for color, label in legend_labels.items()]
+        plt.legend(handles=patches)
         plt.show()
 
+        
+
 lg = LineGraphist()
-lg.draw_graph()
+lg.draw_graph(model_evaluation=True)
