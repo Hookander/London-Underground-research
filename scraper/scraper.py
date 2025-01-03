@@ -109,6 +109,41 @@ class Scraper():
             print(f"Scrapped {i} times")
             time.sleep(interval_sec)
 
+    def get_ideal_timetable(self, station_name : str, type_of_day:str):
+        """
+        Returns the ideal timetable for a given station (without delays or anything)
+        Theorically, this returns the time of departure for each train, but we can assume 
+        that the times of arrival and departure are the same
 
+        type_of_day : 'MTT', 'SAT', 'SUN', 'FRI'
+        """
+        station_id 
+        answer = self.api.send_get_request(f'https://api.tfl.gov.uk/Line/central/Timetable/{station_id}/to/940GZZLUEPG').json()
+        schedules = answer['timetable']['routes'][0]['schedules']
+
+        # Get the index for the correct day
+        if type_of_day == 'SAT':
+            day = 'Saturday'
+        elif type_of_day == 'SUN':
+            day = 'Sunday'
+        elif type_of_day == 'FRI':
+            day = 'Friday'
+        else:
+            day = 'Monday'
+
+        for i in range(len(schedules)):
+            if day in schedules[i]['name']:
+                print(f"Found the correct day at index {i}")
+                break
+
+        #answer['timetable']['routes'][0]['schedules'][i]['name'] is the day (i is the index)
+        #answer['timetable']['routes'][0]['schedules'][0]['knownJourneys']
+
+        journeys = schedules[i]['knownJourneys']
+        timetables = []
+        for journey in journeys:
+            timetables.append((int(journey['hour'])%24, int(journey['minute'])))
+        timetables.sort()
+        print(timetables)
 
 
