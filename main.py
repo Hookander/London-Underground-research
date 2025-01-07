@@ -12,4 +12,5 @@ import time
 #csvp.plot_dist_to_daily_mean(day, 'WB')
 
 scrappy = Scraper(APIHandler())
-scrappy.get_ideal_timetable('940GZZLUNHG', 'SAT')
+#scrappy.create_ideal_timetable_df()
+print(scrappy.get_ideal_timetable_from('Ruislip Gardens', 'FRI', 'WB'))

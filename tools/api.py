@@ -23,5 +23,5 @@ class APIHandler:
         answer = self.send_get_request(f'https://api.tfl.gov.uk/StopPoint/Search/{name}?lines=central&modes=tube&includeHubs=false')
         return answer.json()['matches'][0]['id']
 
-api = APIHandler()
-print(api.get_id_from_name("Shepherd's Bush"))
+#api = APIHandler()
+#print(api.get_id_from_name("Ruislip Gardens"))

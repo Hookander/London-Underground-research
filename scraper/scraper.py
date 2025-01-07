@@ -1,4 +1,5 @@
 from tools.api import APIHandler
+from data.NUMBAT.linkload import LinkLoadHandler
 from typing import Dict, List
 import pandas as pd
 import time
@@ -109,16 +110,17 @@ class Scraper():
             print(f"Scrapped {i} times")
             time.sleep(interval_sec)
 
-    def get_ideal_timetable(self, station_name : str, type_of_day:str):
+    def get_ideal_timetable_from_to(self, from_station_name : str, to_station_name : str, type_of_day:str):
         """
         Returns the ideal timetable for a given station (without delays or anything)
         Theorically, this returns the time of departure for each train, but we can assume 
-        that the times of arrival and departure are the same
+        that the times of arrival and departure are the same.
 
         type_of_day : 'MTT', 'SAT', 'SUN', 'FRI'
         """
-        station_id 
-        answer = self.api.send_get_request(f'https://api.tfl.gov.uk/Line/central/Timetable/{station_id}/to/940GZZLUEPG').json()
+        from_station_id = self.api.get_id_from_name(from_station_name)
+        to_station_id = self.api.get_id_from_name(to_station_name)
+        answer = self.api.send_get_request(f'https://api.tfl.gov.uk/Line/central/Timetable/{from_station_id}/to/{to_station_id}').json()
         schedules = answer['timetable']['routes'][0]['schedules']
 
         # Get the index for the correct day
@@ -133,7 +135,7 @@ class Scraper():
 
         for i in range(len(schedules)):
             if day in schedules[i]['name']:
-                print(f"Found the correct day at index {i}")
+                #print(f"Found the correct day at index {i}")
                 break
 
         #answer['timetable']['routes'][0]['schedules'][i]['name'] is the day (i is the index)
@@ -144,6 +146,42 @@ class Scraper():
         for journey in journeys:
             timetables.append((int(journey['hour'])%24, int(journey['minute'])))
         timetables.sort()
-        print(timetables)
+        return timetables
+    
+    def get_ideal_timetable_from(self, station_name : str, type_of_day:str, direction:str):
+        """
+        Returns the ideal timetable for a given station (without delays or anything)
+        Theorically, this returns the time of departure for each train, but we can assume 
+        that the times of arrival and departure are the same.
+
+        type_of_day : 'MTT', 'SAT', 'SUN', 'FRI'
+        """
+
+        station_id = self.api.get_id_from_name(station_name)
+        # In case of branching stations, we need all the next consecutive stations
+        next_consecutive_stations = LinkLoadHandler().get_next_consecutive_stations(station_name, direction)
+
+        # Lazy way of doing it, we just take the union of all the timetables
+        timetable = set()
+        for next_station in next_consecutive_stations:
+            timetable = timetable.union(set(self.get_ideal_timetable_from_to(station_name, next_station, type_of_day)))
+        timetable = list(timetable)
+        timetable.sort()
+        return timetable
+    
+    def create_ideal_timetable_df(self, path:str = './ideal_timetable.csv'):
+        """
+        Creates a dataframe with the ideal timetable for all stations in all directions
+        """
+        df = pd.DataFrame(columns = ['Type_of_day', 'station_name', 'direction', 'hour_departure', 'min_departure'])
+        all_stations = LinkLoadHandler().get_all_stations()
+        for station in all_stations:
+            for direction in ['EB', 'WB']:
+                for type_of_day in ['MTT', 'SAT', 'SUN', 'FRI']:
+                    print(f"Scraping {station} {direction} {type_of_day}")
+                    timetable = self.get_ideal_timetable_from(station, type_of_day, direction)
+                    for time in timetable:
+                        df = df._append({'Type_of_day': type_of_day, 'station_name': station, 'direction': direction, 'hour_departure': time[0], 'min_departure': time[1]}, ignore_index=True)
+        df.to_csv(path, index = False)
 
 
