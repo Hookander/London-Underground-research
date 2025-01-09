@@ -2,7 +2,7 @@ from tools.api import APIHandler
 from data.NUMBAT.linkload import LinkLoadHandler
 from typing import Dict, List
 import pandas as pd
-import time
+import time as timee
 
 class Scraper():
     def __init__(self, api_handler : APIHandler):
@@ -173,13 +173,22 @@ class Scraper():
         """
         Creates a dataframe with the ideal timetable for all stations in all directions
         """
+
         df = pd.DataFrame(columns = ['Type_of_day', 'station_name', 'direction', 'hour_departure', 'min_departure'])
         all_stations = LinkLoadHandler().get_all_stations()
         for station in all_stations:
             for direction in ['EB', 'WB']:
                 for type_of_day in ['MTT', 'SAT', 'SUN', 'FRI']:
                     print(f"Scraping {station} {direction} {type_of_day}")
-                    timetable = self.get_ideal_timetable_from(station, type_of_day, direction)
+                    n = 50
+                    for attempt in range(n):
+                        try:
+                            timetable = self.get_ideal_timetable_from(station, type_of_day, direction)
+                            break
+                        except Exception as e:
+                            print(f"Attempt {attempt + 1} failed for {station} {direction} {type_of_day}: {e}")
+                            timee.sleep(2)
+                            
                     for time in timetable:
                         df = df._append({'Type_of_day': type_of_day, 'station_name': station, 'direction': direction, 'hour_departure': time[0], 'min_departure': time[1]}, ignore_index=True)
         df.to_csv(path, index = False)

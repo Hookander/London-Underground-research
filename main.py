@@ -13,4 +13,4 @@ import time
 
 scrappy = Scraper(APIHandler())
 #scrappy.create_ideal_timetable_df()
-print(scrappy.get_ideal_timetable_from('Ruislip Gardens', 'FRI', 'WB'))
+#print(scrappy.get_ideal_timetable_from('Woodford', 'MTT', 'WB'))
