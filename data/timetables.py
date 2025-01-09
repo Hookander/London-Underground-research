@@ -67,15 +67,21 @@ class TimetablesHandler():
             
         return delays
     
-    def plot_delays(self, station_name: str, direction: str, type_of_day: str):
+    def plot_delays(self, station_name: str, direction: str, type_of_day: str, plot_normal_distribution=True):
         """
             Plots the delays for the given station, direction and type_of_day
         """
         delays = self.get_station_delay(station_name, direction, type_of_day)
-        plt.hist(delays, bins = 50)
-        plt.title(f'Delays for {station_name} - {direction} - {type_of_day}')
+
+        if plot_normal_distribution:
+            # Calculate the maximum likelihood for a normal distribution
+            mu, std = np.mean(delays), np.std(delays)
+            x = np.linspace(min(delays), max(delays), 100)
+            y = 1/(std * np.sqrt(2 * np.pi)) * np.exp(- (x - mu)**2 / (2 * std**2))
+            plt.plot(x, y, label='Normal distribution')
+        plt.hist(delays, bins=20, density=True, alpha=0.6, color='g')
+        plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day}')
         plt.xlabel('Delay (s)')
-        plt.ylabel('Frequency')
         plt.show()
     
     def get_delays(self):

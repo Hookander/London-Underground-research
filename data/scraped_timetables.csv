@@ -10202,3 +10202,960 @@ vehicleId,arrival_year,arrival_month,arrival_day,arrival_hour,arrival_min,arriva
 357,2025,1,3,12,28,54,outbound,940GZZLUHLT,Hainault Underground Station,20,2025-01-03T12:28:34.440769Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-03T12:28:54Z
 362,2025,1,3,12,41,0,inbound,940GZZLUEBY,Ealing Broadway Underground Station,746,2025-01-03T12:28:34.440769Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-03T12:41:00Z
 364,2025,1,3,12,59,0,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1826,2025-01-03T12:28:34.440769Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-03T12:59:00Z
+51,2025,1,9,12,31,19,outbound,940GZZLUHLT,Hainault Underground Station,1716,2025-01-09T12:02:43.3751121Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T12:31:19Z
+65,2025,1,9,12,5,48,inbound,940GZZLUEBY,Ealing Broadway Underground Station,185,2025-01-09T12:02:43.3751121Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T12:05:48Z
+66,2025,1,9,12,2,48,outbound,940GZZLUHLT,Hainault Underground Station,5,2025-01-09T12:02:43.3751121Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T12:02:48Z
+67,2025,1,9,12,12,19,outbound,940GZZLUHLT,Hainault Underground Station,576,2025-01-09T12:02:43.3751121Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T12:12:19Z
+70,2025,1,9,12,21,19,outbound,940GZZLUHLT,Hainault Underground Station,1116,2025-01-09T12:02:43.3751121Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T12:21:19Z
+16,2025,1,9,12,9,18,inbound,940GZZLUWRP,West Ruislip Underground Station,395,2025-01-09T12:02:43.7523431Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T12:09:18Z
+22,2025,1,9,12,5,19,outbound,940GZZLUEPG,Epping Underground Station,156,2025-01-09T12:02:43.7523431Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T12:05:19Z
+23,2025,1,9,12,14,19,outbound,940GZZLUEPG,Epping Underground Station,696,2025-01-09T12:02:43.7523431Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T12:14:19Z
+24,2025,1,9,12,25,19,outbound,940GZZLUEPG,Epping Underground Station,1356,2025-01-09T12:02:43.7523431Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T12:25:19Z
+25,2025,1,9,12,27,19,outbound,940GZZLUEPG,Epping Underground Station,1476,2025-01-09T12:02:43.7523431Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T12:27:19Z
+12,2025,1,9,12,7,19,inbound,940GZZLUWRP,West Ruislip Underground Station,275,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:07:19Z
+13,2025,1,9,12,15,19,inbound,940GZZLUWRP,West Ruislip Underground Station,755,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:15:19Z
+14,2025,1,9,12,20,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1055,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:20:19Z
+15,2025,1,9,12,29,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1594,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:29:18Z
+25,2025,1,9,12,4,18,outbound,940GZZLUEPG,Epping Underground Station,94,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:04:18Z
+26,2025,1,9,12,10,19,outbound,940GZZLUEPG,Epping Underground Station,455,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:10:19Z
+27,2025,1,9,12,16,19,outbound,940GZZLUEPG,Epping Underground Station,815,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:16:19Z
+30,2025,1,9,12,22,19,outbound,940GZZLUEPG,Epping Underground Station,1175,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:22:19Z
+31,2025,1,9,12,30,19,outbound,940GZZLUEPG,Epping Underground Station,1655,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:30:19Z
+51,2025,1,9,12,7,18,outbound,940GZZLUHLT,Hainault Underground Station,274,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:07:18Z
+52,2025,1,9,12,19,19,outbound,940GZZLUHLT,Hainault Underground Station,995,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:19:19Z
+53,2025,1,9,12,27,19,outbound,940GZZLUHLT,Hainault Underground Station,1475,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:27:19Z
+63,2025,1,9,12,14,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,695,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:14:19Z
+64,2025,1,9,12,23,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1235,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:23:19Z
+65,2025,1,9,12,31,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1714,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:31:18Z
+107,2025,1,9,12,12,19,outbound,940GZZLUHLT,Hainault Underground Station,575,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:12:19Z
+110,2025,1,9,12,24,19,outbound,940GZZLUHLT,Hainault Underground Station,1295,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:24:19Z
+115,2025,1,9,12,10,19,inbound,940GZZLUWCY,White City Underground Station,455,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:10:19Z
+775,2025,1,9,12,8,19,unknown,940GZZLUGGH,Grange Hill Underground Station,335,2025-01-09T12:02:44.609502Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T12:08:19Z
+10,2025,1,9,12,9,18,inbound,940GZZLUWRP,West Ruislip Underground Station,393,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:09:18Z
+11,2025,1,9,12,15,18,inbound,940GZZLUWRP,West Ruislip Underground Station,753,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:15:18Z
+12,2025,1,9,12,22,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1174,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:22:19Z
+13,2025,1,9,12,30,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1654,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:30:19Z
+30,2025,1,9,12,6,18,outbound,940GZZLUEPG,Epping Underground Station,213,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:06:18Z
+31,2025,1,9,12,13,18,outbound,940GZZLUEPG,Epping Underground Station,633,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:13:18Z
+32,2025,1,9,12,22,18,outbound,940GZZLUEPG,Epping Underground Station,1173,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:22:18Z
+33,2025,1,9,12,27,18,outbound,940GZZLUEPG,Epping Underground Station,1473,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:27:18Z
+53,2025,1,9,12,10,18,outbound,940GZZLUHLT,Hainault Underground Station,453,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:10:18Z
+54,2025,1,9,12,22,18,outbound,940GZZLUHLT,Hainault Underground Station,1173,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:22:18Z
+61,2025,1,9,12,7,48,inbound,940GZZLUEBY,Ealing Broadway Underground Station,303,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:07:48Z
+62,2025,1,9,12,17,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,873,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:17:18Z
+63,2025,1,9,12,29,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1594,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:29:19Z
+110,2025,1,9,12,7,18,outbound,940GZZLUHLT,Hainault Underground Station,273,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:07:18Z
+115,2025,1,9,12,24,19,inbound,940GZZLUWCY,White City Underground Station,1294,2025-01-09T12:02:45.0082578Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T12:24:19Z
+11,2025,1,9,12,4,49,inbound,940GZZLUWRP,West Ruislip Underground Station,124,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:04:49Z
+12,2025,1,9,12,12,19,inbound,940GZZLUWRP,West Ruislip Underground Station,574,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:12:19Z
+13,2025,1,9,12,20,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1053,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:20:18Z
+14,2025,1,9,12,26,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1413,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:26:18Z
+26,2025,1,9,12,4,19,outbound,940GZZLUEPG,Epping Underground Station,94,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:04:19Z
+27,2025,1,9,12,10,19,outbound,940GZZLUEPG,Epping Underground Station,454,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:10:19Z
+30,2025,1,9,12,16,18,outbound,940GZZLUEPG,Epping Underground Station,813,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:16:18Z
+31,2025,1,9,12,24,18,outbound,940GZZLUEPG,Epping Underground Station,1293,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:24:18Z
+52,2025,1,9,12,13,19,outbound,940GZZLUHLT,Hainault Underground Station,634,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:13:19Z
+53,2025,1,9,12,21,18,outbound,940GZZLUHLT,Hainault Underground Station,1113,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:21:18Z
+62,2025,1,9,12,7,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,274,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:07:19Z
+63,2025,1,9,12,19,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,993,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:19:18Z
+64,2025,1,9,12,28,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1533,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:28:18Z
+107,2025,1,9,12,6,49,outbound,940GZZLUHLT,Hainault Underground Station,244,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:06:49Z
+110,2025,1,9,12,18,18,outbound,940GZZLUHLT,Hainault Underground Station,933,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:18:18Z
+115,2025,1,9,12,15,18,inbound,940GZZLUWCY,White City Underground Station,753,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:15:18Z
+775,2025,1,9,12,2,49,unknown,940GZZLUGGH,Grange Hill Underground Station,4,2025-01-09T12:02:45.3992911Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T12:02:49Z
+10,2025,1,9,12,3,49,inbound,940GZZLUWRP,West Ruislip Underground Station,64,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:03:49Z
+11,2025,1,9,12,8,19,inbound,940GZZLUWRP,West Ruislip Underground Station,334,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:08:19Z
+12,2025,1,9,12,16,18,inbound,940GZZLUWRP,West Ruislip Underground Station,813,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:16:18Z
+13,2025,1,9,12,24,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1293,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:24:18Z
+14,2025,1,9,12,29,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1594,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:29:19Z
+27,2025,1,9,12,6,19,outbound,940GZZLUEPG,Epping Underground Station,214,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:06:19Z
+30,2025,1,9,12,12,19,outbound,940GZZLUEPG,Epping Underground Station,574,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:12:19Z
+31,2025,1,9,12,20,19,outbound,940GZZLUEPG,Epping Underground Station,1054,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:20:19Z
+32,2025,1,9,12,29,19,outbound,940GZZLUEPG,Epping Underground Station,1594,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:29:19Z
+52,2025,1,9,12,9,19,outbound,940GZZLUHLT,Hainault Underground Station,394,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:09:19Z
+53,2025,1,9,12,17,19,outbound,940GZZLUHLT,Hainault Underground Station,874,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:17:19Z
+54,2025,1,9,12,29,19,outbound,940GZZLUHLT,Hainault Underground Station,1594,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:29:19Z
+62,2025,1,9,12,11,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,513,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:11:18Z
+63,2025,1,9,12,23,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1233,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:23:18Z
+107,2025,1,9,12,2,49,outbound,940GZZLUHLT,Hainault Underground Station,4,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:02:49Z
+110,2025,1,9,12,14,19,outbound,940GZZLUHLT,Hainault Underground Station,694,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:14:19Z
+115,2025,1,9,12,18,18,inbound,940GZZLUWCY,White City Underground Station,933,2025-01-09T12:02:45.9435643Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T12:18:18Z
+172,2025,1,9,12,6,49,outbound,940GZZLUHLT,Hainault Underground Station,239,2025-01-09T12:02:50.1611615Z,940GZZLUCWL,Chigwell Underground Station,Central,central,2025-01-09T12:06:49Z
+16,2025,1,9,12,4,19,inbound,940GZZLUWRP,West Ruislip Underground Station,88,2025-01-09T12:02:51.5916268Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T12:04:19Z
+21,2025,1,9,12,3,19,outbound,940GZZLUEPG,Epping Underground Station,28,2025-01-09T12:02:51.5916268Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T12:03:19Z
+22,2025,1,9,12,10,19,outbound,940GZZLUEPG,Epping Underground Station,448,2025-01-09T12:02:51.5916268Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T12:10:19Z
+23,2025,1,9,12,19,18,outbound,940GZZLUEPG,Epping Underground Station,987,2025-01-09T12:02:51.5916268Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T12:19:18Z
+24,2025,1,9,12,30,18,outbound,940GZZLUEPG,Epping Underground Station,1647,2025-01-09T12:02:51.5916268Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T12:30:18Z
+25,2025,1,9,12,32,18,outbound,940GZZLUEPG,Epping Underground Station,1767,2025-01-09T12:02:51.5916268Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T12:32:18Z
+5,2025,1,9,12,6,19,inbound,940GZZLUWRP,West Ruislip Underground Station,208,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:06:19Z
+6,2025,1,9,12,12,19,inbound,940GZZLUWRP,West Ruislip Underground Station,568,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:12:19Z
+7,2025,1,9,12,17,19,inbound,940GZZLUWRP,West Ruislip Underground Station,868,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:17:19Z
+10,2025,1,9,12,26,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1408,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:26:19Z
+11,2025,1,9,12,31,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1708,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:31:19Z
+32,2025,1,9,12,6,18,outbound,940GZZLUEPG,Epping Underground Station,207,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:06:18Z
+33,2025,1,9,12,10,18,outbound,940GZZLUEPG,Epping Underground Station,447,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:10:18Z
+34,2025,1,9,12,17,18,outbound,940GZZLUEPG,Epping Underground Station,867,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:17:18Z
+54,2025,1,9,12,6,18,outbound,940GZZLUHLT,Hainault Underground Station,207,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:06:18Z
+57,2025,1,9,12,4,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,88,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:04:19Z
+60,2025,1,9,12,14,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,688,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:14:19Z
+61,2025,1,9,12,23,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1228,2025-01-09T12:02:51.9170084Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T12:23:19Z
+57,2025,1,9,12,11,19,unknown,940GZZLUEBY,Ealing Broadway Underground Station,507,2025-01-09T12:02:52.1949349Z,940GZZLUEBY,Ealing Broadway Underground Station,Central,central,2025-01-09T12:11:19Z
+60,2025,1,9,12,21,19,unknown,940GZZLUEBY,Ealing Broadway Underground Station,1107,2025-01-09T12:02:52.1949349Z,940GZZLUEBY,Ealing Broadway Underground Station,Central,central,2025-01-09T12:21:19Z
+61,2025,1,9,12,31,19,unknown,940GZZLUEBY,Ealing Broadway Underground Station,1707,2025-01-09T12:02:52.1949349Z,940GZZLUEBY,Ealing Broadway Underground Station,Central,central,2025-01-09T12:31:19Z
+20,2025,1,9,12,4,48,unknown,940GZZLUEPG,Epping Underground Station,116,2025-01-09T12:02:52.4773042Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T12:04:48Z
+21,2025,1,9,12,10,18,unknown,940GZZLUEPG,Epping Underground Station,446,2025-01-09T12:02:52.4773042Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T12:10:18Z
+22,2025,1,9,12,17,19,unknown,940GZZLUEPG,Epping Underground Station,867,2025-01-09T12:02:52.4773042Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T12:17:19Z
+23,2025,1,9,12,27,18,unknown,940GZZLUEPG,Epping Underground Station,1466,2025-01-09T12:02:52.4773042Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T12:27:18Z
+65,2025,1,9,12,4,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,86,2025-01-09T12:02:53.8579651Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T12:04:19Z
+66,2025,1,9,12,4,49,outbound,940GZZLUHLT,Hainault Underground Station,116,2025-01-09T12:02:53.8579651Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T12:04:49Z
+67,2025,1,9,12,13,19,outbound,940GZZLUHLT,Hainault Underground Station,626,2025-01-09T12:02:53.8579651Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T12:13:19Z
+70,2025,1,9,12,23,19,outbound,940GZZLUHLT,Hainault Underground Station,1226,2025-01-09T12:02:53.8579651Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T12:23:19Z
+4,2025,1,9,12,10,18,inbound,940GZZLUWRP,West Ruislip Underground Station,444,2025-01-09T12:02:54.0202264Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T12:10:18Z
+5,2025,1,9,12,16,19,inbound,940GZZLUWRP,West Ruislip Underground Station,805,2025-01-09T12:02:54.0202264Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T12:16:19Z
+6,2025,1,9,12,21,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1105,2025-01-09T12:02:54.0202264Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T12:21:19Z
+7,2025,1,9,12,27,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1465,2025-01-09T12:02:54.0202264Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T12:27:19Z
+34,2025,1,9,12,7,19,outbound,940GZZLUEPG,Epping Underground Station,265,2025-01-09T12:02:54.0202264Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T12:07:19Z
+142,2025,1,9,12,10,18,inbound,940GZZLURSG,Ruislip Gardens Underground Station,444,2025-01-09T12:02:54.0202264Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T12:10:18Z
+172,2025,1,9,12,10,18,outbound,940GZZLUHLT,Hainault Underground Station,443,2025-01-09T12:02:55.1802522Z,940GZZLUGGH,Grange Hill Underground Station,Central,central,2025-01-09T12:10:18Z
+51,2025,1,9,12,27,18,outbound,940GZZLUHLT,Hainault Underground Station,1463,2025-01-09T12:02:55.3465756Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T12:27:18Z
+65,2025,1,9,12,10,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,444,2025-01-09T12:02:55.3465756Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T12:10:19Z
+67,2025,1,9,12,7,18,outbound,940GZZLUHLT,Hainault Underground Station,263,2025-01-09T12:02:55.3465756Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T12:07:18Z
+70,2025,1,9,12,16,18,outbound,940GZZLUHLT,Hainault Underground Station,803,2025-01-09T12:02:55.3465756Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T12:16:18Z
+107,2025,1,9,12,32,18,outbound,940GZZLUHLT,Hainault Underground Station,1763,2025-01-09T12:02:55.3465756Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T12:32:18Z
+10,2025,1,9,12,5,19,inbound,940GZZLUWRP,West Ruislip Underground Station,144,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:05:19Z
+11,2025,1,9,12,10,19,inbound,940GZZLUWRP,West Ruislip Underground Station,444,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:10:19Z
+12,2025,1,9,12,18,19,inbound,940GZZLUWRP,West Ruislip Underground Station,924,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:18:19Z
+13,2025,1,9,12,26,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1404,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:26:19Z
+14,2025,1,9,12,31,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1704,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:31:19Z
+27,2025,1,9,12,4,49,outbound,940GZZLUEPG,Epping Underground Station,114,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:04:49Z
+30,2025,1,9,12,11,19,outbound,940GZZLUEPG,Epping Underground Station,504,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:11:19Z
+31,2025,1,9,12,18,19,outbound,940GZZLUEPG,Epping Underground Station,924,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:18:19Z
+32,2025,1,9,12,27,19,outbound,940GZZLUEPG,Epping Underground Station,1464,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:27:19Z
+33,2025,1,9,12,32,18,outbound,940GZZLUEPG,Epping Underground Station,1763,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:32:18Z
+52,2025,1,9,12,7,19,outbound,940GZZLUHLT,Hainault Underground Station,264,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:07:19Z
+53,2025,1,9,12,16,19,outbound,940GZZLUHLT,Hainault Underground Station,804,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:16:19Z
+54,2025,1,9,12,27,19,outbound,940GZZLUHLT,Hainault Underground Station,1464,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:27:19Z
+62,2025,1,9,12,12,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,564,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:12:19Z
+63,2025,1,9,12,24,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1284,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:24:19Z
+110,2025,1,9,12,12,19,outbound,940GZZLUHLT,Hainault Underground Station,564,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:12:19Z
+115,2025,1,9,12,20,19,inbound,940GZZLUWCY,White City Underground Station,1044,2025-01-09T12:02:55.5028473Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T12:20:19Z
+4,2025,1,9,12,5,48,inbound,940GZZLUWRP,West Ruislip Underground Station,173,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:05:48Z
+5,2025,1,9,12,11,18,inbound,940GZZLUWRP,West Ruislip Underground Station,503,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:11:18Z
+6,2025,1,9,12,17,18,inbound,940GZZLUWRP,West Ruislip Underground Station,863,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:17:18Z
+7,2025,1,9,12,22,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1163,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:22:18Z
+10,2025,1,9,12,31,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1703,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:31:18Z
+33,2025,1,9,12,5,19,outbound,940GZZLUEPG,Epping Underground Station,144,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:05:19Z
+34,2025,1,9,12,11,19,outbound,940GZZLUEPG,Epping Underground Station,504,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:11:19Z
+142,2025,1,9,12,5,48,inbound,940GZZLURSG,Ruislip Gardens Underground Station,173,2025-01-09T12:02:55.7894702Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T12:05:48Z
+66,2025,1,9,12,6,49,unknown,940GZZLUHLT,Hainault Underground Station,233,2025-01-09T12:02:56.1452094Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T12:06:49Z
+67,2025,1,9,12,16,19,unknown,940GZZLUHLT,Hainault Underground Station,803,2025-01-09T12:02:56.1452094Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T12:16:19Z
+70,2025,1,9,12,25,19,unknown,940GZZLUHLT,Hainault Underground Station,1343,2025-01-09T12:02:56.1452094Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T12:25:19Z
+172,2025,1,9,12,15,19,unknown,940GZZLUHLT,Hainault Underground Station,743,2025-01-09T12:02:56.1452094Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T12:15:19Z
+6,2025,1,9,12,4,18,inbound,940GZZLUWRP,West Ruislip Underground Station,82,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:04:18Z
+7,2025,1,9,12,9,18,inbound,940GZZLUWRP,West Ruislip Underground Station,382,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:09:18Z
+10,2025,1,9,12,18,18,inbound,940GZZLUWRP,West Ruislip Underground Station,922,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:18:18Z
+11,2025,1,9,12,23,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1222,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:23:18Z
+12,2025,1,9,12,31,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1702,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:31:18Z
+31,2025,1,9,12,5,49,outbound,940GZZLUEPG,Epping Underground Station,173,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:05:49Z
+32,2025,1,9,12,14,19,outbound,940GZZLUEPG,Epping Underground Station,683,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:14:19Z
+33,2025,1,9,12,19,19,outbound,940GZZLUEPG,Epping Underground Station,983,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:19:19Z
+34,2025,1,9,12,25,19,outbound,940GZZLUEPG,Epping Underground Station,1343,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:25:19Z
+54,2025,1,9,12,14,19,outbound,940GZZLUHLT,Hainault Underground Station,683,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:14:19Z
+60,2025,1,9,12,6,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,202,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:06:18Z
+61,2025,1,9,12,15,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,742,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:15:18Z
+62,2025,1,9,12,25,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1342,2025-01-09T12:02:56.9728388Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T12:25:18Z
+16,2025,1,9,12,7,19,inbound,940GZZLUWRP,West Ruislip Underground Station,262,2025-01-09T12:02:57.3028958Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T12:07:19Z
+22,2025,1,9,12,7,19,outbound,940GZZLUEPG,Epping Underground Station,262,2025-01-09T12:02:57.3028958Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T12:07:19Z
+23,2025,1,9,12,17,19,outbound,940GZZLUEPG,Epping Underground Station,862,2025-01-09T12:02:57.3028958Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T12:17:19Z
+24,2025,1,9,12,28,19,outbound,940GZZLUEPG,Epping Underground Station,1522,2025-01-09T12:02:57.3028958Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T12:28:19Z
+25,2025,1,9,12,29,19,outbound,940GZZLUEPG,Epping Underground Station,1582,2025-01-09T12:02:57.3028958Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T12:29:19Z
+7,2025,1,9,12,5,19,inbound,940GZZLUWRP,West Ruislip Underground Station,142,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:05:19Z
+10,2025,1,9,12,13,19,inbound,940GZZLUWRP,West Ruislip Underground Station,622,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:13:19Z
+11,2025,1,9,12,18,19,inbound,940GZZLUWRP,West Ruislip Underground Station,922,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:18:19Z
+12,2025,1,9,12,26,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1402,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:26:19Z
+31,2025,1,9,12,9,19,outbound,940GZZLUEPG,Epping Underground Station,382,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:09:19Z
+32,2025,1,9,12,18,19,outbound,940GZZLUEPG,Epping Underground Station,922,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:18:19Z
+33,2025,1,9,12,23,18,outbound,940GZZLUEPG,Epping Underground Station,1221,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:23:18Z
+34,2025,1,9,12,30,18,outbound,940GZZLUEPG,Epping Underground Station,1641,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:30:18Z
+53,2025,1,9,12,7,19,outbound,940GZZLUHLT,Hainault Underground Station,262,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:07:19Z
+54,2025,1,9,12,19,18,outbound,940GZZLUHLT,Hainault Underground Station,981,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:19:18Z
+61,2025,1,9,12,11,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,502,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:11:19Z
+62,2025,1,9,12,21,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1102,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:21:19Z
+110,2025,1,9,12,4,19,outbound,940GZZLUHLT,Hainault Underground Station,82,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:04:19Z
+115,2025,1,9,12,28,19,inbound,940GZZLUWCY,White City Underground Station,1522,2025-01-09T12:02:57.5179994Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T12:28:19Z
+12,2025,1,9,12,10,19,inbound,940GZZLUWRP,West Ruislip Underground Station,442,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:10:19Z
+13,2025,1,9,12,18,19,inbound,940GZZLUWRP,West Ruislip Underground Station,922,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:18:19Z
+14,2025,1,9,12,23,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1222,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:23:19Z
+15,2025,1,9,12,31,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1702,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:31:19Z
+26,2025,1,9,12,6,19,outbound,940GZZLUEPG,Epping Underground Station,202,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:06:19Z
+27,2025,1,9,12,12,19,outbound,940GZZLUEPG,Epping Underground Station,562,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:12:19Z
+30,2025,1,9,12,18,19,outbound,940GZZLUEPG,Epping Underground Station,922,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:18:19Z
+31,2025,1,9,12,26,19,outbound,940GZZLUEPG,Epping Underground Station,1402,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:26:19Z
+51,2025,1,9,12,3,49,outbound,940GZZLUHLT,Hainault Underground Station,52,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:03:49Z
+52,2025,1,9,12,15,19,outbound,940GZZLUHLT,Hainault Underground Station,742,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:15:19Z
+53,2025,1,9,12,23,19,outbound,940GZZLUHLT,Hainault Underground Station,1222,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:23:19Z
+62,2025,1,9,12,5,49,inbound,940GZZLUEBY,Ealing Broadway Underground Station,172,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:05:49Z
+63,2025,1,9,12,17,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,862,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:17:19Z
+64,2025,1,9,12,26,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1402,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:26:19Z
+107,2025,1,9,12,8,19,outbound,940GZZLUHLT,Hainault Underground Station,322,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:08:19Z
+110,2025,1,9,12,20,19,outbound,940GZZLUHLT,Hainault Underground Station,1042,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:20:19Z
+115,2025,1,9,12,12,19,inbound,940GZZLUWCY,White City Underground Station,562,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:12:19Z
+775,2025,1,9,12,4,49,unknown,940GZZLUGGH,Grange Hill Underground Station,112,2025-01-09T12:02:57.787158Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T12:04:49Z
+13,2025,1,9,12,4,18,inbound,940GZZLUWRP,West Ruislip Underground Station,80,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:04:18Z
+14,2025,1,9,12,9,18,inbound,940GZZLUWRP,West Ruislip Underground Station,380,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:09:18Z
+15,2025,1,9,12,18,18,inbound,940GZZLUWRP,West Ruislip Underground Station,920,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:18:18Z
+16,2025,1,9,12,25,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1340,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:25:18Z
+24,2025,1,9,12,12,18,outbound,940GZZLUEPG,Epping Underground Station,560,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:12:18Z
+25,2025,1,9,12,14,18,outbound,940GZZLUEPG,Epping Underground Station,680,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:14:18Z
+26,2025,1,9,12,20,18,outbound,940GZZLUEPG,Epping Underground Station,1040,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:20:18Z
+27,2025,1,9,12,26,18,outbound,940GZZLUEPG,Epping Underground Station,1400,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:26:18Z
+51,2025,1,9,12,17,18,outbound,940GZZLUHLT,Hainault Underground Station,860,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:17:18Z
+52,2025,1,9,12,29,18,outbound,940GZZLUHLT,Hainault Underground Station,1580,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:29:18Z
+64,2025,1,9,12,11,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,500,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:11:18Z
+65,2025,1,9,12,19,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,980,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:19:18Z
+70,2025,1,9,12,7,48,outbound,940GZZLUHLT,Hainault Underground Station,290,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:07:48Z
+107,2025,1,9,12,23,18,outbound,940GZZLUHLT,Hainault Underground Station,1220,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:23:18Z
+775,2025,1,9,12,18,18,unknown,940GZZLUGGH,Grange Hill Underground Station,920,2025-01-09T12:02:58.1742747Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T12:18:18Z
+14,2025,1,9,12,6,18,inbound,940GZZLUWRP,West Ruislip Underground Station,200,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:06:18Z
+15,2025,1,9,12,14,18,inbound,940GZZLUWRP,West Ruislip Underground Station,680,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:14:18Z
+16,2025,1,9,12,22,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1160,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:22:18Z
+23,2025,1,9,12,3,48,outbound,940GZZLUEPG,Epping Underground Station,50,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:03:48Z
+24,2025,1,9,12,14,18,outbound,940GZZLUEPG,Epping Underground Station,680,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:14:18Z
+25,2025,1,9,12,16,18,outbound,940GZZLUEPG,Epping Underground Station,800,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:16:18Z
+26,2025,1,9,12,22,18,outbound,940GZZLUEPG,Epping Underground Station,1160,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:22:18Z
+27,2025,1,9,12,28,18,outbound,940GZZLUEPG,Epping Underground Station,1520,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:28:18Z
+51,2025,1,9,12,20,18,outbound,940GZZLUHLT,Hainault Underground Station,1040,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:20:18Z
+52,2025,1,9,12,31,18,outbound,940GZZLUHLT,Hainault Underground Station,1700,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:31:18Z
+64,2025,1,9,12,8,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,320,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:08:18Z
+65,2025,1,9,12,16,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,800,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:16:18Z
+70,2025,1,9,12,9,18,outbound,940GZZLUHLT,Hainault Underground Station,380,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:09:18Z
+107,2025,1,9,12,25,18,outbound,940GZZLUHLT,Hainault Underground Station,1340,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:25:18Z
+775,2025,1,9,12,21,18,unknown,940GZZLUGGH,Grange Hill Underground Station,1100,2025-01-09T12:02:58.4849206Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T12:21:18Z
+7,2025,1,9,12,3,19,inbound,940GZZLUWRP,West Ruislip Underground Station,21,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:03:19Z
+10,2025,1,9,12,11,19,inbound,940GZZLUWRP,West Ruislip Underground Station,501,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:11:19Z
+11,2025,1,9,12,16,18,inbound,940GZZLUWRP,West Ruislip Underground Station,800,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:16:18Z
+12,2025,1,9,12,24,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1280,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:24:18Z
+13,2025,1,9,12,32,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1760,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:32:18Z
+30,2025,1,9,12,4,48,outbound,940GZZLUEPG,Epping Underground Station,110,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:04:48Z
+31,2025,1,9,12,12,18,outbound,940GZZLUEPG,Epping Underground Station,560,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:12:18Z
+32,2025,1,9,12,21,18,outbound,940GZZLUEPG,Epping Underground Station,1100,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:21:18Z
+33,2025,1,9,12,25,18,outbound,940GZZLUEPG,Epping Underground Station,1340,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:25:18Z
+53,2025,1,9,12,9,18,outbound,940GZZLUHLT,Hainault Underground Station,380,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:09:18Z
+54,2025,1,9,12,21,18,outbound,940GZZLUHLT,Hainault Underground Station,1100,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:21:18Z
+61,2025,1,9,12,9,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,381,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:09:19Z
+62,2025,1,9,12,19,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,980,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:19:18Z
+63,2025,1,9,12,31,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1700,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:31:18Z
+110,2025,1,9,12,6,18,outbound,940GZZLUHLT,Hainault Underground Station,200,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:06:18Z
+115,2025,1,9,12,26,18,inbound,940GZZLUWCY,White City Underground Station,1400,2025-01-09T12:02:58.7721776Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T12:26:18Z
+12,2025,1,9,12,4,48,inbound,940GZZLUWRP,West Ruislip Underground Station,109,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:04:48Z
+13,2025,1,9,12,12,18,inbound,940GZZLUWRP,West Ruislip Underground Station,559,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:12:18Z
+14,2025,1,9,12,17,18,inbound,940GZZLUWRP,West Ruislip Underground Station,859,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:17:18Z
+15,2025,1,9,12,26,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1399,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:26:18Z
+24,2025,1,9,12,5,48,outbound,940GZZLUEPG,Epping Underground Station,169,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:05:48Z
+25,2025,1,9,12,7,18,outbound,940GZZLUEPG,Epping Underground Station,259,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:07:18Z
+26,2025,1,9,12,13,18,outbound,940GZZLUEPG,Epping Underground Station,619,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:13:18Z
+27,2025,1,9,12,19,18,outbound,940GZZLUEPG,Epping Underground Station,979,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:19:18Z
+30,2025,1,9,12,25,18,outbound,940GZZLUEPG,Epping Underground Station,1339,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:25:18Z
+51,2025,1,9,12,10,18,outbound,940GZZLUHLT,Hainault Underground Station,439,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:10:18Z
+52,2025,1,9,12,22,18,outbound,940GZZLUHLT,Hainault Underground Station,1159,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:22:18Z
+53,2025,1,9,12,30,18,outbound,940GZZLUHLT,Hainault Underground Station,1639,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:30:18Z
+63,2025,1,9,12,11,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,499,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:11:18Z
+64,2025,1,9,12,20,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1039,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:20:18Z
+65,2025,1,9,12,28,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1519,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:28:18Z
+107,2025,1,9,12,16,18,outbound,940GZZLUHLT,Hainault Underground Station,799,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:16:18Z
+110,2025,1,9,12,27,18,outbound,940GZZLUHLT,Hainault Underground Station,1459,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:27:18Z
+115,2025,1,9,12,7,18,inbound,940GZZLUWCY,White City Underground Station,259,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:07:18Z
+775,2025,1,9,12,11,18,unknown,940GZZLUGGH,Grange Hill Underground Station,499,2025-01-09T12:02:59.1035528Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T12:11:18Z
+5,2025,1,9,12,8,19,inbound,940GZZLUWRP,West Ruislip Underground Station,320,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:08:19Z
+6,2025,1,9,12,14,19,inbound,940GZZLUWRP,West Ruislip Underground Station,680,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:14:19Z
+7,2025,1,9,12,19,19,inbound,940GZZLUWRP,West Ruislip Underground Station,980,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:19:19Z
+10,2025,1,9,12,28,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1520,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:28:19Z
+32,2025,1,9,12,3,49,outbound,940GZZLUEPG,Epping Underground Station,50,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:03:49Z
+33,2025,1,9,12,8,19,outbound,940GZZLUEPG,Epping Underground Station,320,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:08:19Z
+34,2025,1,9,12,15,19,outbound,940GZZLUEPG,Epping Underground Station,740,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:15:19Z
+54,2025,1,9,12,4,19,outbound,940GZZLUHLT,Hainault Underground Station,80,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:04:19Z
+57,2025,1,9,12,6,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,200,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:06:19Z
+60,2025,1,9,12,16,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,800,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:16:19Z
+61,2025,1,9,12,25,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1340,2025-01-09T12:02:59.3977082Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T12:25:19Z
+51,2025,1,9,12,29,19,outbound,940GZZLUHLT,Hainault Underground Station,1579,2025-01-09T12:03:00.2439311Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T12:29:19Z
+65,2025,1,9,12,7,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,258,2025-01-09T12:03:00.2439311Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T12:07:18Z
+67,2025,1,9,12,10,18,outbound,940GZZLUHLT,Hainault Underground Station,438,2025-01-09T12:03:00.2439311Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T12:10:18Z
+70,2025,1,9,12,19,18,outbound,940GZZLUHLT,Hainault Underground Station,978,2025-01-09T12:03:00.2439311Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T12:19:18Z
+7,2025,1,9,12,8,18,inbound,940GZZLUWRP,West Ruislip Underground Station,318,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:08:18Z
+10,2025,1,9,12,16,18,inbound,940GZZLUWRP,West Ruislip Underground Station,798,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:16:18Z
+11,2025,1,9,12,21,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1098,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:21:18Z
+12,2025,1,9,12,29,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1578,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:29:18Z
+31,2025,1,9,12,6,48,outbound,940GZZLUEPG,Epping Underground Station,228,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:06:48Z
+32,2025,1,9,12,15,18,outbound,940GZZLUEPG,Epping Underground Station,738,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:15:18Z
+33,2025,1,9,12,20,18,outbound,940GZZLUEPG,Epping Underground Station,1038,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:20:18Z
+34,2025,1,9,12,27,18,outbound,940GZZLUEPG,Epping Underground Station,1458,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:27:18Z
+53,2025,1,9,12,4,18,outbound,940GZZLUHLT,Hainault Underground Station,78,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:04:18Z
+54,2025,1,9,12,15,18,outbound,940GZZLUHLT,Hainault Underground Station,738,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:15:18Z
+60,2025,1,9,12,4,48,inbound,940GZZLUEBY,Ealing Broadway Underground Station,108,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:04:48Z
+61,2025,1,9,12,14,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,678,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:14:18Z
+62,2025,1,9,12,24,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1278,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:24:18Z
+115,2025,1,9,12,31,18,inbound,940GZZLUWCY,White City Underground Station,1698,2025-01-09T12:03:00.8908814Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T12:31:18Z
+3,2025,1,9,12,5,19,inbound,940GZZLUWRP,West Ruislip Underground Station,138,2025-01-09T12:03:01.3520838Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T12:05:19Z
+4,2025,1,9,12,12,18,inbound,940GZZLUWRP,West Ruislip Underground Station,557,2025-01-09T12:03:01.3520838Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T12:12:18Z
+5,2025,1,9,12,18,18,inbound,940GZZLUWRP,West Ruislip Underground Station,917,2025-01-09T12:03:01.3520838Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T12:18:18Z
+6,2025,1,9,12,24,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1277,2025-01-09T12:03:01.3520838Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T12:24:18Z
+7,2025,1,9,12,29,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1577,2025-01-09T12:03:01.3520838Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T12:29:18Z
+34,2025,1,9,12,4,48,outbound,940GZZLUEPG,Epping Underground Station,107,2025-01-09T12:03:01.3520838Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T12:04:48Z
+142,2025,1,9,12,12,18,inbound,940GZZLURSG,Ruislip Gardens Underground Station,557,2025-01-09T12:03:01.3520838Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T12:12:18Z
+10,2025,1,9,12,8,18,inbound,940GZZLUWRP,West Ruislip Underground Station,317,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:08:18Z
+11,2025,1,9,12,13,18,inbound,940GZZLUWRP,West Ruislip Underground Station,617,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:13:18Z
+12,2025,1,9,12,21,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1097,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:21:18Z
+13,2025,1,9,12,29,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1578,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:29:19Z
+30,2025,1,9,12,7,18,outbound,940GZZLUEPG,Epping Underground Station,257,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:07:18Z
+31,2025,1,9,12,14,18,outbound,940GZZLUEPG,Epping Underground Station,677,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:14:18Z
+32,2025,1,9,12,23,18,outbound,940GZZLUEPG,Epping Underground Station,1217,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:23:18Z
+33,2025,1,9,12,28,18,outbound,940GZZLUEPG,Epping Underground Station,1517,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:28:18Z
+52,2025,1,9,12,3,48,outbound,940GZZLUHLT,Hainault Underground Station,47,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:03:48Z
+53,2025,1,9,12,12,19,outbound,940GZZLUHLT,Hainault Underground Station,558,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:12:19Z
+54,2025,1,9,12,24,18,outbound,940GZZLUHLT,Hainault Underground Station,1277,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:24:18Z
+61,2025,1,9,12,6,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,197,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:06:18Z
+62,2025,1,9,12,16,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,797,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:16:18Z
+63,2025,1,9,12,28,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1517,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:28:18Z
+110,2025,1,9,12,9,18,outbound,940GZZLUHLT,Hainault Underground Station,377,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:09:18Z
+115,2025,1,9,12,23,18,inbound,940GZZLUWCY,White City Underground Station,1217,2025-01-09T12:03:01.6023688Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T12:23:18Z
+4,2025,1,9,12,7,18,inbound,940GZZLUWRP,West Ruislip Underground Station,256,2025-01-09T12:03:02.1237742Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T12:07:18Z
+5,2025,1,9,12,13,19,inbound,940GZZLUWRP,West Ruislip Underground Station,617,2025-01-09T12:03:02.1237742Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T12:13:19Z
+6,2025,1,9,12,19,19,inbound,940GZZLUWRP,West Ruislip Underground Station,977,2025-01-09T12:03:02.1237742Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T12:19:19Z
+7,2025,1,9,12,25,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1337,2025-01-09T12:03:02.1237742Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T12:25:19Z
+34,2025,1,9,12,9,19,outbound,940GZZLUEPG,Epping Underground Station,377,2025-01-09T12:03:02.1237742Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T12:09:19Z
+142,2025,1,9,12,8,19,inbound,940GZZLURSG,Ruislip Gardens Underground Station,317,2025-01-09T12:03:02.1237742Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T12:08:19Z
+7,2025,1,9,12,6,49,inbound,940GZZLUWRP,West Ruislip Underground Station,227,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:06:49Z
+10,2025,1,9,12,15,18,inbound,940GZZLUWRP,West Ruislip Underground Station,736,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:15:18Z
+11,2025,1,9,12,20,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1036,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:20:18Z
+12,2025,1,9,12,28,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1516,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:28:18Z
+31,2025,1,9,12,8,19,outbound,940GZZLUEPG,Epping Underground Station,317,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:08:19Z
+32,2025,1,9,12,17,19,outbound,940GZZLUEPG,Epping Underground Station,857,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:17:19Z
+33,2025,1,9,12,22,19,outbound,940GZZLUEPG,Epping Underground Station,1157,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:22:19Z
+34,2025,1,9,12,28,19,outbound,940GZZLUEPG,Epping Underground Station,1517,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:28:19Z
+53,2025,1,9,12,5,48,outbound,940GZZLUHLT,Hainault Underground Station,166,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:05:48Z
+54,2025,1,9,12,17,19,outbound,940GZZLUHLT,Hainault Underground Station,857,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:17:19Z
+60,2025,1,9,12,3,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,17,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:03:19Z
+61,2025,1,9,12,12,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,557,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:12:19Z
+62,2025,1,9,12,22,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1156,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:22:18Z
+115,2025,1,9,12,30,18,inbound,940GZZLUWCY,White City Underground Station,1636,2025-01-09T12:03:02.4544874Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T12:30:18Z
+51,2025,1,9,12,25,19,outbound,940GZZLUHLT,Hainault Underground Station,1337,2025-01-09T12:03:02.7613883Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T12:25:19Z
+64,2025,1,9,12,4,49,inbound,940GZZLUEBY,Ealing Broadway Underground Station,107,2025-01-09T12:03:02.7613883Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T12:04:49Z
+65,2025,1,9,12,12,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,557,2025-01-09T12:03:02.7613883Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T12:12:19Z
+67,2025,1,9,12,5,19,outbound,940GZZLUHLT,Hainault Underground Station,137,2025-01-09T12:03:02.7613883Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T12:05:19Z
+70,2025,1,9,12,14,19,outbound,940GZZLUHLT,Hainault Underground Station,677,2025-01-09T12:03:02.7613883Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T12:14:19Z
+107,2025,1,9,12,30,19,outbound,940GZZLUHLT,Hainault Underground Station,1637,2025-01-09T12:03:02.7613883Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T12:30:19Z
+2,2025,1,9,12,4,48,inbound,940GZZLUWRP,West Ruislip Underground Station,105,2025-01-09T12:03:03.2769675Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T12:04:48Z
+3,2025,1,9,12,9,18,inbound,940GZZLUWRP,West Ruislip Underground Station,375,2025-01-09T12:03:03.2769675Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T12:09:18Z
+4,2025,1,9,12,16,19,inbound,940GZZLUWRP,West Ruislip Underground Station,796,2025-01-09T12:03:03.2769675Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T12:16:19Z
+5,2025,1,9,12,22,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1155,2025-01-09T12:03:03.2769675Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T12:22:18Z
+6,2025,1,9,12,28,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1515,2025-01-09T12:03:03.2769675Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T12:28:18Z
+142,2025,1,9,12,17,19,unknown,940GZZLURSG,Ruislip Gardens Underground Station,856,2025-01-09T12:03:03.2769675Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T12:17:19Z
+171,2025,1,9,12,6,48,inbound,940GZZLUWOF,Woodford Underground Station,225,2025-01-09T12:03:03.5371746Z,940GZZLURVY,Roding Valley Underground Station,Central,central,2025-01-09T12:06:48Z
+6,2025,1,9,12,5,48,inbound,940GZZLUWRP,West Ruislip Underground Station,165,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:05:48Z
+7,2025,1,9,12,11,18,inbound,940GZZLUWRP,West Ruislip Underground Station,495,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:11:18Z
+10,2025,1,9,12,19,18,inbound,940GZZLUWRP,West Ruislip Underground Station,975,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:19:18Z
+11,2025,1,9,12,24,18,inbound,940GZZLUWRP,West Ruislip Underground Station,1275,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:24:18Z
+31,2025,1,9,12,3,48,outbound,940GZZLUEPG,Epping Underground Station,45,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:03:48Z
+32,2025,1,9,12,12,18,outbound,940GZZLUEPG,Epping Underground Station,555,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:12:18Z
+33,2025,1,9,12,17,18,outbound,940GZZLUEPG,Epping Underground Station,855,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:17:18Z
+34,2025,1,9,12,24,19,outbound,940GZZLUEPG,Epping Underground Station,1276,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:24:19Z
+54,2025,1,9,12,13,18,outbound,940GZZLUHLT,Hainault Underground Station,615,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:13:18Z
+60,2025,1,9,12,8,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,315,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:08:18Z
+61,2025,1,9,12,17,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,855,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:17:18Z
+62,2025,1,9,12,27,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1455,2025-01-09T12:03:03.769391Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T12:27:18Z
+14,2025,1,9,12,3,19,inbound,940GZZLUWRP,West Ruislip Underground Station,15,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:03:19Z
+15,2025,1,9,12,12,19,inbound,940GZZLUWRP,West Ruislip Underground Station,555,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:12:19Z
+16,2025,1,9,12,19,19,inbound,940GZZLUWRP,West Ruislip Underground Station,975,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:19:19Z
+23,2025,1,9,12,7,18,outbound,940GZZLUEPG,Epping Underground Station,254,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:07:18Z
+24,2025,1,9,12,18,18,outbound,940GZZLUEPG,Epping Underground Station,914,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:18:18Z
+25,2025,1,9,12,19,18,outbound,940GZZLUEPG,Epping Underground Station,974,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:19:18Z
+26,2025,1,9,12,26,18,outbound,940GZZLUEPG,Epping Underground Station,1394,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:26:18Z
+27,2025,1,9,12,31,18,outbound,940GZZLUEPG,Epping Underground Station,1694,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:31:18Z
+775,2025,1,9,12,24,18,unknown,940GZZLUGGH,Grange Hill Underground Station,1274,2025-01-09T12:03:04.065251Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T12:24:18Z
+11,2025,1,9,12,6,48,inbound,940GZZLUWRP,West Ruislip Underground Station,224,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:06:48Z
+12,2025,1,9,12,14,18,inbound,940GZZLUWRP,West Ruislip Underground Station,674,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:14:18Z
+13,2025,1,9,12,22,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1155,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:22:19Z
+14,2025,1,9,12,27,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1455,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:27:19Z
+27,2025,1,9,12,8,18,outbound,940GZZLUEPG,Epping Underground Station,314,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:08:18Z
+30,2025,1,9,12,14,18,outbound,940GZZLUEPG,Epping Underground Station,674,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:14:18Z
+31,2025,1,9,12,22,18,outbound,940GZZLUEPG,Epping Underground Station,1154,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:22:18Z
+32,2025,1,9,12,31,19,outbound,940GZZLUEPG,Epping Underground Station,1695,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:31:19Z
+52,2025,1,9,12,11,18,outbound,940GZZLUHLT,Hainault Underground Station,494,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:11:18Z
+53,2025,1,9,12,19,18,outbound,940GZZLUHLT,Hainault Underground Station,974,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:19:18Z
+54,2025,1,9,12,31,18,outbound,940GZZLUHLT,Hainault Underground Station,1694,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:31:18Z
+62,2025,1,9,12,9,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,374,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:09:18Z
+63,2025,1,9,12,21,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1095,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:21:19Z
+64,2025,1,9,12,30,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1635,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:30:19Z
+107,2025,1,9,12,4,49,outbound,940GZZLUHLT,Hainault Underground Station,105,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:04:49Z
+110,2025,1,9,12,16,18,outbound,940GZZLUHLT,Hainault Underground Station,794,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:16:18Z
+115,2025,1,9,12,16,18,inbound,940GZZLUWCY,White City Underground Station,794,2025-01-09T12:03:04.289659Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T12:16:18Z
+2,2025,1,9,12,3,19,inbound,940GZZLUWRP,West Ruislip Underground Station,15,2025-01-09T12:03:04.6034793Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T12:03:19Z
+3,2025,1,9,12,7,19,inbound,940GZZLUWRP,West Ruislip Underground Station,255,2025-01-09T12:03:04.6034793Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T12:07:19Z
+4,2025,1,9,12,14,19,inbound,940GZZLUWRP,West Ruislip Underground Station,675,2025-01-09T12:03:04.6034793Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T12:14:19Z
+5,2025,1,9,12,20,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1035,2025-01-09T12:03:04.6034793Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T12:20:19Z
+6,2025,1,9,12,26,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1395,2025-01-09T12:03:04.6034793Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T12:26:19Z
+7,2025,1,9,12,32,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1755,2025-01-09T12:03:04.6034793Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T12:32:19Z
+142,2025,1,9,12,15,19,inbound,940GZZLURSG,Ruislip Gardens Underground Station,735,2025-01-09T12:03:04.6034793Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T12:15:19Z
+13,2025,1,9,12,7,49,inbound,940GZZLUWRP,West Ruislip Underground Station,285,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:07:49Z
+14,2025,1,9,12,12,19,inbound,940GZZLUWRP,West Ruislip Underground Station,555,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:12:19Z
+15,2025,1,9,12,21,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1095,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:21:19Z
+16,2025,1,9,12,28,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1515,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:28:19Z
+24,2025,1,9,12,9,18,outbound,940GZZLUEPG,Epping Underground Station,374,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:09:18Z
+25,2025,1,9,12,11,18,outbound,940GZZLUEPG,Epping Underground Station,494,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:11:18Z
+26,2025,1,9,12,17,18,outbound,940GZZLUEPG,Epping Underground Station,854,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:17:18Z
+27,2025,1,9,12,23,18,outbound,940GZZLUEPG,Epping Underground Station,1214,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:23:18Z
+30,2025,1,9,12,29,19,outbound,940GZZLUEPG,Epping Underground Station,1575,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:29:19Z
+51,2025,1,9,12,14,18,outbound,940GZZLUHLT,Hainault Underground Station,674,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:14:18Z
+52,2025,1,9,12,26,18,outbound,940GZZLUHLT,Hainault Underground Station,1394,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:26:18Z
+63,2025,1,9,12,6,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,195,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:06:19Z
+64,2025,1,9,12,15,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,735,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:15:19Z
+65,2025,1,9,12,23,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1215,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:23:19Z
+70,2025,1,9,12,4,19,outbound,940GZZLUHLT,Hainault Underground Station,75,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:04:19Z
+107,2025,1,9,12,20,18,outbound,940GZZLUHLT,Hainault Underground Station,1034,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:20:18Z
+110,2025,1,9,12,31,19,outbound,940GZZLUHLT,Hainault Underground Station,1695,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:31:19Z
+775,2025,1,9,12,15,18,unknown,940GZZLUGGH,Grange Hill Underground Station,734,2025-01-09T12:03:04.9200463Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T12:15:18Z
+15,2025,1,9,12,10,19,inbound,940GZZLUWRP,West Ruislip Underground Station,434,2025-01-09T12:03:05.2155206Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T12:10:19Z
+16,2025,1,9,12,17,19,inbound,940GZZLUWRP,West Ruislip Underground Station,854,2025-01-09T12:03:05.2155206Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T12:17:19Z
+23,2025,1,9,12,8,19,outbound,940GZZLUEPG,Epping Underground Station,314,2025-01-09T12:03:05.2155206Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T12:08:19Z
+24,2025,1,9,12,19,18,outbound,940GZZLUEPG,Epping Underground Station,973,2025-01-09T12:03:05.2155206Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T12:19:18Z
+25,2025,1,9,12,21,18,outbound,940GZZLUEPG,Epping Underground Station,1093,2025-01-09T12:03:05.2155206Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T12:21:18Z
+26,2025,1,9,12,27,18,outbound,940GZZLUEPG,Epping Underground Station,1453,2025-01-09T12:03:05.2155206Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T12:27:18Z
+775,2025,1,9,12,26,18,unknown,940GZZLUGGH,Grange Hill Underground Station,1393,2025-01-09T12:03:05.2155206Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T12:26:18Z
+10,2025,1,9,12,6,49,inbound,940GZZLUWRP,West Ruislip Underground Station,224,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:06:49Z
+11,2025,1,9,12,12,18,inbound,940GZZLUWRP,West Ruislip Underground Station,553,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:12:18Z
+12,2025,1,9,12,19,18,inbound,940GZZLUWRP,West Ruislip Underground Station,973,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:19:18Z
+13,2025,1,9,12,27,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1454,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:27:19Z
+30,2025,1,9,12,9,19,outbound,940GZZLUEPG,Epping Underground Station,374,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:09:19Z
+31,2025,1,9,12,16,19,outbound,940GZZLUEPG,Epping Underground Station,794,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:16:19Z
+32,2025,1,9,12,25,19,outbound,940GZZLUEPG,Epping Underground Station,1334,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:25:19Z
+33,2025,1,9,12,30,18,outbound,940GZZLUEPG,Epping Underground Station,1633,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:30:18Z
+52,2025,1,9,12,5,49,outbound,940GZZLUHLT,Hainault Underground Station,164,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:05:49Z
+53,2025,1,9,12,13,19,outbound,940GZZLUHLT,Hainault Underground Station,614,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:13:19Z
+54,2025,1,9,12,25,18,outbound,940GZZLUHLT,Hainault Underground Station,1333,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:25:18Z
+61,2025,1,9,12,4,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,74,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:04:19Z
+62,2025,1,9,12,14,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,673,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:14:18Z
+63,2025,1,9,12,26,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1394,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:26:19Z
+110,2025,1,9,12,10,19,outbound,940GZZLUHLT,Hainault Underground Station,434,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:10:19Z
+115,2025,1,9,12,21,19,inbound,940GZZLUWCY,White City Underground Station,1094,2025-01-09T12:03:05.4790355Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T12:21:19Z
+21,2025,1,9,12,6,49,outbound,940GZZLUEPG,Epping Underground Station,224,2025-01-09T12:03:05.779442Z,940GZZLUTHB,Theydon Bois Underground Station,Central,central,2025-01-09T12:06:49Z
+22,2025,1,9,12,13,19,outbound,940GZZLUEPG,Epping Underground Station,614,2025-01-09T12:03:05.779442Z,940GZZLUTHB,Theydon Bois Underground Station,Central,central,2025-01-09T12:13:19Z
+23,2025,1,9,12,23,19,outbound,940GZZLUEPG,Epping Underground Station,1214,2025-01-09T12:03:05.779442Z,940GZZLUTHB,Theydon Bois Underground Station,Central,central,2025-01-09T12:23:19Z
+6,2025,1,9,12,8,19,inbound,940GZZLUWRP,West Ruislip Underground Station,313,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:08:19Z
+7,2025,1,9,12,14,19,inbound,940GZZLUWRP,West Ruislip Underground Station,673,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:14:19Z
+10,2025,1,9,12,22,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1153,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:22:19Z
+11,2025,1,9,12,27,19,inbound,940GZZLUWRP,West Ruislip Underground Station,1453,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:27:19Z
+32,2025,1,9,12,9,19,outbound,940GZZLUEPG,Epping Underground Station,373,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:09:19Z
+33,2025,1,9,12,14,19,outbound,940GZZLUEPG,Epping Underground Station,673,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:14:19Z
+34,2025,1,9,12,20,19,outbound,940GZZLUEPG,Epping Underground Station,1033,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:20:19Z
+54,2025,1,9,12,9,19,outbound,940GZZLUHLT,Hainault Underground Station,373,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:09:19Z
+60,2025,1,9,12,10,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,433,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:10:19Z
+61,2025,1,9,12,20,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1033,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:20:19Z
+62,2025,1,9,12,30,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1633,2025-01-09T12:03:06.0340717Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T12:30:19Z
+15,2025,1,9,12,6,49,inbound,940GZZLUWRP,West Ruislip Underground Station,223,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:06:49Z
+16,2025,1,9,12,13,18,inbound,940GZZLUWRP,West Ruislip Underground Station,612,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:13:18Z
+23,2025,1,9,12,11,18,outbound,940GZZLUEPG,Epping Underground Station,492,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:11:18Z
+24,2025,1,9,12,22,18,outbound,940GZZLUEPG,Epping Underground Station,1152,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:22:18Z
+25,2025,1,9,12,24,18,outbound,940GZZLUEPG,Epping Underground Station,1272,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:24:18Z
+26,2025,1,9,12,30,18,outbound,940GZZLUEPG,Epping Underground Station,1632,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:30:18Z
+171,2025,1,9,12,9,19,unknown,940GZZLUWOF,Woodford Underground Station,373,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:09:19Z
+775,2025,1,9,12,29,18,outbound,940GZZLUGGH,Grange Hill Underground Station,1572,2025-01-09T12:03:06.3244933Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T12:29:18Z
+2,2025,1,9,12,8,18,unknown,940GZZLUWRP,West Ruislip Underground Station,312,2025-01-09T12:03:06.6231717Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T12:08:18Z
+3,2025,1,9,12,13,18,unknown,940GZZLUWRP,West Ruislip Underground Station,612,2025-01-09T12:03:06.6231717Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T12:13:18Z
+4,2025,1,9,12,20,18,unknown,940GZZLUWRP,West Ruislip Underground Station,1032,2025-01-09T12:03:06.6231717Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T12:20:18Z
+5,2025,1,9,12,26,18,unknown,940GZZLUWRP,West Ruislip Underground Station,1392,2025-01-09T12:03:06.6231717Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T12:26:18Z
+6,2025,1,9,12,31,18,unknown,940GZZLUWRP,West Ruislip Underground Station,1692,2025-01-09T12:03:06.6231717Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T12:31:18Z
+51,2025,1,9,12,23,19,outbound,940GZZLUHLT,Hainault Underground Station,1213,2025-01-09T12:03:06.9192675Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T12:23:19Z
+64,2025,1,9,12,6,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,192,2025-01-09T12:03:06.9192675Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T12:06:18Z
+65,2025,1,9,12,14,18,inbound,940GZZLUEBY,Ealing Broadway Underground Station,672,2025-01-09T12:03:06.9192675Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T12:14:18Z
+67,2025,1,9,12,3,48,outbound,940GZZLUHLT,Hainault Underground Station,42,2025-01-09T12:03:06.9192675Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T12:03:48Z
+70,2025,1,9,12,12,19,outbound,940GZZLUHLT,Hainault Underground Station,553,2025-01-09T12:03:06.9192675Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T12:12:19Z
+107,2025,1,9,12,28,19,outbound,940GZZLUHLT,Hainault Underground Station,1513,2025-01-09T12:03:06.9192675Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T12:28:19Z
+57,2025,1,9,12,8,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,312,2025-01-09T12:03:07.1403827Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-09T12:08:19Z
+60,2025,1,9,12,19,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,972,2025-01-09T12:03:07.1403827Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-09T12:19:19Z
+61,2025,1,9,12,28,19,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1512,2025-01-09T12:03:07.1403827Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-09T12:28:19Z
+55,2025,1,9,13,11,13,outbound,940GZZLUHLT,Hainault Underground Station,177,2025-01-09T13:08:16.8563551Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T13:11:13Z
+56,2025,1,9,13,22,13,outbound,940GZZLUHLT,Hainault Underground Station,837,2025-01-09T13:08:16.8563551Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T13:22:13Z
+57,2025,1,9,13,31,13,outbound,940GZZLUHLT,Hainault Underground Station,1377,2025-01-09T13:08:16.8563551Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T13:31:13Z
+115,2025,1,9,13,36,13,outbound,940GZZLUHLT,Hainault Underground Station,1677,2025-01-09T13:08:16.8563551Z,940GZZLUBKE,Barkingside Underground Station,Central,central,2025-01-09T13:36:13Z
+1,2025,1,9,13,23,12,outbound,940GZZLUEPG,Epping Underground Station,895,2025-01-09T13:08:17.1109735Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T13:23:12Z
+2,2025,1,9,13,32,12,outbound,940GZZLUEPG,Epping Underground Station,1435,2025-01-09T13:08:17.1109735Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T13:32:12Z
+27,2025,1,9,13,15,12,inbound,940GZZLUWRP,West Ruislip Underground Station,415,2025-01-09T13:08:17.1109735Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T13:15:12Z
+30,2025,1,9,13,17,12,inbound,940GZZLUWRP,West Ruislip Underground Station,535,2025-01-09T13:08:17.1109735Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T13:17:12Z
+34,2025,1,9,13,14,12,outbound,940GZZLUEPG,Epping Underground Station,355,2025-01-09T13:08:17.1109735Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T13:14:12Z
+35,2025,1,9,13,19,12,outbound,940GZZLUEPG,Epping Underground Station,655,2025-01-09T13:08:17.1109735Z,940GZZLUBKH,Buckhurst Hill Underground Station,Central,central,2025-01-09T13:19:12Z
+2,2025,1,9,13,9,42,outbound,940GZZLUEPG,Epping Underground Station,84,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:09:42Z
+3,2025,1,9,13,15,12,outbound,940GZZLUEPG,Epping Underground Station,414,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:15:12Z
+4,2025,1,9,13,22,12,outbound,940GZZLUEPG,Epping Underground Station,834,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:22:12Z
+5,2025,1,9,13,30,13,outbound,940GZZLUEPG,Epping Underground Station,1315,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:30:13Z
+24,2025,1,9,13,19,13,inbound,940GZZLUWRP,West Ruislip Underground Station,655,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:19:13Z
+25,2025,1,9,13,23,12,inbound,940GZZLUWRP,West Ruislip Underground Station,894,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:23:12Z
+26,2025,1,9,13,27,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1134,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:27:12Z
+51,2025,1,9,13,13,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,295,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:13:13Z
+52,2025,1,9,13,26,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1074,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:26:12Z
+53,2025,1,9,13,34,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1554,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:34:12Z
+60,2025,1,9,13,20,12,outbound,940GZZLUHLT,Hainault Underground Station,714,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:20:12Z
+61,2025,1,9,13,27,13,outbound,940GZZLUHLT,Hainault Underground Station,1135,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:27:13Z
+62,2025,1,9,13,38,13,outbound,940GZZLUHLT,Hainault Underground Station,1795,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:38:13Z
+101,2025,1,9,13,25,13,outbound,940GZZLUHLT,Hainault Underground Station,1015,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:25:13Z
+107,2025,1,9,13,21,12,inbound,940GZZLUWCY,White City Underground Station,774,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:21:12Z
+115,2025,1,9,13,12,12,outbound,940GZZLUHLT,Hainault Underground Station,234,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:12:12Z
+142,2025,1,9,13,35,13,outbound,940GZZLUHLT,Hainault Underground Station,1615,2025-01-09T13:08:18.3608116Z,940GZZLUBLG,Bethnal Green Underground Station,Central,central,2025-01-09T13:35:13Z
+5,2025,1,9,13,13,13,outbound,940GZZLUEPG,Epping Underground Station,295,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:13:13Z
+6,2025,1,9,13,23,12,outbound,940GZZLUEPG,Epping Underground Station,894,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:23:12Z
+7,2025,1,9,13,27,12,outbound,940GZZLUEPG,Epping Underground Station,1134,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:27:12Z
+10,2025,1,9,13,33,12,outbound,940GZZLUEPG,Epping Underground Station,1494,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:33:12Z
+21,2025,1,9,13,9,43,inbound,940GZZLUWRP,West Ruislip Underground Station,85,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:09:43Z
+22,2025,1,9,13,15,13,inbound,940GZZLUWRP,West Ruislip Underground Station,415,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:15:13Z
+23,2025,1,9,13,20,13,inbound,940GZZLUWRP,West Ruislip Underground Station,715,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:20:13Z
+24,2025,1,9,13,34,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1555,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:34:13Z
+25,2025,1,9,13,38,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1795,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:38:13Z
+51,2025,1,9,13,29,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1255,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:29:13Z
+61,2025,1,9,13,11,13,outbound,940GZZLUHLT,Hainault Underground Station,175,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:11:13Z
+62,2025,1,9,13,21,13,outbound,940GZZLUHLT,Hainault Underground Station,775,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:21:13Z
+63,2025,1,9,13,30,12,outbound,940GZZLUHLT,Hainault Underground Station,1314,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:30:12Z
+70,2025,1,9,13,18,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,595,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:18:13Z
+105,2025,1,9,13,12,43,inbound,940GZZLUWCY,White City Underground Station,265,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:12:43Z
+107,2025,1,9,13,36,13,inbound,940GZZLUWCY,White City Underground Station,1675,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:36:13Z
+142,2025,1,9,13,18,13,outbound,940GZZLUHLT,Hainault Underground Station,595,2025-01-09T13:08:18.923869Z,940GZZLUBND,Bond Street Underground Station,Central,central,2025-01-09T13:18:13Z
+3,2025,1,9,13,9,42,outbound,940GZZLUEPG,Epping Underground Station,83,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:09:42Z
+4,2025,1,9,13,16,12,outbound,940GZZLUEPG,Epping Underground Station,473,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:16:12Z
+5,2025,1,9,13,24,13,outbound,940GZZLUEPG,Epping Underground Station,954,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:24:13Z
+6,2025,1,9,13,34,13,outbound,940GZZLUEPG,Epping Underground Station,1554,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:34:13Z
+7,2025,1,9,13,37,13,outbound,940GZZLUEPG,Epping Underground Station,1734,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:37:13Z
+23,2025,1,9,13,10,43,inbound,940GZZLUWRP,West Ruislip Underground Station,144,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:10:43Z
+24,2025,1,9,13,24,13,inbound,940GZZLUWRP,West Ruislip Underground Station,954,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:24:13Z
+25,2025,1,9,13,28,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1194,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:28:13Z
+26,2025,1,9,13,32,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1433,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:32:12Z
+51,2025,1,9,13,19,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,654,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:19:13Z
+52,2025,1,9,13,31,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1374,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:31:13Z
+60,2025,1,9,13,14,12,outbound,940GZZLUHLT,Hainault Underground Station,353,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:14:12Z
+61,2025,1,9,13,21,12,outbound,940GZZLUHLT,Hainault Underground Station,773,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:21:12Z
+62,2025,1,9,13,32,13,outbound,940GZZLUHLT,Hainault Underground Station,1434,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:32:13Z
+70,2025,1,9,13,8,43,inbound,940GZZLUEBY,Ealing Broadway Underground Station,24,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:08:43Z
+101,2025,1,9,13,19,12,outbound,940GZZLUHLT,Hainault Underground Station,653,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:19:12Z
+107,2025,1,9,13,26,13,inbound,940GZZLUWCY,White City Underground Station,1074,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:26:13Z
+142,2025,1,9,13,29,13,outbound,940GZZLUHLT,Hainault Underground Station,1254,2025-01-09T13:08:19.1907072Z,940GZZLUBNK,Bank Underground Station,Central,central,2025-01-09T13:29:13Z
+4,2025,1,9,13,12,12,outbound,940GZZLUEPG,Epping Underground Station,233,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:12:12Z
+5,2025,1,9,13,20,13,outbound,940GZZLUEPG,Epping Underground Station,714,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:20:13Z
+6,2025,1,9,13,30,13,outbound,940GZZLUEPG,Epping Underground Station,1314,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:30:13Z
+7,2025,1,9,13,33,13,outbound,940GZZLUEPG,Epping Underground Station,1494,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:33:13Z
+22,2025,1,9,13,8,42,inbound,940GZZLUWRP,West Ruislip Underground Station,23,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:08:42Z
+23,2025,1,9,13,14,12,inbound,940GZZLUWRP,West Ruislip Underground Station,353,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:14:12Z
+24,2025,1,9,13,28,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1193,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:28:12Z
+25,2025,1,9,13,32,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1433,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:32:12Z
+26,2025,1,9,13,36,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1673,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:36:12Z
+51,2025,1,9,13,22,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,833,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:22:12Z
+52,2025,1,9,13,35,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1613,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:35:12Z
+60,2025,1,9,13,10,42,outbound,940GZZLUHLT,Hainault Underground Station,143,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:10:42Z
+61,2025,1,9,13,17,13,outbound,940GZZLUHLT,Hainault Underground Station,534,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:17:13Z
+62,2025,1,9,13,28,13,outbound,940GZZLUHLT,Hainault Underground Station,1194,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:28:13Z
+63,2025,1,9,13,36,13,outbound,940GZZLUHLT,Hainault Underground Station,1674,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:36:13Z
+70,2025,1,9,13,12,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,233,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:12:12Z
+101,2025,1,9,13,15,13,outbound,940GZZLUHLT,Hainault Underground Station,414,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:15:13Z
+107,2025,1,9,13,29,12,inbound,940GZZLUWCY,White City Underground Station,1253,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:29:12Z
+142,2025,1,9,13,25,13,outbound,940GZZLUHLT,Hainault Underground Station,1014,2025-01-09T13:08:19.4644577Z,940GZZLUCHL,Chancery Lane Underground Station,Central,central,2025-01-09T13:25:13Z
+488,2025,1,9,13,16,13,outbound,940GZZLUGGH,Grange Hill Underground Station,474,2025-01-09T13:08:19.8678842Z,940GZZLUCWL,Chigwell Underground Station,Central,central,2025-01-09T13:16:13Z
+1,2025,1,9,13,28,13,outbound,940GZZLUEPG,Epping Underground Station,1193,2025-01-09T13:08:20.0572834Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T13:28:13Z
+2,2025,1,9,13,38,13,outbound,940GZZLUEPG,Epping Underground Station,1793,2025-01-09T13:08:20.0572834Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T13:38:13Z
+27,2025,1,9,13,10,13,inbound,940GZZLUWRP,West Ruislip Underground Station,113,2025-01-09T13:08:20.0572834Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T13:10:13Z
+30,2025,1,9,13,12,13,inbound,940GZZLUWRP,West Ruislip Underground Station,233,2025-01-09T13:08:20.0572834Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T13:12:13Z
+33,2025,1,9,13,11,13,outbound,940GZZLUEPG,Epping Underground Station,173,2025-01-09T13:08:20.0572834Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T13:11:13Z
+34,2025,1,9,13,19,13,outbound,940GZZLUEPG,Epping Underground Station,653,2025-01-09T13:08:20.0572834Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T13:19:13Z
+35,2025,1,9,13,24,13,outbound,940GZZLUEPG,Epping Underground Station,953,2025-01-09T13:08:20.0572834Z,940GZZLUDBN,Debden Underground Station,Central,central,2025-01-09T13:24:13Z
+7,2025,1,9,13,10,42,outbound,940GZZLUEPG,Epping Underground Station,142,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:10:42Z
+10,2025,1,9,13,17,12,outbound,940GZZLUEPG,Epping Underground Station,532,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:17:12Z
+11,2025,1,9,13,23,12,outbound,940GZZLUEPG,Epping Underground Station,892,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:23:12Z
+17,2025,1,9,13,12,42,inbound,940GZZLUWRP,West Ruislip Underground Station,262,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:12:42Z
+20,2025,1,9,13,18,12,inbound,940GZZLUWRP,West Ruislip Underground Station,592,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:18:12Z
+21,2025,1,9,13,25,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1012,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:25:12Z
+22,2025,1,9,13,31,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1372,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:31:12Z
+23,2025,1,9,13,37,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1732,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:37:12Z
+63,2025,1,9,13,14,12,outbound,940GZZLUHLT,Hainault Underground Station,352,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:14:12Z
+66,2025,1,9,13,14,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,352,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:14:12Z
+67,2025,1,9,13,23,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,892,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:23:12Z
+70,2025,1,9,13,34,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1552,2025-01-09T13:08:20.2983798Z,940GZZLUEAN,East Acton Underground Station,Central,central,2025-01-09T13:34:12Z
+65,2025,1,9,13,12,13,unknown,940GZZLUEBY,Ealing Broadway Underground Station,233,2025-01-09T13:08:20.6203941Z,940GZZLUEBY,Ealing Broadway Underground Station,Central,central,2025-01-09T13:12:13Z
+66,2025,1,9,13,22,12,unknown,940GZZLUEBY,Ealing Broadway Underground Station,832,2025-01-09T13:08:20.6203941Z,940GZZLUEBY,Ealing Broadway Underground Station,Central,central,2025-01-09T13:22:12Z
+67,2025,1,9,13,30,13,unknown,940GZZLUEBY,Ealing Broadway Underground Station,1313,2025-01-09T13:08:20.6203941Z,940GZZLUEBY,Ealing Broadway Underground Station,Central,central,2025-01-09T13:30:13Z
+1,2025,1,9,13,35,12,unknown,940GZZLUEPG,Epping Underground Station,1612,2025-01-09T13:08:20.8323086Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T13:35:12Z
+32,2025,1,9,13,10,42,unknown,940GZZLUEPG,Epping Underground Station,142,2025-01-09T13:08:20.8323086Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T13:10:42Z
+33,2025,1,9,13,18,12,unknown,940GZZLUEPG,Epping Underground Station,592,2025-01-09T13:08:20.8323086Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T13:18:12Z
+34,2025,1,9,13,26,12,unknown,940GZZLUEPG,Epping Underground Station,1072,2025-01-09T13:08:20.8323086Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T13:26:12Z
+35,2025,1,9,13,31,12,unknown,940GZZLUEPG,Epping Underground Station,1372,2025-01-09T13:08:20.8323086Z,940GZZLUEPG,Epping Underground Station,Central,central,2025-01-09T13:31:12Z
+55,2025,1,9,13,13,13,outbound,940GZZLUHLT,Hainault Underground Station,292,2025-01-09T13:08:21.1618143Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T13:13:13Z
+56,2025,1,9,13,24,13,outbound,940GZZLUHLT,Hainault Underground Station,952,2025-01-09T13:08:21.1618143Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T13:24:13Z
+57,2025,1,9,13,33,13,outbound,940GZZLUHLT,Hainault Underground Station,1492,2025-01-09T13:08:21.1618143Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T13:33:13Z
+115,2025,1,9,13,38,13,outbound,940GZZLUHLT,Hainault Underground Station,1792,2025-01-09T13:08:21.1618143Z,940GZZLUFLP,Fairlop Underground Station,Central,central,2025-01-09T13:38:13Z
+11,2025,1,9,13,13,13,outbound,940GZZLUEPG,Epping Underground Station,292,2025-01-09T13:08:21.4395995Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T13:13:13Z
+15,2025,1,9,13,9,43,inbound,940GZZLUWRP,West Ruislip Underground Station,82,2025-01-09T13:08:21.4395995Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T13:09:43Z
+16,2025,1,9,13,17,13,inbound,940GZZLUWRP,West Ruislip Underground Station,532,2025-01-09T13:08:21.4395995Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T13:17:13Z
+17,2025,1,9,13,22,13,inbound,940GZZLUWRP,West Ruislip Underground Station,832,2025-01-09T13:08:21.4395995Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T13:22:13Z
+20,2025,1,9,13,28,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1192,2025-01-09T13:08:21.4395995Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T13:28:13Z
+21,2025,1,9,13,35,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1612,2025-01-09T13:08:21.4395995Z,940GZZLUGFD,Greenford Underground Station,Central,central,2025-01-09T13:35:13Z
+171,2025,1,9,13,9,43,outbound,940GZZLUHLT,Hainault Underground Station,82,2025-01-09T13:08:21.6323223Z,940GZZLUGGH,Grange Hill Underground Station,Central,central,2025-01-09T13:09:43Z
+488,2025,1,9,13,21,13,unknown,940GZZLUGGH,Grange Hill Underground Station,772,2025-01-09T13:08:21.6323223Z,940GZZLUGGH,Grange Hill Underground Station,Central,central,2025-01-09T13:21:13Z
+53,2025,1,9,13,13,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,291,2025-01-09T13:08:22.0970999Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T13:13:13Z
+56,2025,1,9,13,17,13,outbound,940GZZLUHLT,Hainault Underground Station,531,2025-01-09T13:08:22.0970999Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T13:17:13Z
+57,2025,1,9,13,26,13,outbound,940GZZLUHLT,Hainault Underground Station,1071,2025-01-09T13:08:22.0970999Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T13:26:13Z
+110,2025,1,9,13,11,43,inbound,940GZZLUWCY,White City Underground Station,201,2025-01-09T13:08:22.0970999Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T13:11:43Z
+115,2025,1,9,13,31,13,outbound,940GZZLUHLT,Hainault Underground Station,1371,2025-01-09T13:08:22.0970999Z,940GZZLUGTH,Gants Hill Underground Station,Central,central,2025-01-09T13:31:13Z
+4,2025,1,9,13,11,12,outbound,940GZZLUEPG,Epping Underground Station,170,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:11:12Z
+5,2025,1,9,13,19,12,outbound,940GZZLUEPG,Epping Underground Station,650,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:19:12Z
+6,2025,1,9,13,29,12,outbound,940GZZLUEPG,Epping Underground Station,1250,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:29:12Z
+7,2025,1,9,13,32,12,outbound,940GZZLUEPG,Epping Underground Station,1430,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:32:12Z
+22,2025,1,9,13,10,12,inbound,940GZZLUWRP,West Ruislip Underground Station,110,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:10:12Z
+23,2025,1,9,13,16,12,inbound,940GZZLUWRP,West Ruislip Underground Station,470,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:16:12Z
+24,2025,1,9,13,29,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1250,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:29:12Z
+25,2025,1,9,13,33,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1490,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:33:12Z
+26,2025,1,9,13,38,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1790,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:38:12Z
+51,2025,1,9,13,24,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,950,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:24:12Z
+52,2025,1,9,13,36,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1670,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:36:12Z
+60,2025,1,9,13,9,12,outbound,940GZZLUHLT,Hainault Underground Station,50,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:09:12Z
+61,2025,1,9,13,16,12,outbound,940GZZLUHLT,Hainault Underground Station,470,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:16:12Z
+62,2025,1,9,13,26,12,outbound,940GZZLUHLT,Hainault Underground Station,1070,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:26:12Z
+63,2025,1,9,13,35,12,outbound,940GZZLUHLT,Hainault Underground Station,1610,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:35:12Z
+70,2025,1,9,13,13,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,290,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:13:12Z
+101,2025,1,9,13,13,12,outbound,940GZZLUHLT,Hainault Underground Station,290,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:13:12Z
+107,2025,1,9,13,31,12,inbound,940GZZLUWCY,White City Underground Station,1370,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:31:12Z
+142,2025,1,9,13,24,12,outbound,940GZZLUHLT,Hainault Underground Station,950,2025-01-09T13:08:22.293881Z,940GZZLUHBN,Holborn Underground Station,Central,central,2025-01-09T13:24:12Z
+10,2025,1,9,13,11,42,outbound,940GZZLUEPG,Epping Underground Station,199,2025-01-09T13:08:23.3564123Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T13:11:42Z
+11,2025,1,9,13,17,12,outbound,940GZZLUEPG,Epping Underground Station,529,2025-01-09T13:08:23.3564123Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T13:17:12Z
+16,2025,1,9,13,12,42,inbound,940GZZLUWRP,West Ruislip Underground Station,259,2025-01-09T13:08:23.3564123Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T13:12:42Z
+17,2025,1,9,13,17,12,inbound,940GZZLUWRP,West Ruislip Underground Station,529,2025-01-09T13:08:23.3564123Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T13:17:12Z
+20,2025,1,9,13,23,12,inbound,940GZZLUWRP,West Ruislip Underground Station,889,2025-01-09T13:08:23.3564123Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T13:23:12Z
+21,2025,1,9,13,31,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1369,2025-01-09T13:08:23.3564123Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T13:31:12Z
+22,2025,1,9,13,36,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1669,2025-01-09T13:08:23.3564123Z,940GZZLUHGR,Hanger Lane Underground Station,Central,central,2025-01-09T13:36:12Z
+55,2025,1,9,13,15,12,unknown,940GZZLUHLT,Hainault Underground Station,409,2025-01-09T13:08:23.9396763Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T13:15:12Z
+56,2025,1,9,13,26,12,unknown,940GZZLUHLT,Hainault Underground Station,1069,2025-01-09T13:08:23.9396763Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T13:26:12Z
+57,2025,1,9,13,35,13,unknown,940GZZLUHLT,Hainault Underground Station,1610,2025-01-09T13:08:23.9396763Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T13:35:13Z
+171,2025,1,9,13,14,13,unknown,940GZZLUHLT,Hainault Underground Station,350,2025-01-09T13:08:23.9396763Z,940GZZLUHLT,Hainault Underground Station,Central,central,2025-01-09T13:14:13Z
+6,2025,1,9,13,15,13,outbound,940GZZLUEPG,Epping Underground Station,409,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:15:13Z
+7,2025,1,9,13,19,13,outbound,940GZZLUEPG,Epping Underground Station,649,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:19:13Z
+10,2025,1,9,13,26,13,outbound,940GZZLUEPG,Epping Underground Station,1069,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:26:13Z
+11,2025,1,9,13,31,13,outbound,940GZZLUEPG,Epping Underground Station,1369,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:31:13Z
+20,2025,1,9,13,10,43,inbound,940GZZLUWRP,West Ruislip Underground Station,139,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:10:43Z
+21,2025,1,9,13,18,13,inbound,940GZZLUWRP,West Ruislip Underground Station,589,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:18:13Z
+22,2025,1,9,13,23,13,inbound,940GZZLUWRP,West Ruislip Underground Station,889,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:23:13Z
+23,2025,1,9,13,29,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1249,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:29:13Z
+51,2025,1,9,13,37,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1729,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:37:13Z
+62,2025,1,9,13,13,13,outbound,940GZZLUHLT,Hainault Underground Station,289,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:13:13Z
+63,2025,1,9,13,22,13,outbound,940GZZLUHLT,Hainault Underground Station,829,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:22:13Z
+67,2025,1,9,13,15,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,409,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:15:13Z
+70,2025,1,9,13,26,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1069,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:26:13Z
+105,2025,1,9,13,20,13,inbound,940GZZLUWCY,White City Underground Station,709,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:20:13Z
+142,2025,1,9,13,10,43,outbound,940GZZLUHLT,Hainault Underground Station,139,2025-01-09T13:08:24.3905657Z,940GZZLUHPK,Holland Park Underground Station,Central,central,2025-01-09T13:10:43Z
+1,2025,1,9,13,25,13,outbound,940GZZLUEPG,Epping Underground Station,1008,2025-01-09T13:08:25.4021224Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T13:25:13Z
+2,2025,1,9,13,35,13,outbound,940GZZLUEPG,Epping Underground Station,1608,2025-01-09T13:08:25.4021224Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T13:35:13Z
+27,2025,1,9,13,13,13,inbound,940GZZLUWRP,West Ruislip Underground Station,288,2025-01-09T13:08:25.4021224Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T13:13:13Z
+30,2025,1,9,13,15,13,inbound,940GZZLUWRP,West Ruislip Underground Station,408,2025-01-09T13:08:25.4021224Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T13:15:13Z
+33,2025,1,9,13,8,43,outbound,940GZZLUEPG,Epping Underground Station,18,2025-01-09T13:08:25.4021224Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T13:08:43Z
+34,2025,1,9,13,16,13,outbound,940GZZLUEPG,Epping Underground Station,468,2025-01-09T13:08:25.4021224Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T13:16:13Z
+35,2025,1,9,13,21,13,outbound,940GZZLUEPG,Epping Underground Station,768,2025-01-09T13:08:25.4021224Z,940GZZLULGN,Loughton Underground Station,Central,central,2025-01-09T13:21:13Z
+5,2025,1,9,13,10,13,outbound,940GZZLUEPG,Epping Underground Station,108,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:10:13Z
+6,2025,1,9,13,20,12,outbound,940GZZLUEPG,Epping Underground Station,707,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:20:12Z
+7,2025,1,9,13,23,12,outbound,940GZZLUEPG,Epping Underground Station,887,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:23:12Z
+10,2025,1,9,13,30,12,outbound,940GZZLUEPG,Epping Underground Station,1307,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:30:12Z
+11,2025,1,9,13,36,12,outbound,940GZZLUEPG,Epping Underground Station,1667,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:36:12Z
+21,2025,1,9,13,13,13,inbound,940GZZLUWRP,West Ruislip Underground Station,288,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:13:13Z
+22,2025,1,9,13,18,13,inbound,940GZZLUWRP,West Ruislip Underground Station,588,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:18:13Z
+23,2025,1,9,13,24,13,inbound,940GZZLUWRP,West Ruislip Underground Station,948,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:24:13Z
+24,2025,1,9,13,37,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1728,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:37:13Z
+51,2025,1,9,13,32,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1428,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:32:13Z
+62,2025,1,9,13,18,13,outbound,940GZZLUHLT,Hainault Underground Station,588,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:18:13Z
+63,2025,1,9,13,26,12,outbound,940GZZLUHLT,Hainault Underground Station,1067,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:26:12Z
+67,2025,1,9,13,10,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,108,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:10:13Z
+70,2025,1,9,13,21,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,768,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:21:13Z
+105,2025,1,9,13,15,13,inbound,940GZZLUWCY,White City Underground Station,408,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:15:13Z
+142,2025,1,9,13,15,13,outbound,940GZZLUHLT,Hainault Underground Station,408,2025-01-09T13:08:25.9204314Z,940GZZLULGT,Lancaster Gate Underground Station,Central,central,2025-01-09T13:15:13Z
+3,2025,1,9,13,11,43,outbound,940GZZLUEPG,Epping Underground Station,197,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:11:43Z
+4,2025,1,9,13,18,13,outbound,940GZZLUEPG,Epping Underground Station,587,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:18:13Z
+5,2025,1,9,13,26,13,outbound,940GZZLUEPG,Epping Underground Station,1067,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:26:13Z
+6,2025,1,9,13,36,13,outbound,940GZZLUEPG,Epping Underground Station,1667,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:36:13Z
+23,2025,1,9,13,8,43,inbound,940GZZLUWRP,West Ruislip Underground Station,17,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:08:43Z
+24,2025,1,9,13,22,13,inbound,940GZZLUWRP,West Ruislip Underground Station,827,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:22:13Z
+25,2025,1,9,13,26,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1067,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:26:13Z
+26,2025,1,9,13,30,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1307,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:30:13Z
+51,2025,1,9,13,16,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,467,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:16:13Z
+52,2025,1,9,13,29,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1247,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:29:13Z
+53,2025,1,9,13,37,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1727,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:37:13Z
+60,2025,1,9,13,16,13,outbound,940GZZLUHLT,Hainault Underground Station,467,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:16:13Z
+61,2025,1,9,13,23,13,outbound,940GZZLUHLT,Hainault Underground Station,887,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:23:13Z
+62,2025,1,9,13,34,13,outbound,940GZZLUHLT,Hainault Underground Station,1547,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:34:13Z
+101,2025,1,9,13,21,13,outbound,940GZZLUHLT,Hainault Underground Station,767,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:21:13Z
+107,2025,1,9,13,24,13,inbound,940GZZLUWCY,White City Underground Station,947,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:24:13Z
+142,2025,1,9,13,31,13,outbound,940GZZLUHLT,Hainault Underground Station,1367,2025-01-09T13:08:26.8248375Z,940GZZLULVT,Liverpool Street Underground Station,Central,central,2025-01-09T13:31:13Z
+1,2025,1,9,13,10,12,outbound,940GZZLUEPG,Epping Underground Station,105,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:10:12Z
+2,2025,1,9,13,19,12,outbound,940GZZLUEPG,Epping Underground Station,645,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:19:12Z
+3,2025,1,9,13,25,12,outbound,940GZZLUEPG,Epping Underground Station,1005,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:25:12Z
+4,2025,1,9,13,32,12,outbound,940GZZLUEPG,Epping Underground Station,1425,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:32:12Z
+25,2025,1,9,13,11,42,inbound,940GZZLUWRP,West Ruislip Underground Station,195,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:11:42Z
+26,2025,1,9,13,16,12,inbound,940GZZLUWRP,West Ruislip Underground Station,465,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:16:12Z
+27,2025,1,9,13,31,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1365,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:31:12Z
+30,2025,1,9,13,33,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1485,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:33:12Z
+52,2025,1,9,13,14,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,345,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:14:12Z
+53,2025,1,9,13,22,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,825,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:22:12Z
+57,2025,1,9,13,17,12,outbound,940GZZLUHLT,Hainault Underground Station,525,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:17:12Z
+60,2025,1,9,13,30,12,outbound,940GZZLUHLT,Hainault Underground Station,1305,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:30:12Z
+61,2025,1,9,13,38,12,outbound,940GZZLUHLT,Hainault Underground Station,1785,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:38:12Z
+101,2025,1,9,13,35,12,outbound,940GZZLUHLT,Hainault Underground Station,1605,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:35:12Z
+107,2025,1,9,13,10,12,inbound,940GZZLUWCY,White City Underground Station,105,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:10:12Z
+115,2025,1,9,13,22,12,outbound,940GZZLUHLT,Hainault Underground Station,825,2025-01-09T13:08:27.6715314Z,940GZZLULYN,Leyton Underground Station,Central,central,2025-01-09T13:22:12Z
+1,2025,1,9,13,12,43,outbound,940GZZLUEPG,Epping Underground Station,255,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:12:43Z
+2,2025,1,9,13,22,13,outbound,940GZZLUEPG,Epping Underground Station,825,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:22:13Z
+3,2025,1,9,13,28,13,outbound,940GZZLUEPG,Epping Underground Station,1185,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:28:13Z
+4,2025,1,9,13,35,13,outbound,940GZZLUEPG,Epping Underground Station,1605,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:35:13Z
+26,2025,1,9,13,13,12,inbound,940GZZLUWRP,West Ruislip Underground Station,284,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:13:12Z
+27,2025,1,9,13,28,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1184,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:28:12Z
+30,2025,1,9,13,30,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1305,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:30:13Z
+52,2025,1,9,13,11,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,164,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:11:12Z
+53,2025,1,9,13,19,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,644,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:19:12Z
+56,2025,1,9,13,10,43,outbound,940GZZLUHLT,Hainault Underground Station,135,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:10:43Z
+57,2025,1,9,13,19,13,outbound,940GZZLUHLT,Hainault Underground Station,645,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:19:13Z
+60,2025,1,9,13,33,13,outbound,940GZZLUHLT,Hainault Underground Station,1485,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:33:13Z
+101,2025,1,9,13,37,13,outbound,940GZZLUHLT,Hainault Underground Station,1725,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:37:13Z
+115,2025,1,9,13,25,13,outbound,940GZZLUHLT,Hainault Underground Station,1005,2025-01-09T13:08:28.769387Z,940GZZLULYS,Leytonstone Underground Station,Central,central,2025-01-09T13:25:13Z
+5,2025,1,9,13,12,12,outbound,940GZZLUEPG,Epping Underground Station,223,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:12:12Z
+6,2025,1,9,13,22,12,outbound,940GZZLUEPG,Epping Underground Station,823,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:22:12Z
+7,2025,1,9,13,25,12,outbound,940GZZLUEPG,Epping Underground Station,1003,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:25:12Z
+10,2025,1,9,13,32,12,outbound,940GZZLUEPG,Epping Underground Station,1423,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:32:12Z
+21,2025,1,9,13,11,13,inbound,940GZZLUWRP,West Ruislip Underground Station,164,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:11:13Z
+22,2025,1,9,13,16,13,inbound,940GZZLUWRP,West Ruislip Underground Station,464,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:16:13Z
+23,2025,1,9,13,22,13,inbound,940GZZLUWRP,West Ruislip Underground Station,824,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:22:13Z
+24,2025,1,9,13,36,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1663,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:36:12Z
+51,2025,1,9,13,30,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1304,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:30:13Z
+61,2025,1,9,13,9,42,outbound,940GZZLUHLT,Hainault Underground Station,73,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:09:42Z
+62,2025,1,9,13,20,12,outbound,940GZZLUHLT,Hainault Underground Station,703,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:20:12Z
+63,2025,1,9,13,28,12,outbound,940GZZLUHLT,Hainault Underground Station,1183,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:28:12Z
+70,2025,1,9,13,20,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,704,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:20:13Z
+105,2025,1,9,13,13,13,inbound,940GZZLUWCY,White City Underground Station,284,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:13:13Z
+107,2025,1,9,13,37,12,inbound,940GZZLUWCY,White City Underground Station,1723,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:37:12Z
+142,2025,1,9,13,17,12,outbound,940GZZLUHLT,Hainault Underground Station,523,2025-01-09T13:08:29.1902218Z,940GZZLUMBA,Marble Arch Underground Station,Central,central,2025-01-09T13:17:12Z
+2,2025,1,9,13,12,42,outbound,940GZZLUEPG,Epping Underground Station,253,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:12:42Z
+3,2025,1,9,13,18,12,outbound,940GZZLUEPG,Epping Underground Station,583,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:18:12Z
+4,2025,1,9,13,25,12,outbound,940GZZLUEPG,Epping Underground Station,1003,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:25:12Z
+5,2025,1,9,13,33,12,outbound,940GZZLUEPG,Epping Underground Station,1483,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:33:12Z
+24,2025,1,9,13,16,12,inbound,940GZZLUWRP,West Ruislip Underground Station,463,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:16:12Z
+25,2025,1,9,13,20,12,inbound,940GZZLUWRP,West Ruislip Underground Station,703,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:20:12Z
+26,2025,1,9,13,24,12,inbound,940GZZLUWRP,West Ruislip Underground Station,943,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:24:12Z
+51,2025,1,9,13,11,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,163,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:11:12Z
+52,2025,1,9,13,23,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,883,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:23:12Z
+53,2025,1,9,13,31,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1363,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:31:12Z
+57,2025,1,9,13,10,12,outbound,940GZZLUHLT,Hainault Underground Station,103,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:10:12Z
+60,2025,1,9,13,23,12,outbound,940GZZLUHLT,Hainault Underground Station,883,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:23:12Z
+61,2025,1,9,13,30,12,outbound,940GZZLUHLT,Hainault Underground Station,1303,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:30:12Z
+101,2025,1,9,13,28,12,outbound,940GZZLUHLT,Hainault Underground Station,1183,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:28:12Z
+107,2025,1,9,13,18,12,inbound,940GZZLUWCY,White City Underground Station,583,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:18:12Z
+115,2025,1,9,13,15,12,outbound,940GZZLUHLT,Hainault Underground Station,403,2025-01-09T13:08:29.734995Z,940GZZLUMED,Mile End Underground Station,Central,central,2025-01-09T13:15:12Z
+10,2025,1,9,13,15,12,outbound,940GZZLUEPG,Epping Underground Station,402,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:15:12Z
+11,2025,1,9,13,21,12,outbound,940GZZLUEPG,Epping Underground Station,762,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:21:12Z
+16,2025,1,9,13,9,42,inbound,940GZZLUWRP,West Ruislip Underground Station,72,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:09:42Z
+17,2025,1,9,13,14,12,inbound,940GZZLUWRP,West Ruislip Underground Station,342,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:14:12Z
+20,2025,1,9,13,20,12,inbound,940GZZLUWRP,West Ruislip Underground Station,702,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:20:12Z
+21,2025,1,9,13,28,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1182,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:28:12Z
+22,2025,1,9,13,33,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1482,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:33:12Z
+63,2025,1,9,13,11,42,outbound,940GZZLUHLT,Hainault Underground Station,192,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:11:42Z
+66,2025,1,9,13,16,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,462,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:16:12Z
+67,2025,1,9,13,25,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1002,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:25:12Z
+70,2025,1,9,13,36,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1662,2025-01-09T13:08:30.5114889Z,940GZZLUNAN,North Acton Underground Station,Central,central,2025-01-09T13:36:12Z
+53,2025,1,9,13,10,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,102,2025-01-09T13:08:30.8602854Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T13:10:12Z
+55,2025,1,9,13,9,12,outbound,940GZZLUHLT,Hainault Underground Station,42,2025-01-09T13:08:30.8602854Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T13:09:12Z
+56,2025,1,9,13,20,12,outbound,940GZZLUHLT,Hainault Underground Station,702,2025-01-09T13:08:30.8602854Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T13:20:12Z
+57,2025,1,9,13,29,12,outbound,940GZZLUHLT,Hainault Underground Station,1242,2025-01-09T13:08:30.8602854Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T13:29:12Z
+115,2025,1,9,13,34,12,outbound,940GZZLUHLT,Hainault Underground Station,1542,2025-01-09T13:08:30.8602854Z,940GZZLUNBP,Newbury Park Underground Station,Central,central,2025-01-09T13:34:12Z
+6,2025,1,9,13,17,13,outbound,940GZZLUEPG,Epping Underground Station,522,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:17:13Z
+7,2025,1,9,13,20,13,outbound,940GZZLUEPG,Epping Underground Station,702,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:20:13Z
+10,2025,1,9,13,27,13,outbound,940GZZLUEPG,Epping Underground Station,1122,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:27:13Z
+11,2025,1,9,13,33,13,outbound,940GZZLUEPG,Epping Underground Station,1482,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:33:13Z
+20,2025,1,9,13,9,13,inbound,940GZZLUWRP,West Ruislip Underground Station,42,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:09:13Z
+21,2025,1,9,13,16,13,inbound,940GZZLUWRP,West Ruislip Underground Station,462,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:16:13Z
+22,2025,1,9,13,21,13,inbound,940GZZLUWRP,West Ruislip Underground Station,762,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:21:13Z
+23,2025,1,9,13,27,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1122,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:27:13Z
+51,2025,1,9,13,35,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1602,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:35:13Z
+62,2025,1,9,13,15,13,outbound,940GZZLUHLT,Hainault Underground Station,402,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:15:13Z
+63,2025,1,9,13,23,13,outbound,940GZZLUHLT,Hainault Underground Station,882,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:23:13Z
+67,2025,1,9,13,13,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,282,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:13:13Z
+70,2025,1,9,13,25,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1002,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:25:13Z
+105,2025,1,9,13,19,13,inbound,940GZZLUWCY,White City Underground Station,642,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:19:13Z
+142,2025,1,9,13,12,13,outbound,940GZZLUHLT,Hainault Underground Station,222,2025-01-09T13:08:31.6266342Z,940GZZLUNHG,Notting Hill Gate Underground Station,Central,central,2025-01-09T13:12:13Z
+11,2025,1,9,13,10,42,outbound,940GZZLUEPG,Epping Underground Station,130,2025-01-09T13:08:32.098076Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T13:10:42Z
+15,2025,1,9,13,12,12,inbound,940GZZLUWRP,West Ruislip Underground Station,220,2025-01-09T13:08:32.098076Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T13:12:12Z
+16,2025,1,9,13,19,12,inbound,940GZZLUWRP,West Ruislip Underground Station,640,2025-01-09T13:08:32.098076Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T13:19:12Z
+17,2025,1,9,13,24,12,inbound,940GZZLUWRP,West Ruislip Underground Station,940,2025-01-09T13:08:32.098076Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T13:24:12Z
+20,2025,1,9,13,30,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1300,2025-01-09T13:08:32.098076Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T13:30:12Z
+21,2025,1,9,13,38,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1780,2025-01-09T13:08:32.098076Z,940GZZLUNHT,Northolt Underground Station,Central,central,2025-01-09T13:38:12Z
+5,2025,1,9,13,15,13,outbound,940GZZLUEPG,Epping Underground Station,401,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:15:13Z
+6,2025,1,9,13,25,13,outbound,940GZZLUEPG,Epping Underground Station,1001,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:25:13Z
+7,2025,1,9,13,28,13,outbound,940GZZLUEPG,Epping Underground Station,1181,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:28:13Z
+10,2025,1,9,13,35,13,outbound,940GZZLUEPG,Epping Underground Station,1601,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:35:13Z
+22,2025,1,9,13,13,13,inbound,940GZZLUWRP,West Ruislip Underground Station,281,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:13:13Z
+23,2025,1,9,13,19,13,inbound,940GZZLUWRP,West Ruislip Underground Station,641,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:19:13Z
+24,2025,1,9,13,33,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1481,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:33:13Z
+25,2025,1,9,13,37,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1721,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:37:13Z
+51,2025,1,9,13,27,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1121,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:27:13Z
+61,2025,1,9,13,12,13,outbound,940GZZLUHLT,Hainault Underground Station,221,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:12:13Z
+62,2025,1,9,13,23,13,outbound,940GZZLUHLT,Hainault Underground Station,881,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:23:13Z
+63,2025,1,9,13,31,13,outbound,940GZZLUHLT,Hainault Underground Station,1361,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:31:13Z
+70,2025,1,9,13,17,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,521,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:17:13Z
+101,2025,1,9,13,9,43,outbound,940GZZLUHLT,Hainault Underground Station,71,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:09:43Z
+105,2025,1,9,13,11,13,inbound,940GZZLUWCY,White City Underground Station,161,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:11:13Z
+107,2025,1,9,13,34,13,inbound,940GZZLUWCY,White City Underground Station,1541,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:34:13Z
+142,2025,1,9,13,20,13,outbound,940GZZLUHLT,Hainault Underground Station,701,2025-01-09T13:08:32.774093Z,940GZZLUOXC,Oxford Circus Underground Station,Central,central,2025-01-09T13:20:13Z
+10,2025,1,9,13,9,43,outbound,940GZZLUEPG,Epping Underground Station,70,2025-01-09T13:08:33.6487558Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T13:09:43Z
+11,2025,1,9,13,15,13,outbound,940GZZLUEPG,Epping Underground Station,400,2025-01-09T13:08:33.6487558Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T13:15:13Z
+16,2025,1,9,13,15,13,inbound,940GZZLUWRP,West Ruislip Underground Station,400,2025-01-09T13:08:33.6487558Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T13:15:13Z
+17,2025,1,9,13,20,13,inbound,940GZZLUWRP,West Ruislip Underground Station,700,2025-01-09T13:08:33.6487558Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T13:20:13Z
+20,2025,1,9,13,26,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1060,2025-01-09T13:08:33.6487558Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T13:26:13Z
+21,2025,1,9,13,33,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1480,2025-01-09T13:08:33.6487558Z,940GZZLUPVL,Perivale Underground Station,Central,central,2025-01-09T13:33:13Z
+5,2025,1,9,13,8,43,outbound,940GZZLUEPG,Epping Underground Station,9,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:08:43Z
+6,2025,1,9,13,18,13,outbound,940GZZLUEPG,Epping Underground Station,579,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:18:13Z
+7,2025,1,9,13,21,12,outbound,940GZZLUEPG,Epping Underground Station,758,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:21:12Z
+10,2025,1,9,13,28,12,outbound,940GZZLUEPG,Epping Underground Station,1178,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:28:12Z
+11,2025,1,9,13,34,12,outbound,940GZZLUEPG,Epping Underground Station,1538,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:34:12Z
+21,2025,1,9,13,15,13,inbound,940GZZLUWRP,West Ruislip Underground Station,399,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:15:13Z
+22,2025,1,9,13,20,13,inbound,940GZZLUWRP,West Ruislip Underground Station,699,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:20:13Z
+23,2025,1,9,13,26,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1059,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:26:13Z
+51,2025,1,9,13,34,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1539,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:34:13Z
+62,2025,1,9,13,16,13,outbound,940GZZLUHLT,Hainault Underground Station,459,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:16:13Z
+63,2025,1,9,13,25,12,outbound,940GZZLUHLT,Hainault Underground Station,998,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:25:12Z
+67,2025,1,9,13,12,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,219,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:12:13Z
+70,2025,1,9,13,23,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,879,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:23:13Z
+105,2025,1,9,13,17,13,inbound,940GZZLUWCY,White City Underground Station,519,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:17:13Z
+142,2025,1,9,13,13,13,outbound,940GZZLUHLT,Hainault Underground Station,279,2025-01-09T13:08:34.2798549Z,940GZZLUQWY,Queensway Underground Station,Central,central,2025-01-09T13:13:13Z
+53,2025,1,9,13,15,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,397,2025-01-09T13:08:35.0038355Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T13:15:12Z
+56,2025,1,9,13,15,12,outbound,940GZZLUHLT,Hainault Underground Station,397,2025-01-09T13:08:35.0038355Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T13:15:12Z
+57,2025,1,9,13,24,12,outbound,940GZZLUHLT,Hainault Underground Station,937,2025-01-09T13:08:35.0038355Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T13:24:12Z
+60,2025,1,9,13,38,12,outbound,940GZZLUHLT,Hainault Underground Station,1777,2025-01-09T13:08:35.0038355Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T13:38:12Z
+110,2025,1,9,13,13,12,inbound,940GZZLUWCY,White City Underground Station,277,2025-01-09T13:08:35.0038355Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T13:13:12Z
+115,2025,1,9,13,30,12,outbound,940GZZLUHLT,Hainault Underground Station,1297,2025-01-09T13:08:35.0038355Z,940GZZLURBG,Redbridge Underground Station,Central,central,2025-01-09T13:30:12Z
+14,2025,1,9,13,10,42,inbound,940GZZLUWRP,West Ruislip Underground Station,127,2025-01-09T13:08:35.394265Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T13:10:42Z
+15,2025,1,9,13,16,12,inbound,940GZZLUWRP,West Ruislip Underground Station,457,2025-01-09T13:08:35.394265Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T13:16:12Z
+16,2025,1,9,13,23,12,inbound,940GZZLUWRP,West Ruislip Underground Station,877,2025-01-09T13:08:35.394265Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T13:23:12Z
+17,2025,1,9,13,29,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1237,2025-01-09T13:08:35.394265Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T13:29:12Z
+20,2025,1,9,13,34,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1537,2025-01-09T13:08:35.394265Z,940GZZLURSG,Ruislip Gardens Underground Station,Central,central,2025-01-09T13:34:12Z
+488,2025,1,9,13,10,42,outbound,940GZZLUGGH,Grange Hill Underground Station,126,2025-01-09T13:08:36.3053112Z,940GZZLURVY,Roding Valley Underground Station,Central,central,2025-01-09T13:10:42Z
+6,2025,1,9,13,14,12,outbound,940GZZLUEPG,Epping Underground Station,335,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:14:12Z
+7,2025,1,9,13,17,12,outbound,940GZZLUEPG,Epping Underground Station,515,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:17:12Z
+10,2025,1,9,13,24,12,outbound,940GZZLUEPG,Epping Underground Station,935,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:24:12Z
+11,2025,1,9,13,30,12,outbound,940GZZLUEPG,Epping Underground Station,1295,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:30:12Z
+20,2025,1,9,13,12,12,inbound,940GZZLUWRP,West Ruislip Underground Station,215,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:12:12Z
+21,2025,1,9,13,19,12,inbound,940GZZLUWRP,West Ruislip Underground Station,635,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:19:12Z
+22,2025,1,9,13,24,12,inbound,940GZZLUWRP,West Ruislip Underground Station,935,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:24:12Z
+23,2025,1,9,13,30,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1295,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:30:12Z
+62,2025,1,9,13,12,12,outbound,940GZZLUHLT,Hainault Underground Station,215,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:12:12Z
+63,2025,1,9,13,20,12,outbound,940GZZLUHLT,Hainault Underground Station,695,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:20:12Z
+67,2025,1,9,13,16,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,455,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:16:12Z
+70,2025,1,9,13,28,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1175,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:28:12Z
+105,2025,1,9,13,22,12,inbound,940GZZLUWCY,White City Underground Station,815,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:22:12Z
+142,2025,1,9,13,9,12,outbound,940GZZLUHLT,Hainault Underground Station,35,2025-01-09T13:08:37.0169577Z,940GZZLUSBC,Shepherd's Bush (Central) Underground Station,Central,central,2025-01-09T13:09:12Z
+1,2025,1,9,13,15,12,outbound,940GZZLUEPG,Epping Underground Station,395,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:15:12Z
+2,2025,1,9,13,25,12,outbound,940GZZLUEPG,Epping Underground Station,995,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:25:12Z
+3,2025,1,9,13,31,12,outbound,940GZZLUEPG,Epping Underground Station,1355,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:31:12Z
+4,2025,1,9,13,38,12,outbound,940GZZLUEPG,Epping Underground Station,1775,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:38:12Z
+26,2025,1,9,13,10,12,inbound,940GZZLUWRP,West Ruislip Underground Station,95,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:10:12Z
+27,2025,1,9,13,25,12,inbound,940GZZLUWRP,West Ruislip Underground Station,995,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:25:12Z
+30,2025,1,9,13,27,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1115,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:27:12Z
+35,2025,1,9,13,11,42,outbound,940GZZLUEPG,Epping Underground Station,185,2025-01-09T13:08:37.9299366Z,940GZZLUSNB,Snaresbrook Underground Station,Central,central,2025-01-09T13:11:42Z
+4,2025,1,9,13,14,13,outbound,940GZZLUEPG,Epping Underground Station,335,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:14:13Z
+5,2025,1,9,13,22,13,outbound,940GZZLUEPG,Epping Underground Station,815,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:22:13Z
+6,2025,1,9,13,32,13,outbound,940GZZLUEPG,Epping Underground Station,1415,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:32:13Z
+7,2025,1,9,13,35,13,outbound,940GZZLUEPG,Epping Underground Station,1595,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:35:13Z
+23,2025,1,9,13,12,42,inbound,940GZZLUWRP,West Ruislip Underground Station,244,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:12:42Z
+24,2025,1,9,13,26,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1054,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:26:12Z
+25,2025,1,9,13,30,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1295,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:30:13Z
+26,2025,1,9,13,34,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1535,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:34:13Z
+51,2025,1,9,13,20,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,694,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:20:12Z
+52,2025,1,9,13,33,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1475,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:33:13Z
+60,2025,1,9,13,12,43,outbound,940GZZLUHLT,Hainault Underground Station,245,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:12:43Z
+61,2025,1,9,13,19,13,outbound,940GZZLUHLT,Hainault Underground Station,635,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:19:13Z
+62,2025,1,9,13,30,13,outbound,940GZZLUHLT,Hainault Underground Station,1295,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:30:13Z
+70,2025,1,9,13,10,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,94,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:10:12Z
+101,2025,1,9,13,17,13,outbound,940GZZLUHLT,Hainault Underground Station,515,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:17:13Z
+107,2025,1,9,13,28,13,inbound,940GZZLUWCY,White City Underground Station,1175,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:28:13Z
+142,2025,1,9,13,27,13,outbound,940GZZLUHLT,Hainault Underground Station,1115,2025-01-09T13:08:38.8139226Z,940GZZLUSPU,St. Paul's Underground Station,Central,central,2025-01-09T13:27:13Z
+14,2025,1,9,13,8,42,inbound,940GZZLUWRP,West Ruislip Underground Station,3,2025-01-09T13:08:39.3700592Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T13:08:42Z
+15,2025,1,9,13,14,12,inbound,940GZZLUWRP,West Ruislip Underground Station,333,2025-01-09T13:08:39.3700592Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T13:14:12Z
+16,2025,1,9,13,22,12,inbound,940GZZLUWRP,West Ruislip Underground Station,813,2025-01-09T13:08:39.3700592Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T13:22:12Z
+17,2025,1,9,13,27,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1113,2025-01-09T13:08:39.3700592Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T13:27:12Z
+20,2025,1,9,13,33,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1473,2025-01-09T13:08:39.3700592Z,940GZZLUSRP,South Ruislip Underground Station,Central,central,2025-01-09T13:33:12Z
+2,2025,1,9,13,16,13,outbound,940GZZLUEPG,Epping Underground Station,453,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:16:13Z
+3,2025,1,9,13,22,13,outbound,940GZZLUEPG,Epping Underground Station,813,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:22:13Z
+4,2025,1,9,13,29,13,outbound,940GZZLUEPG,Epping Underground Station,1233,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:29:13Z
+5,2025,1,9,13,37,13,outbound,940GZZLUEPG,Epping Underground Station,1713,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:37:13Z
+24,2025,1,9,13,11,13,inbound,940GZZLUWRP,West Ruislip Underground Station,153,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:11:13Z
+25,2025,1,9,13,15,13,inbound,940GZZLUWRP,West Ruislip Underground Station,393,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:15:13Z
+26,2025,1,9,13,19,13,inbound,940GZZLUWRP,West Ruislip Underground Station,633,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:19:13Z
+27,2025,1,9,13,34,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1533,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:34:13Z
+30,2025,1,9,13,36,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1653,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:36:13Z
+52,2025,1,9,13,18,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,573,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:18:13Z
+53,2025,1,9,13,26,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1053,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:26:13Z
+57,2025,1,9,13,14,13,outbound,940GZZLUHLT,Hainault Underground Station,333,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:14:13Z
+60,2025,1,9,13,27,13,outbound,940GZZLUHLT,Hainault Underground Station,1113,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:27:13Z
+61,2025,1,9,13,34,13,outbound,940GZZLUHLT,Hainault Underground Station,1533,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:34:13Z
+101,2025,1,9,13,32,13,outbound,940GZZLUHLT,Hainault Underground Station,1413,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:32:13Z
+107,2025,1,9,13,13,13,inbound,940GZZLUWCY,White City Underground Station,273,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:13:13Z
+115,2025,1,9,13,19,13,outbound,940GZZLUHLT,Hainault Underground Station,633,2025-01-09T13:08:40.5527654Z,940GZZLUSTD,Stratford Underground Station,Central,central,2025-01-09T13:19:13Z
+1,2025,1,9,13,17,12,outbound,940GZZLUEPG,Epping Underground Station,511,2025-01-09T13:08:41.5287782Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T13:17:12Z
+2,2025,1,9,13,27,12,outbound,940GZZLUEPG,Epping Underground Station,1111,2025-01-09T13:08:41.5287782Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T13:27:12Z
+3,2025,1,9,13,32,12,outbound,940GZZLUEPG,Epping Underground Station,1411,2025-01-09T13:08:41.5287782Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T13:32:12Z
+27,2025,1,9,13,23,12,inbound,940GZZLUWRP,West Ruislip Underground Station,871,2025-01-09T13:08:41.5287782Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T13:23:12Z
+30,2025,1,9,13,25,12,inbound,940GZZLUWRP,West Ruislip Underground Station,991,2025-01-09T13:08:41.5287782Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T13:25:12Z
+35,2025,1,9,13,13,12,outbound,940GZZLUEPG,Epping Underground Station,271,2025-01-09T13:08:41.5287782Z,940GZZLUSWF,South Woodford Underground Station,Central,central,2025-01-09T13:13:12Z
+4,2025,1,9,13,8,43,outbound,940GZZLUEPG,Epping Underground Station,1,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:08:43Z
+5,2025,1,9,13,16,13,outbound,940GZZLUEPG,Epping Underground Station,451,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:16:13Z
+6,2025,1,9,13,26,13,outbound,940GZZLUEPG,Epping Underground Station,1051,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:26:13Z
+7,2025,1,9,13,30,13,outbound,940GZZLUEPG,Epping Underground Station,1291,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:30:13Z
+10,2025,1,9,13,37,13,outbound,940GZZLUEPG,Epping Underground Station,1711,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:37:13Z
+22,2025,1,9,13,12,13,inbound,940GZZLUWRP,West Ruislip Underground Station,211,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:12:13Z
+23,2025,1,9,13,17,13,inbound,940GZZLUWRP,West Ruislip Underground Station,511,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:17:13Z
+24,2025,1,9,13,31,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1351,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:31:13Z
+25,2025,1,9,13,35,13,inbound,940GZZLUWRP,West Ruislip Underground Station,1591,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:35:13Z
+51,2025,1,9,13,25,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,991,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:25:13Z
+61,2025,1,9,13,14,13,outbound,940GZZLUHLT,Hainault Underground Station,331,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:14:13Z
+62,2025,1,9,13,24,13,outbound,940GZZLUHLT,Hainault Underground Station,931,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:24:13Z
+63,2025,1,9,13,33,13,outbound,940GZZLUHLT,Hainault Underground Station,1471,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:33:13Z
+70,2025,1,9,13,15,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,391,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:15:13Z
+101,2025,1,9,13,11,43,outbound,940GZZLUHLT,Hainault Underground Station,181,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:11:43Z
+105,2025,1,9,13,9,43,inbound,940GZZLUWCY,White City Underground Station,61,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:09:43Z
+107,2025,1,9,13,32,13,inbound,940GZZLUWCY,White City Underground Station,1411,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:32:13Z
+142,2025,1,9,13,21,13,outbound,940GZZLUHLT,Hainault Underground Station,751,2025-01-09T13:08:42.2460973Z,940GZZLUTCR,Tottenham Court Road Underground Station,Central,central,2025-01-09T13:21:13Z
+1,2025,1,9,13,31,13,outbound,940GZZLUEPG,Epping Underground Station,1351,2025-01-09T13:08:42.8879967Z,940GZZLUTHB,Theydon Bois Underground Station,Central,central,2025-01-09T13:31:13Z
+33,2025,1,9,13,14,13,outbound,940GZZLUEPG,Epping Underground Station,331,2025-01-09T13:08:42.8879967Z,940GZZLUTHB,Theydon Bois Underground Station,Central,central,2025-01-09T13:14:13Z
+34,2025,1,9,13,22,13,outbound,940GZZLUEPG,Epping Underground Station,811,2025-01-09T13:08:42.8879967Z,940GZZLUTHB,Theydon Bois Underground Station,Central,central,2025-01-09T13:22:13Z
+35,2025,1,9,13,27,13,outbound,940GZZLUEPG,Epping Underground Station,1111,2025-01-09T13:08:42.8879967Z,940GZZLUTHB,Theydon Bois Underground Station,Central,central,2025-01-09T13:27:13Z
+6,2025,1,9,13,10,42,outbound,940GZZLUEPG,Epping Underground Station,119,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:10:42Z
+7,2025,1,9,13,14,12,outbound,940GZZLUEPG,Epping Underground Station,329,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:14:12Z
+10,2025,1,9,13,20,12,outbound,940GZZLUEPG,Epping Underground Station,689,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:20:12Z
+11,2025,1,9,13,26,12,outbound,940GZZLUEPG,Epping Underground Station,1049,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:26:12Z
+17,2025,1,9,13,9,12,inbound,940GZZLUWRP,West Ruislip Underground Station,29,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:09:12Z
+20,2025,1,9,13,15,12,inbound,940GZZLUWRP,West Ruislip Underground Station,389,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:15:12Z
+21,2025,1,9,13,22,12,inbound,940GZZLUWRP,West Ruislip Underground Station,809,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:22:12Z
+22,2025,1,9,13,27,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1109,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:27:12Z
+23,2025,1,9,13,33,12,inbound,940GZZLUWRP,West Ruislip Underground Station,1469,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:33:12Z
+63,2025,1,9,13,17,12,outbound,940GZZLUHLT,Hainault Underground Station,509,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:17:12Z
+66,2025,1,9,13,11,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,149,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:11:12Z
+67,2025,1,9,13,19,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,629,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:19:12Z
+70,2025,1,9,13,31,12,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1349,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:31:12Z
+105,2025,1,9,13,25,12,unknown,940GZZLUWCY,White City Underground Station,989,2025-01-09T13:08:43.3519452Z,940GZZLUWCY,White City Underground Station,Central,central,2025-01-09T13:25:12Z
+1,2025,1,9,13,20,12,outbound,940GZZLUEPG,Epping Underground Station,688,2025-01-09T13:08:44.10955Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T13:20:12Z
+2,2025,1,9,13,30,12,outbound,940GZZLUEPG,Epping Underground Station,1288,2025-01-09T13:08:44.10955Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T13:30:12Z
+3,2025,1,9,13,35,12,outbound,940GZZLUEPG,Epping Underground Station,1588,2025-01-09T13:08:44.10955Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T13:35:12Z
+27,2025,1,9,13,19,12,inbound,940GZZLUWRP,West Ruislip Underground Station,628,2025-01-09T13:08:44.10955Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T13:19:12Z
+30,2025,1,9,13,21,12,inbound,940GZZLUWRP,West Ruislip Underground Station,748,2025-01-09T13:08:44.10955Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T13:21:12Z
+34,2025,1,9,13,11,42,outbound,940GZZLUEPG,Epping Underground Station,178,2025-01-09T13:08:44.10955Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T13:11:42Z
+35,2025,1,9,13,16,12,outbound,940GZZLUEPG,Epping Underground Station,448,2025-01-09T13:08:44.10955Z,940GZZLUWOF,Woodford Underground Station,Central,central,2025-01-09T13:16:12Z
+13,2025,1,9,13,10,43,unknown,940GZZLUWRP,West Ruislip Underground Station,119,2025-01-09T13:08:44.6347887Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T13:10:43Z
+14,2025,1,9,13,14,12,unknown,940GZZLUWRP,West Ruislip Underground Station,328,2025-01-09T13:08:44.6347887Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T13:14:12Z
+15,2025,1,9,13,19,12,unknown,940GZZLUWRP,West Ruislip Underground Station,628,2025-01-09T13:08:44.6347887Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T13:19:12Z
+16,2025,1,9,13,27,12,unknown,940GZZLUWRP,West Ruislip Underground Station,1108,2025-01-09T13:08:44.6347887Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T13:27:12Z
+17,2025,1,9,13,32,12,unknown,940GZZLUWRP,West Ruislip Underground Station,1408,2025-01-09T13:08:44.6347887Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T13:32:12Z
+20,2025,1,9,13,38,12,unknown,940GZZLUWRP,West Ruislip Underground Station,1768,2025-01-09T13:08:44.6347887Z,940GZZLUWRP,West Ruislip Underground Station,Central,central,2025-01-09T13:38:12Z
+52,2025,1,9,13,9,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,28,2025-01-09T13:08:45.1346767Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T13:09:13Z
+53,2025,1,9,13,16,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,448,2025-01-09T13:08:45.1346767Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T13:16:13Z
+56,2025,1,9,13,13,13,outbound,940GZZLUHLT,Hainault Underground Station,268,2025-01-09T13:08:45.1346767Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T13:13:13Z
+57,2025,1,9,13,22,13,outbound,940GZZLUHLT,Hainault Underground Station,808,2025-01-09T13:08:45.1346767Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T13:22:13Z
+60,2025,1,9,13,36,13,outbound,940GZZLUHLT,Hainault Underground Station,1648,2025-01-09T13:08:45.1346767Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T13:36:13Z
+110,2025,1,9,13,15,13,inbound,940GZZLUWCY,White City Underground Station,388,2025-01-09T13:08:45.1346767Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T13:15:13Z
+115,2025,1,9,13,28,13,outbound,940GZZLUHLT,Hainault Underground Station,1168,2025-01-09T13:08:45.1346767Z,940GZZLUWSD,Wanstead Underground Station,Central,central,2025-01-09T13:28:13Z
+65,2025,1,9,13,9,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,28,2025-01-09T13:08:45.5856239Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-09T13:09:13Z
+66,2025,1,9,13,19,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,628,2025-01-09T13:08:45.5856239Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-09T13:19:13Z
+67,2025,1,9,13,27,13,inbound,940GZZLUEBY,Ealing Broadway Underground Station,1108,2025-01-09T13:08:45.5856239Z,940GZZLUWTA,West Acton Underground Station,Central,central,2025-01-09T13:27:13Z

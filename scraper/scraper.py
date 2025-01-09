@@ -108,7 +108,7 @@ class Scraper():
             df = self.scrap_line(line, df)
             df.to_csv(path, index = False)
             print(f"Scrapped {i} times")
-            time.sleep(interval_sec)
+            timee.sleep(interval_sec)
 
     def get_ideal_timetable_from_to(self, from_station_name : str, to_station_name : str, type_of_day:str):
         """
