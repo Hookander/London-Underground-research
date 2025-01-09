@@ -1,5 +1,8 @@
 import pandas as pd
-from typing import Tuple
+from typing import Tuple, List
+import matplotlib.pyplot as plt
+import numpy as np
+from tools import *
 
 
 class TimetablesHandler():
@@ -42,7 +45,7 @@ class TimetablesHandler():
 
         return filtered_df.iloc[0]
     
-    def get_delay_s(self, time, station_name, direction, type_of_day):
+    def get_delay_s(self, time: Tuple[int, int, int], station_name: str, direction: str, type_of_day: str) -> int:
         """
             Returns the delay in seconds for the given station, direction, type_of_day and time
         """
@@ -50,6 +53,30 @@ class TimetablesHandler():
         return (closest_train['hour_departure']*3600 + closest_train['min_departure']*60
                 - (3600 * time[0] + 60 * time[1] + time[2]))
     
+    def get_station_delay(self, station_name: str, direction: str, type_of_day: str) -> List[int]:
+        
+        destination_ids = get_destinations_ids_from_direction(direction)
+        station_id = APIHandler().get_id_from_name(station_name)
+
+        trains = self.actual_timetable[(self.actual_timetable['stationId'] == station_id) 
+                                       & (self.actual_timetable['destinationId'].isin(destination_ids))] 
+        delays = []
+        for index, train in trains.iterrows():
+            delays.append(self.get_delay_s((train['arrival_hour'], train['arrival_min'], train['arrival_sec']),
+                                           station_name, direction, type_of_day))
+            
+        return delays
+    
+    def plot_delays(self, station_name: str, direction: str, type_of_day: str):
+        """
+            Plots the delays for the given station, direction and type_of_day
+        """
+        delays = self.get_station_delay(station_name, direction, type_of_day)
+        plt.hist(delays, bins = 50)
+        plt.title(f'Delays for {station_name} - {direction} - {type_of_day}')
+        plt.xlabel('Delay (s)')
+        plt.ylabel('Frequency')
+        plt.show()
     
     def get_delays(self):
         """
@@ -60,6 +87,3 @@ class TimetablesHandler():
         return self.actual_timetable['delay'].value_counts()
     
 
-
-handler = TimetablesHandler()
-print(handler.get_delay_s((12, 34, 15), 'Woodford', 'WB', 'MTT'))

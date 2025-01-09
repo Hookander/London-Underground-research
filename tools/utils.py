@@ -37,6 +37,15 @@ def reverser_direction(direction: str) -> str:
         return 'EB'
     raise ValueError('Invalid direction')
 
+def get_destinations_ids_from_direction(direction: str) -> str:
+    """
+    Returns the destination from the direction
+    """
+    if direction == 'EB':
+        return ('940GZZLUHLT', '940GZZLUEPG')
+    elif direction == 'WB':
+        return ('940GZZLUWRP', '940GZZLUEBY')
+    raise ValueError('Invalid direction')
 
 
 
