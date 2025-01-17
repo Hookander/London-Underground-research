@@ -39,9 +39,11 @@ class TimetablesHandler():
         
         # Sort the results by distance to the given time (convert to seconds)
         filtered_df = filtered_df.copy()
-        filtered_df['distance_s'] = abs(filtered_df['hour_departure']*3600 + filtered_df['min_departure']*60 
-                                      - (3600 * time[0] + 60 * time[1] + time[2]))
+        filtered_df['distance_s'] = abs((filtered_df['hour_departure'] - time[0])*3600 + 
+                                       (filtered_df['min_departure'] - time[1])*60 +
+                                       time[2])
         filtered_df = filtered_df.sort_values(by=['distance_s'])
+        print(filtered_df)
 
         return filtered_df.iloc[0]
     
@@ -50,8 +52,9 @@ class TimetablesHandler():
             Returns the delay in seconds for the given station, direction, type_of_day and time
         """
         closest_train = self.get_closest_train(time, station_name, direction, type_of_day)
-        return (closest_train['hour_departure']*3600 + closest_train['min_departure']*60
-                - (3600 * time[0] + 60 * time[1] + time[2]))
+        return ((closest_train['hour_departure'] - time[0])*3600 + 
+                (closest_train['min_departure'] - time[1])*60
+                + time[2])
     
     def get_station_delay(self, station_name: str, direction: str, type_of_day: str) -> List[int]:
         
@@ -67,7 +70,7 @@ class TimetablesHandler():
             
         return delays
     
-    def plot_delays(self, station_name: str, direction: str, type_of_day: str, plot_normal_distribution=True):
+    def plot_delays(self, station_name: str, direction: str, type_of_day: str, plot_normal_distribution=True, n_bins = 20):
         """
             Plots the delays for the given station, direction and type_of_day
         """
@@ -79,7 +82,7 @@ class TimetablesHandler():
             x = np.linspace(min(delays), max(delays), 100)
             y = 1/(std * np.sqrt(2 * np.pi)) * np.exp(- (x - mu)**2 / (2 * std**2))
             plt.plot(x, y, label='Normal distribution')
-        plt.hist(delays, bins=20, density=True, alpha=0.6, color='g')
+        plt.hist(delays, bins=n_bins, density=True, alpha=0.6, color='g')
         plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day}')
         plt.xlabel('Delay (s)')
         plt.show()

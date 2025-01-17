@@ -23,4 +23,4 @@ import time
 handler = TimetablesHandler()
 #print(handler.get_delay_s((12, 34, 15), 'Woodford', 'WB', 'MTT'))
 # print(handler.get_station_delay('Woodford', 'WB', 'MTT'))
-handler.plot_delays('Woodford', 'EB', 'SUN')
+handler.plot_delays('Woodford', 'EB', 'MTT', n_bins=50)
