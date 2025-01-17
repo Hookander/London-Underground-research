@@ -1,6 +1,7 @@
 import pandas as pd
 from typing import Tuple, List
 import matplotlib.pyplot as plt
+from sklearn.neighbors import KernelDensity
 import numpy as np
 from tools import *
 
@@ -43,7 +44,7 @@ class TimetablesHandler():
                                        (filtered_df['min_departure'] - time[1])*60 +
                                        time[2])
         filtered_df = filtered_df.sort_values(by=['distance_s'])
-        print(filtered_df)
+
 
         return filtered_df.iloc[0]
     
@@ -56,13 +57,20 @@ class TimetablesHandler():
                 (closest_train['min_departure'] - time[1])*60
                 + time[2])
     
-    def get_station_delay(self, station_name: str, direction: str, type_of_day: str) -> List[int]:
+    def get_station_delay(self, station_name: str, direction: str, type_of_day: str, interval : None) -> List[int]:
         
         destination_ids = get_destinations_ids_from_direction(direction)
         station_id = APIHandler().get_id_from_name(station_name)
 
         trains = self.actual_timetable[(self.actual_timetable['stationId'] == station_id) 
-                                       & (self.actual_timetable['destinationId'].isin(destination_ids))] 
+                                       & (self.actual_timetable['destinationId'].isin(destination_ids))]
+        
+        # Filter to consider the trains in the interval
+        if interval is not None:
+            start_min = interval[0][0]*60 + interval[0][1]
+            end_min = interval[1][0]*60 + interval[1][1]
+            trains = trains[(trains['arrival_hour']*60 + trains['arrival_min'] >= start_min) &
+                            (trains['arrival_hour']*60 + trains['arrival_min'] <= end_min)]
         delays = []
         for index, train in trains.iterrows():
             delays.append(self.get_delay_s((train['arrival_hour'], train['arrival_min'], train['arrival_sec']),
@@ -70,29 +78,45 @@ class TimetablesHandler():
             
         return delays
     
-    def plot_delays(self, station_name: str, direction: str, type_of_day: str, plot_normal_distribution=True, n_bins = 20):
+    def density_estimation(self, delays: List[int], bandwidth: float = 30):
+        """
+            Returns the kernel density estimation for the given delays
+        """
+        kde = KernelDensity(kernel='gaussian', bandwidth=bandwidth).fit(np.array(delays).reshape(-1, 1))
+        return kde
+
+    def plot_delays(self, station_name: str, direction: str, type_of_day: str, plot:str=None, n_bins = 20, interval = None):
         """
             Plots the delays for the given station, direction and type_of_day
+            station_name : str, name of the station
+            direction : str, direction of the train
+            type_of_day : str, type of day (MTT, SAT, SUN)
+            plot : Normal | Parzen | None, type of plot to consider
+            n_bins : int, number of bins for the histogram
+            interval : Tuple[Tuple[int, int], Tuple[int, int]] | None, interval to consider to plot the histogram. If None, consider all the delays
         """
-        delays = self.get_station_delay(station_name, direction, type_of_day)
+        delays = self.get_station_delay(station_name, direction, type_of_day, interval = interval)
 
-        if plot_normal_distribution:
-            # Calculate the maximum likelihood for a normal distribution
-            mu, std = np.mean(delays), np.std(delays)
-            x = np.linspace(min(delays), max(delays), 100)
-            y = 1/(std * np.sqrt(2 * np.pi)) * np.exp(- (x - mu)**2 / (2 * std**2))
-            plt.plot(x, y, label='Normal distribution')
+        if plot is not None:
+            if plot == 'Parzen':
+                # Calculate the kernel density estimation
+                kde = self.density_estimation(delays)
+                x = np.linspace(min(delays), max(delays), 1000)
+                log_dens = kde.score_samples(x.reshape(-1, 1))
+                plt.plot(x, np.exp(log_dens), label='Parzen estimation')
+            elif plot == 'Normal':
+                # Calculate the maximum likelihood for a normal distribution
+                mu, std = np.mean(delays), np.std(delays)
+                x = np.linspace(min(delays), max(delays), 100)
+                y = 1/(std * np.sqrt(2 * np.pi)) * np.exp(- (x - mu)**2 / (2 * std**2))
+                plt.plot(x, y, label='Normal distribution')
         plt.hist(delays, bins=n_bins, density=True, alpha=0.6, color='g')
-        plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day}')
+        if interval is not None:
+            plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day} between {interval[0]} and {interval[1]}')
+        else:
+            plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day}')
         plt.xlabel('Delay (s)')
         plt.show()
-    
-    def get_delays(self):
-        """
-            Returns the delays for each station and each direction.
-            Goes through all the scraped tube arrival times, considers that it was supposed to arrive at the closest
-            ideal time and calculates the delay.
-        """
-        return self.actual_timetable['delay'].value_counts()
+
     
 
