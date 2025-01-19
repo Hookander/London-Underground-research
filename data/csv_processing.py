@@ -142,12 +142,12 @@ class CSVProcesser():
             
         return estimated_flows
     
-    def create_flow_time_day_csv(self, date:str, path:str):
+    def flow_time_day_csv(self, date:str) -> pd.DataFrame:
         """
         Creates a csv file containing the estimated link load between stations for a given day and quater_hour
         """
         begin = time.time()
-        directions = ['EB'] #! for now to test
+        directions = ['EB', 'WB'] #! for now to test
         df = pd.DataFrame(columns=['date', 'quarterhour', 'from_station', 'to_station', 'direction', 'link_load'])
         quater_hours = [f'{h:02d}{m:02d}' for h in range(24) for m in range(0, 60, 15)]
         for direction in directions:
@@ -162,8 +162,21 @@ class CSVProcesser():
                     link_load = day_link_load * proportion
                     df = df._append({'date': date, 'quarterhour': quater_hour, 'from_station': start_station, 'to_station': end_station, 'direction': direction, 'link_load': link_load}, ignore_index=True)
 
-        df.to_csv(path, index=False)
-        print(f"Time to create csv: {time.time() - begin}")            
+        print(f"Time to create the csv at date {date}: {time.time() - begin}")
+        return df
+    
+    def creates_flow_time_day_csv_all(self, start_date:str, end_date:str, path) -> None:
+        """
+        Creates csv files containing the estimated link load between stations for a given day and quater_hour
+        for all days between start_date and end_date
+        """
+        begin = time.time()
+        dates = get_dates_between(start_date, end_date)
+        full_df = pd.DataFrame(columns=['date', 'quarterhour', 'from_station', 'to_station', 'direction', 'link_load'])
+        for date in dates:
+            df = self.flow_time_day_csv(date)
+            full_df = pd.concat([full_df, df], ignore_index=True)
+        full_df.to_csv(path, index=False)
         
     def get_linkload_error_to_daily_mean(self, date:str, direction:str) -> Dict[Tuple[str, str], float]:
         """

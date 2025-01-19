@@ -1,6 +1,6 @@
 from datetime import datetime
-
-
+from datetime import timedelta
+from typing import List
 
 def get_day_of_week(date: str) -> str:
     """
@@ -47,5 +47,16 @@ def get_destinations_ids_from_direction(direction: str) -> str:
         return ('940GZZLUWRP', '940GZZLUEBY')
     raise ValueError('Invalid direction')
 
-
-
+def get_dates_between(start_date: str, end_date: str) -> List[str]:
+    """
+    Returns a list of dates between the start and end date
+    start_date = 'dd/mm'
+    end_date = 'dd/mm'
+    """
+    start_date = datetime.strptime(start_date, '%d/%m')
+    end_date = datetime.strptime(end_date, '%d/%m')
+    dates = []
+    while start_date <= end_date:
+        dates.append(start_date.strftime('%d/%m'))
+        start_date += timedelta(days=1)
+    return dates
