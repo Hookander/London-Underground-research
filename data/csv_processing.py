@@ -77,6 +77,7 @@ class CSVProcesser():
                 link_load += estimated_outputs[end_station]
 
         return link_load
+            
     
     def flow_time_day(self, start_station, end_station, direction, date, quarter_hour):
         """
@@ -122,7 +123,7 @@ class CSVProcesser():
             # For example, with this, we won't consider Wanstead, ... when we are at Leytonstone going to Snaresbrook
 
             next_consecutive_stations = self.LinkLoadHandler.get_next_consecutive_stations(station, direction)
-            print(station, next_consecutive_stations)
+            #print(station, next_consecutive_stations)
             for next_consecutive in next_consecutive_stations:
 
                 link_load = 0
@@ -138,10 +139,32 @@ class CSVProcesser():
                         link_load += estimated_outputs[start_station][end_station]
 
                 estimated_flows.append((station, next_consecutive, link_load))
-                print(station, next_stations[0], link_load)
             
         return estimated_flows
     
+    def create_flow_time_day_csv(self, date:str, path:str):
+        """
+        Creates a csv file containing the estimated link load between stations for a given day and quater_hour
+        """
+        begin = time.time()
+        directions = ['EB'] #! for now to test
+        df = pd.DataFrame(columns=['date', 'quarterhour', 'from_station', 'to_station', 'direction', 'link_load'])
+        quater_hours = [f'{h:02d}{m:02d}' for h in range(24) for m in range(0, 60, 15)]
+        for direction in directions:
+            day_link_load_distribution = self.estimate_flow__line(date, direction)
+            print(f"Time to estimate flow between stations: {time.time() - begin}")
+            begin = time.time()
+            for start_station, end_station, day_link_load in day_link_load_distribution:
+                total_linkload = self.LinkLoadHandler.get_avg_daily_link_load(start_station, end_station, get_type_of_day(get_day_of_week(date)))
+                for quater_hour in quater_hours:
+                    quarter_link_load = self.LinkLoadHandler.get_avg_link_load(start_station, end_station, quater_hour, get_type_of_day(get_day_of_week(date)))
+                    proportion = quarter_link_load / total_linkload
+                    link_load = day_link_load * proportion
+                    df = df._append({'date': date, 'quarterhour': quater_hour, 'from_station': start_station, 'to_station': end_station, 'direction': direction, 'link_load': link_load}, ignore_index=True)
+
+        df.to_csv(path, index=False)
+        print(f"Time to create csv: {time.time() - begin}")            
+        
     def get_linkload_error_to_daily_mean(self, date:str, direction:str) -> Dict[Tuple[str, str], float]:
         """
         Returns the error (in %) between : 

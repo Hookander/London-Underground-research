@@ -7,10 +7,12 @@ import time
 
 csvp = CSVProcesser()
 day = '17/09/2019'
-print(csvp.flow_time_day('Notting Hill Gate', 'Queensway', 'EB', day, '0800'))
+csvp.create_flow_time_day_csv(day, 'data/precise_ll/flow_time_day.csv')
+#print(csvp.flow_time_day('Notting Hill Gate', 'Queensway', 'EB', day, '0800'))
 #print(day, get_day_of_week(day))
 #print(csvp.get_linkload_error_to_daily_mean(day, 'WB'))
 #csvp.plot_dist_to_daily_mean(day, 'WB')
+
 
 #df = pd.read_csv('./data/scraped_timetables.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
 #scrapy = Scraper(APIHandler())
