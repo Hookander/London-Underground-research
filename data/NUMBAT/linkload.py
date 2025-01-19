@@ -69,20 +69,12 @@ class LinkLoadHandler():
             return s_time[:2] + '45-' + end
     
     
-    def get_avg_link_load(self, start_station: str, end_station: str, time: int or str, day_of_week:str) -> Dict[str, int]:
+    def get_avg_link_load(self, start_station: str, end_station: str, time: int or str, type_of_day:str) -> Dict[str, int]:
         """
         Returns the link load for the given station and time (averaged over a year)
         time format: hhmm (e.g., 1714 or '1714' for 17:14)
         """
-        match day_of_week:
-            case 'Friday':
-                df = self.dfs['FRI']
-            case 'Saturday':
-                df = self.dfs['SAT']
-            case 'Sunday':
-                df = self.dfs['SUN']
-            case _:
-                df = self.dfs['MTT']
+        df = self.dfs[type_of_day]
         time = int(time)
         quaterhour = self.get_quaterhour(time)
         filtered_df = df[(df['From Station'] == start_station) & 
@@ -102,20 +94,20 @@ class LinkLoadHandler():
         
         return linkload
     
-    def get_avg_daily_link_load(self, start_station: str, end_station: str, day_of_week: str) -> int:
+    def get_avg_daily_link_load(self, start_station: str, end_station: str, type_of_day: str) -> int:
         """
         Returns the daily link load for the given station
         Sums over all the quaterhours
         It is an average because each load at a given time is averaged over a year
         """
-        df = self.dfs[day_of_week]
+        df = self.dfs[type_of_day]
         filtered_df = df[(df['From Station'] == start_station) &
                             (df['To Station'] == end_station)]
         linkload = 0
         for hour in range(24):
             for mins in range(0, 60, 15):
                 time = hour*100 + mins
-                l = self.get_avg_link_load(start_station, end_station, time, day_of_week)
+                l = self.get_avg_link_load(start_station, end_station, time, type_of_day)
                 linkload += l
         return linkload
 
