@@ -33,8 +33,18 @@ class tapsHandler():
         filtered_df = self.df[(self.df['Station'] == station) & (self.df['TravelDate'] == date)]
 
         #Entries and Exits
-        entries = filtered_df[filtered_df['EntryExit'] == 'Entry']['TapCount'].values[0]
-        exits = filtered_df[filtered_df['EntryExit'] == 'Exit']['TapCount'].values[0]
+        entries_df = filtered_df[filtered_df['EntryExit'] == 'Entry']
+        exits_df = filtered_df[filtered_df['EntryExit'] == 'Exit']
+        if len(entries_df['TapCount'].values) == 0 or len(exits_df['TapCount'].values) == 0:
+            # if for some reason there are no data for this day, we return the data
+            # for 7 days before (to have the same type of day (weekday or weekend))
+            previous_date = pd.to_datetime(date, format='%d/%m/%Y') - pd.DateOffset(days=7)
+            previous_date = previous_date.strftime('%d/%m/%Y')
+            print(f"No data for {date}, returning data for {previous_date} : {station}")
+            return self.get_entries_exits(station, previous_date)
+        else:
+            entries = entries_df['TapCount'].values[0]
+            exits = exits_df['TapCount'].values[0]
 
         #we want ints, now they are strings like 1,391
         entries = int(entries.replace(',', ''))
