@@ -53,8 +53,8 @@ def get_dates_between(start_date: str, end_date: str) -> List[str]:
     start_date = 'dd/mm'
     end_date = 'dd/mm'
     """
-    start_date = datetime.strptime(start_date, '%d/%m')
-    end_date = datetime.strptime(end_date, '%d/%m')
+    start_date = datetime.strptime(start_date, '%d/%m/%Y')
+    end_date = datetime.strptime(end_date, '%d/%m/%Y')
     dates = []
     while start_date <= end_date:
         dates.append(start_date.strftime('%d/%m'))
