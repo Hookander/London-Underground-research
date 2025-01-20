@@ -10,7 +10,7 @@ print("Starting...")
 
 csvp = CSVProcesser()
 day = '17/09/2019'
-csvp.get_between_dates_precise_linkload('data/precise_ll/flow_time_day.csv', '01/01/2019', '01/01/2019')
+csvp.get_between_dates_precise_linkload('data/precise_ll/aug_flow_time_day.csv', '02/08/2019', '01/09/2019')
 #df = csvp.flow_time_day_csv(day)
 #df.to_csv('data/precise_ll/flow_time_day.csv', index=False)
 #print(csvp.flow_time_day('Notting Hill Gate', 'Queensway', 'EB', day, '0800'))
