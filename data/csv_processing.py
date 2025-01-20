@@ -152,8 +152,6 @@ class CSVProcesser():
         quater_hours = [f'{h:02d}{m:02d}' for h in range(24) for m in range(0, 60, 15)]
         for direction in directions:
             day_link_load_distribution = self.estimate_flow__line(date, direction)
-            print(f"Time to estimate flow between stations: {time.time() - begin}")
-            begin = time.time()
             for start_station, end_station, day_link_load in day_link_load_distribution:
                 total_linkload = self.LinkLoadHandler.get_avg_daily_link_load(start_station, end_station, get_type_of_day(get_day_of_week(date)))
                 for quater_hour in quater_hours:
@@ -165,18 +163,29 @@ class CSVProcesser():
         print(f"Time to create the csv at date {date}: {time.time() - begin}")
         return df
     
-    def creates_flow_time_day_csv_all(self, start_date:str, end_date:str, path) -> None:
+    def get_between_dates_precise_linkload(self, path: str, start_date: str, end_date: str) -> None:
+        """Generate the csv with the linkloads at a given time on a given day for all days of the year
+        Because it takes roughly 10mins per day, this function will make checkpoints at the end of each day,
+        and will be able to start again from the last checkpoint.
+
+        Args:
+            path (str): The path to the csv file
+            start_date (str): The date to start from (dd/mm/yyyy)
+            end_date (str): The date to end at (dd/mm/yyyy)
         """
-        Creates csv files containing the estimated link load between stations for a given day and quater_hour
-        for all days between start_date and end_date
-        """
-        begin = time.time()
-        dates = get_dates_between(start_date, end_date)
-        full_df = pd.DataFrame(columns=['date', 'quarterhour', 'from_station', 'to_station', 'direction', 'link_load'])
-        for date in dates:
-            df = self.flow_time_day_csv(date)
-            full_df = pd.concat([full_df, df], ignore_index=True)
-        full_df.to_csv(path, index=False)
+        all_dates = get_dates_between(start_date, end_date)
+        try :
+            full_df = pd.read_csv(path)
+        except:
+            print("Creating new csv file")
+            full_df = pd.DataFrame(columns=['date', 'quarterhour', 'from_station', 'to_station', 'direction', 'link_load'])
+        undone_dates = [date for date in all_dates if date not in full_df['date'].unique()]
+        for date in undone_dates:
+            print(f"Processing date {date}")
+            day_df = self.flow_time_day_csv(date)
+            full_df = pd.concat([full_df, day_df])
+            print(f"Checkpoint at date {date}")
+            full_df.to_csv(path, index=False)
         
     def get_linkload_error_to_daily_mean(self, date:str, direction:str) -> Dict[Tuple[str, str], float]:
         """
