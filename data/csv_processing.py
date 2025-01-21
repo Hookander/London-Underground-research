@@ -22,6 +22,7 @@ class CSVProcesser():
         self.LinkLoadHandler = LinkLoadHandler()
         self.tapsHandler = tapsHandler()
 
+
     def passenger_flow_from(self, from_station: str, direction: str, date: str) -> Dict[str, float]:
         """
         Returns the number of passengers that went from a station to another on a gievn day
@@ -32,14 +33,13 @@ class CSVProcesser():
         Here, we consider that the number of passengers exiting to_station from from_station is 
         proportional to the number of passengers exiting to_station from all different stations.
         """
+        
         next_stations = self.LinkLoadHandler.get_inbetween_stations(direction = direction, start_station = from_station)
         # Remove from_station from the list
         next_stations = [station for station in next_stations if station != from_station]
 
         # We want all the stations other than from station (londoners don't make mistakes.)
-        all_stations = self.LinkLoadHandler.get_all_stations()
-        different_stations = [station for station in all_stations if station != from_station]
-        total_output = self.tapsHandler.get_total_output(different_stations, date)
+        total_output = self.total_outputs - self.tapsHandler.get_entries_exits(from_station, date)['exits']
 
         # The entries at from_station
         inputs = self.tapsHandler.get_entries_exits(from_station, date)['entries']
@@ -114,6 +114,10 @@ class CSVProcesser():
 
         """
         stations = self.LinkLoadHandler.get_all_stations()
+
+        # Calculate it here to pass it to the passenger_flow_from function
+        # This way, we don't have to run the same calculation multiple times (access to a df is slow)
+        self.total_outputs = self.tapsHandler.get_total_output(stations, date)
         estimated_flows = []
         estimated_outputs = {}
         for station in stations: 
@@ -147,13 +151,15 @@ class CSVProcesser():
         Creates a csv file containing the estimated link load between stations for a given day and quater_hour
         """
         begin = time.time()
+
+        # Reset it to clear the cache
+        self.tapsHandler = tapsHandler()
+
         directions = ['EB', 'WB'] #! for now to test
         df = pd.DataFrame(columns=['date', 'quarterhour', 'from_station', 'to_station', 'direction', 'link_load'])
         quater_hours = [f'{h:02d}{m:02d}' for h in range(24) for m in range(0, 60, 15)]
         for direction in directions:
             day_link_load_distribution = self.estimate_flow__line(date, direction)
-            print(f"Time to estimate flow between stations: {time.time() - begin}")
-            begin = time.time()
             for start_station, end_station, day_link_load in day_link_load_distribution:
                 total_linkload = self.LinkLoadHandler.get_avg_daily_link_load(start_station, end_station, get_type_of_day(get_day_of_week(date)))
                 for quater_hour in quater_hours:

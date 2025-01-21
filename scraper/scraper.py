@@ -105,7 +105,13 @@ class Scraper():
         """
         df = pd.read_csv(path)
         for i in range(amount):
-            df = self.scrap_line(line, df)
+            for j in range(5):
+                try:
+                    df = self.scrap_line(line, df)
+                    break
+                except:
+                    print(f"Error with line {line}")
+                    timee.sleep(30)
             df.to_csv(path, index = False)
             print(f"Scrapped {i} times")
             timee.sleep(interval_sec)

@@ -3,15 +3,16 @@ import torch.nn as nn
 import pandas as pd
 import numpy as np
 from data import *
+from model.model_class import ModelClass
 
 
 
-class Model(nn.Module):
+class Model(ModelClass):
     """
     This is the is the simplest model we try, just a bunch of linear layers
     """
     def __init__(self):
-        super(Model, self).__init__()
+        super().__init__()
         self.fc = nn.Linear(1, 1)
 
     def create_data(self):
