@@ -6,24 +6,30 @@ class LinkLoadHandler():
     def __init__(self):
         self.dfs = {}
         try :
-            for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
-                self.dfs[type_of_day] = pd.read_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
+            for year in range(2019, 2024):
+                self.dfs[year] = {}
+                sy = str(year)
+                for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
+                    self.dfs[year][type_of_day] = pd.read_csv(f'./data/NUMBAT/{sy}/NBT{sy[-2:]}{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
         except:
             print("Cleaning dataframes...")
-            self.clean_dfs()
-            for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
-                self.dfs[type_of_day] = pd.read_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
+            for year in range(2019, 2024):
+                self.clean_dfs(year)
+                self.dfs[year] = {}
+                sy = str(year)
+                for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
+                    self.dfs[year][type_of_day] = pd.read_csv(f'./data/NUMBAT/{sy}/NBT{sy[-2:]}{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
         
-    
-    def clean_dfs(self) -> pd.DataFrame:
+    def clean_dfs(self, year: int) -> pd.DataFrame:
         """
         Cleans the dataframes :
             - Removes stations from other lines than the Central Line
             - Convert all stations names to a standard format (mainly removing the "LU" at the end sometimes)
         Then saves the cleaned dataframe to a csv file to gain time
         """
+        sy = str(year)
         for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
-            df = pd.read_csv(f'./data/NUMBAT/2019/raw/NBT19{type_of_day}_Outputs.csv', encoding='utf-8', on_bad_lines='skip', sep=';', skiprows=2)
+            df = pd.read_csv(f'./data/NUMBAT/{sy}/raw/NBT{sy[-2:]}{type_of_day}_Outputs.csv', encoding='utf-8', on_bad_lines='skip', sep=';', skiprows=2)
             df = df[df['Line'] == 'Central']
 
             # Removes the LU at the end if it exists
@@ -38,7 +44,7 @@ class LinkLoadHandler():
             df['From Station'] = df['From Station'].apply(lambda x: 'Bank' if x == 'Bank and Monument' else x)
             df['To Station'] = df['To Station'].apply(lambda x: 'Bank' if x == 'Bank and Monument' else x)
 
-            df.to_csv(f'./data/NUMBAT/2019/NBT19{type_of_day}_Outputs_cleaned.csv', index=False)
+            df.to_csv(f'./data/NUMBAT/{sy}/NBT{sy[-2:]}{type_of_day}_Outputs_cleaned.csv', index=False)
 
 
     def get_quaterhour(self, time:int)->str:
@@ -212,5 +218,6 @@ class LinkLoadHandler():
         return self.dfs['MTT']['From Station'].unique()
     
 #llh = LinkLoadHandler()
+#llh.clean_dfs(2023)
 #print(llh.get_next_consecutive_stations('Leytonstone', 'EB'))
 #print(llh.get_inbetween_stations('EB', 'Leytonstone'))
