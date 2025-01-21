@@ -182,7 +182,8 @@ class CSVProcesser():
         for date in dates:
             df = self.flow_time_day_csv(date)
             full_df = pd.concat([full_df, df], ignore_index=True)
-        full_df.to_csv(path, index=False)
+            print(f"Done with {date}, {time.time() - begin}")
+            full_df.to_csv(path, index=False)
         
     def get_linkload_error_to_daily_mean(self, date:str, direction:str) -> Dict[Tuple[str, str], float]:
         """
