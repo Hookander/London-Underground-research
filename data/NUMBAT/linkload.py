@@ -7,18 +7,18 @@ class LinkLoadHandler():
         self.dfs = {}
         try :
             for year in range(2019, 2024):
-                self.dfs[year] = {}
                 sy = str(year)
+                self.dfs[sy] = {}
                 for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
-                    self.dfs[year][type_of_day] = pd.read_csv(f'./data/NUMBAT/{sy}/NBT{sy[-2:]}{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
+                    self.dfs[sy][type_of_day] = pd.read_csv(f'./data/NUMBAT/{sy}/NBT{sy[-2:]}{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
         except:
             print("Cleaning dataframes...")
             for year in range(2019, 2024):
                 self.clean_dfs(year)
-                self.dfs[year] = {}
                 sy = str(year)
+                self.dfs[sy] = {}
                 for type_of_day in ["MTT", "FRI", "SAT", "SUN"]:
-                    self.dfs[year][type_of_day] = pd.read_csv(f'./data/NUMBAT/{sy}/NBT{sy[-2:]}{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
+                    self.dfs[sy][type_of_day] = pd.read_csv(f'./data/NUMBAT/{sy}/NBT{sy[-2:]}{type_of_day}_Outputs_cleaned.csv', encoding='utf-8', on_bad_lines='skip', sep=',')
         
     def clean_dfs(self, year: int) -> pd.DataFrame:
         """
@@ -75,12 +75,12 @@ class LinkLoadHandler():
             return s_time[:2] + '45-' + end
     
     
-    def get_avg_link_load(self, start_station: str, end_station: str, time: int or str, type_of_day:str) -> Dict[str, int]:
+    def get_avg_link_load(self, start_station: str, end_station: str, time: int or str, type_of_day:str, year: str) -> Dict[str, int]:
         """
         Returns the link load for the given station and time (averaged over a year)
         time format: hhmm (e.g., 1714 or '1714' for 17:14)
         """
-        df = self.dfs[type_of_day]
+        df = self.dfs[year][type_of_day]
         time = int(time)
         quaterhour = self.get_quaterhour(time)
         filtered_df = df[(df['From Station'] == start_station) & 
@@ -100,20 +100,20 @@ class LinkLoadHandler():
         
         return linkload
     
-    def get_avg_daily_link_load(self, start_station: str, end_station: str, type_of_day: str) -> int:
+    def get_avg_daily_link_load(self, start_station: str, end_station: str, type_of_day: str, year: str) -> int:
         """
         Returns the daily link load for the given station
         Sums over all the quaterhours
         It is an average because each load at a given time is averaged over a year
         """
-        df = self.dfs[type_of_day]
+        df = self.dfs[year][type_of_day]
         filtered_df = df[(df['From Station'] == start_station) &
                             (df['To Station'] == end_station)]
         linkload = 0
         for hour in range(24):
             for mins in range(0, 60, 15):
                 time = hour*100 + mins
-                l = self.get_avg_link_load(start_station, end_station, time, type_of_day)
+                l = self.get_avg_link_load(start_station, end_station, time, type_of_day, year)
                 linkload += l
         return linkload
 
@@ -121,7 +121,7 @@ class LinkLoadHandler():
         """
         Returns the next station in the given direction
         """
-        next_stations = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == station) 
+        next_stations = self.dfs['2019']['MTT'][(self.dfs['MTT']['From Station'] == station) 
                                         & (self.dfs['MTT']['Dir'] == direction)
                                         ]['To Station'].values
         if len(next_stations) == 0:
@@ -143,8 +143,8 @@ class LinkLoadHandler():
         # Gets all stations starting from start_station in direction
         if end_station is None:
             
-            next_stations = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == start_station)
-                                            & (self.dfs['MTT']['Dir'] == direction)
+            next_stations = self.dfs['2019']['MTT'][(self.dfs['2019']['MTT']['From Station'] == start_station)
+                                            & (self.dfs['2019']['MTT']['Dir'] == direction)
                                             ]['To Station'].values
             
             while len(next_stations) != 0 :           
@@ -155,8 +155,8 @@ class LinkLoadHandler():
                 #Because of the branches, we might have already added the station
                 if not(current_station in stations):
                     stations.append(current_station)
-                next = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == current_station)
-                                       & (self.dfs['MTT']['Dir'] == direction)
+                next = self.dfs['2019']['MTT'][(self.dfs['2019']['MTT']['From Station'] == current_station)
+                                       & (self.dfs['2019']['MTT']['Dir'] == direction)
                                         ]['To Station'].values
                 next_stations = np.concatenate([next_stations,next])
                 
@@ -178,8 +178,8 @@ class LinkLoadHandler():
         while current_station != end_station and i<100:
 
             # Check for the number of next stops for possible branching
-            nexts = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == current_station)
-                                              & (self.dfs['MTT']['Dir'] == direction)
+            nexts = self.dfs['2019']['MTT'][(self.dfs['2019']['MTT']['From Station'] == current_station)
+                                              & (self.dfs['2019']['MTT']['Dir'] == direction)
                                               ]['To Station'].values
             
             if len(nexts)==2: # We are branching at this station
@@ -207,7 +207,7 @@ class LinkLoadHandler():
         Returns the next stations in the given direction, 
         there might be multiple next stations because of the branches
         """
-        next_stations = self.dfs['MTT'][(self.dfs['MTT']['From Station'] == station) & (self.dfs['MTT']['Dir'] == direction)
+        next_stations = self.dfs['2019']['MTT'][(self.dfs['2019']['MTT']['From Station'] == station) & (self.dfs['2019']['MTT']['Dir'] == direction)
                                         ]['To Station'].values
         return next_stations
 
@@ -215,7 +215,7 @@ class LinkLoadHandler():
         """
         Returns all the stations in the Central line
         """
-        return self.dfs['MTT']['From Station'].unique()
+        return self.dfs['2019']['MTT']['From Station'].unique()
     
 #llh = LinkLoadHandler()
 #llh.clean_dfs(2023)

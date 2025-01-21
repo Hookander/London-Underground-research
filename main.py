@@ -9,7 +9,7 @@ print("Starting...")
 #day = '17/09/2019'
 
 csvp = CSVProcesser()
-day = '03/08/2019'
+day = '03/08/2023'
 df = csvp.flow_time_day_csv(day)
 #df.to_csv('data/precise_ll/flow_time_day.csv', index=False)
 #print(csvp.flow_time_day('Notting Hill Gate', 'Queensway', 'EB', day, '0800'))
