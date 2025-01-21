@@ -89,16 +89,16 @@ class LineGraphist():
         else:
             return 'black'
 
-    def get_edges_colors(self, date) -> List:
+    def get_edges_colors(self, date, direction) -> List:
         """
         Returns the color of the edge based on the error betwwen the real data and the model used to predict the link load
         """
         csvp = CSVProcesser()
-        errors = csvp.get_linkload_error_to_daily_mean(date, 'EB')
+        errors = csvp.get_linkload_error_to_daily_mean(date, direction)
         colors = {edge: self.color_from_error(error) for edge, error in errors.items()}
         return colors
     
-    def draw_graph(self, model_evaluation = True, date : str = '17/09/2019') -> None:
+    def draw_graph(self, date : str, direction: str, model_evaluation = True) -> None:
         """
         Draw the graph
         If model_evaluation is True, the edges colors will be based on the error between the real data, 
@@ -109,7 +109,7 @@ class LineGraphist():
         G.add_edges_from(self.edges)
         colors = []
         if model_evaluation:
-            edge_colors = self.get_edges_colors(date)
+            edge_colors = self.get_edges_colors(date, direction)
             for edge in G.edges:
                 if edge in edge_colors:
                     colors.append(edge_colors[edge])
@@ -150,9 +150,10 @@ class LineGraphist():
 
         patches = [mpatches.Patch(color=color, label=label) for color, label in legend_labels.items()]
         plt.legend(handles=patches)
+        plt.title(f'London Underground Central Line at date {date}, direction {direction}')
         plt.show()
 
         
 
 lg = LineGraphist()
-lg.draw_graph(model_evaluation=True)
+lg.draw_graph(model_evaluation=True, date='17/09/2019', direction='WB')

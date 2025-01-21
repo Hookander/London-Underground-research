@@ -94,9 +94,9 @@ class CSVProcesser():
         type_of_day = get_type_of_day(day_of_week)
         linkload_day = self.estimate_flow_between_stations(start_station, end_station, date, direction)
         print(f"Time to get link load between stations: {time.time() - begin}")
-        linkload_quarter = self.LinkLoadHandler.get_avg_link_load(start_station, end_station, quarter_hour, type_of_day)
+        linkload_quarter = self.LinkLoadHandler.get_avg_link_load(start_station, end_station, quarter_hour, type_of_day, date[-4:])
         print(f"Time to get link load for the quarter of the day: {time.time() - begin}")
-        total_linkload = self.LinkLoadHandler.get_avg_daily_link_load(start_station, end_station, type_of_day)
+        total_linkload = self.LinkLoadHandler.get_avg_daily_link_load(start_station, end_station, type_of_day, date[-4:])
         print(f"Time to get total link load for the day: {time.time() - begin}")
 
         proportion = linkload_quarter / total_linkload
@@ -161,9 +161,9 @@ class CSVProcesser():
         for direction in directions:
             day_link_load_distribution = self.estimate_flow__line(date, direction)
             for start_station, end_station, day_link_load in day_link_load_distribution:
-                total_linkload = self.LinkLoadHandler.get_avg_daily_link_load(start_station, end_station, get_type_of_day(get_day_of_week(date)))
+                total_linkload = self.LinkLoadHandler.get_avg_daily_link_load(start_station, end_station, get_type_of_day(get_day_of_week(date)), date[-4:])
                 for quater_hour in quater_hours:
-                    quarter_link_load = self.LinkLoadHandler.get_avg_link_load(start_station, end_station, quater_hour, get_type_of_day(get_day_of_week(date)))
+                    quarter_link_load = self.LinkLoadHandler.get_avg_link_load(start_station, end_station, quater_hour, get_type_of_day(get_day_of_week(date)), date[-4:])
                     proportion = quarter_link_load / total_linkload
                     link_load = day_link_load * proportion
                     df = df._append({'date': date, 'quarterhour': quater_hour, 'from_station': start_station, 'to_station': end_station, 'direction': direction, 'link_load': link_load}, ignore_index=True)
