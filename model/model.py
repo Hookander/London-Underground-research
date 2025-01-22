@@ -35,11 +35,10 @@ class Model(ModelClass):
         2019-2022 : training
         2023 : testing
         """
-        df = pd.DataFrame(columns=['day', 'month_cos', 'month_sin', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load'])
+        df = pd.DataFrame(columns=['day', 'month', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load'])
         df.to_csv(f'data/model_data/data_no_taps.csv', index=False)
         stations = self.llh.get_all_stations()
-        #! just for testing
-        directions = ['EB']
+        directions = ['EB', 'WB']
 
         ntods_per_year = {}
         for year in range(2019, 2024):
@@ -53,9 +52,10 @@ class Model(ModelClass):
                 type_of_day = get_type_of_day(day_of_week, include_friday=True)
 
                 tod_id = self.tod_to_int(type_of_day)
+
                 month = int(date.split('/')[1])
-                month_cos = np.cos(month * 2 * np.pi / 12)
-                month_sin = np.sin(month * 2 * np.pi / 12)
+
+                day = int(date.split('/')[0])
                 for direction in directions:
                     dir_id = self.direction_to_int(direction)
                     for start_station in stations:
@@ -69,9 +69,8 @@ class Model(ModelClass):
                                     quarter_hour = str(hour).zfill(2) + str(min).zfill(2)
                                     avg_link_load = self.llh.get_avg_link_load(start_station, end_station, quarter_hour, type_of_day, year)
                                     output = avg_link_load * ntods_per_year[year][type_of_day]
-                                    df = df._append({'day': date, 
-                                                        'month_cos': month_cos, 
-                                                        'month_sin': month_sin, 
+                                    df = df._append({'day': day, 
+                                                        'month' : month,
                                                         'tod_id': tod_id, 
                                                         'start_station_id': start_id, 
                                                         'end_station_id': end_id, 
@@ -82,7 +81,7 @@ class Model(ModelClass):
                         d2 = pd.read_csv(f'data/model_data/data_no_taps.csv')
                         df = pd.concat([d2, df])
                         df.to_csv(f'data/model_data/data_no_taps.csv', index=False)
-                        df = pd.DataFrame(columns=['day', 'month_cos', 'month_sin', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load'])
+                        df = pd.DataFrame(columns=['day', 'month', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load'])
 
                 print(f'{date} done, time taken: {time.time() - begin}')
 
