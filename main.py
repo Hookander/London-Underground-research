@@ -9,7 +9,7 @@ print("Starting...")
 #csvp = CSVProcesser()
 #day = '17/09/2019'
 model = Model()
-df = model.create_data()
+df = model.create_data('2023', 'data/model_data/2022_data_no_taps.csv')
 
 #csvp = CSVProcesser()
 #day = '03/08/2023'
