@@ -60,3 +60,13 @@ def get_dates_between(start_date: str, end_date: str) -> List[str]:
         dates.append(start_date.strftime('%d/%m/%Y'))
         start_date += timedelta(days=1)
     return dates
+
+def nb_days_per_tod(year:str) -> int:
+    """
+    Returns the number of days for a given type of day and year
+    """
+    dates = get_dates_between('01/01/'+year, '31/12/'+year)
+    count = {'MTT': 0, 'SAT': 0, 'SUN': 0, 'FRI': 0}
+    for date in dates:
+        count[get_type_of_day(get_day_of_week(date), include_friday=True)] += 1
+    return count

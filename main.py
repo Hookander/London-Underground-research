@@ -1,16 +1,19 @@
 from tools import *
 from scraper import *
 from data import *
+from model import *
 import pandas as pd
 import time
 
 print("Starting...")
 #csvp = CSVProcesser()
 #day = '17/09/2019'
+model = Model()
+df = model.create_data()
 
-csvp = CSVProcesser()
-day = '03/08/2023'
-df = csvp.flow_time_day_csv(day)
+#csvp = CSVProcesser()
+#day = '03/08/2023'
+#df = csvp.flow_time_day_csv(day)
 #df.to_csv('data/precise_ll/flow_time_day.csv', index=False)
 #print(csvp.flow_time_day('Notting Hill Gate', 'Queensway', 'EB', day, '0800'))
 #print(day, get_day_of_week(day))
