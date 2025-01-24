@@ -46,7 +46,10 @@ class Model(ModelClass):
         for iyear in range(2019, 2023):
             ll_dict = {}
             year = str(iyear)
-            for date in get_dates_between('01/01/'+year, '31/12/'+year):
+            dates = get_dates_between('01/01/'+year, '31/12/'+year)
+            already_done_dates = (str(df['day']) + '/' + str(df['month']) + '/' + year).tolist()
+            dates_to_do = [date for date in dates if date not in already_done_dates]
+            for date in dates_to_do:
                 begin = time.time()
                 day_of_week = get_day_of_week(date)
                 type_of_day = get_type_of_day(day_of_week, include_friday=True)
