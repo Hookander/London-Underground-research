@@ -98,6 +98,5 @@ class Model(ModelClass):
             df = pd.DataFrame(columns=['day', 'month', 'year', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load', 'output'])
 
             print(f'{date} done, time taken: {time.time() - begin}')
-            break
         
         
