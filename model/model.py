@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 from data import *
 from model.model_class import ModelClass
+from model.data_handler import CustomUndergroundDataset
+from torch.utils.data import DataLoader, Dataset
+
 
 
 
@@ -11,9 +14,27 @@ class Model(ModelClass):
     """
     This is the is the simplest model we try, just a bunch of linear layers
     """
-    def __init__(self):
+    def __init__(self, embedding_dim):
         super().__init__()
-        self.fc = nn.Linear(1, 1)
+
+        self.embedding_dim = embedding_dim
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+        # 49 stations
+        self.station_embedding = nn.Embedding(49, self.embedding_dim)
+        self.tod_embedding = nn.Embedding(4, 4) # 4 types of days, don't need a big embedding
+        self.model = nn.Sequential(
+            nn.LazyLinear(128),
+            nn.ReLU(),
+            nn.LazyLinear(64),
+            nn.ReLU(),
+            nn.LazyLinear(32),
+            nn.ReLU(),
+            nn.LazyLinear(16),
+            nn.ReLU(),
+            nn.LazyLinear(1)
+        )
+        self.to(self.device)
 
     def create_data(self, year:str, path: str) -> None:
         """
@@ -89,5 +110,53 @@ class Model(ModelClass):
                     df = pd.DataFrame(columns=['day', 'month', 'year', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load', 'output'])
 
             print(f'{date} done, time taken: {time.time() - begin}')
+    
+    def forward(self, continuous_inputs, embedding_inputs):
+
+        print(continuous_inputs.shape)
+        embedded = [self.tod_embedding(embedding_inputs[:, 0]),
+                    self.station_embedding(embedding_inputs[:, 1]),
+                    self.station_embedding(embedding_inputs[:, 2])]
+        embedded = torch.cat(embedded, dim=1)  # Shape : [batch_size, sum(embedding_dims)]
+
+
+        x = torch.cat([continuous_inputs, embedded], dim=1)  # Shape : [batch_size, continuous_input_size + sum(embedding_dims)]
         
+        return self.model(x)
+
+    def train(self, lr, epochs):
+        """
+        2019 to 2021 for training
+        2022 for testing
+        """
+        self.lr = lr
+        self.epochs = epochs
+        self.criterion = nn.MSELoss()
+        self.optimizer = torch.optim.Adam(self.parameters(), lr=self.lr)
+        dataset = CustomUndergroundDataset()
+        dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
+        for epoch in range(epochs):
+            for batch in dataloader:
+                #print(batch)
+                continuous_inputs, embedding_inputs, label = batch
+                continuous_inputs = continuous_inputs.to(self.device)
+                embedding_inputs = embedding_inputs.to(self.device)
+                label = label.to(self.device)
+                self.optimizer.zero_grad()
+                output = self.forward(continuous_inputs, embedding_inputs)
+                loss = self.criterion(output, label)
+                loss.backward()
+                self.optimizer.step()
+                break
+            print(f'Epoch {epoch} done, loss: {loss.item()}')
+            torch.save(self.state_dict(), path)
+            print('Model saved')
+        
+
+
+
+
+
+
+
         

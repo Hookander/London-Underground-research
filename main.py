@@ -8,11 +8,13 @@ import time
 print("Starting...")
 #csvp = CSVProcesser()
 #day = '17/09/2019'
-model = Model()
-df = model.create_data('2019', 'data/model_data/2019_data_no_taps.csv')
-
-df = pd.read_csv('data/model_data/2019_data_no_taps.csv') 
-print(df.tail(1))
+model = Model(10)
+model.train(epochs=1, lr=0.001)
+#df = model.create_data('2019', 'data/model_data/2019_data_no_taps.csv')
+#dataset = CustomUndergroundDataset()
+#print(dataset.train_data)
+#df = pd.read_csv('data/model_data/2019_data_no_taps.csv') 
+#print(df.tail(1))
 #csvp = CSVProcesser()
 #day = '03/08/2023'
 #df = csvp.flow_time_day_csv(day)
