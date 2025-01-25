@@ -56,22 +56,28 @@ class Model(ModelClass):
         2019-2022 : training
         2023 : testing
         """
-        try:
+        try: # the df already exists
             df = pd.read_csv(path)
+            # get the last date in dd/mm/yyyy format
+            last_date = df.iloc[-1][['day', 'month', 'year']].values
+            last_date = '/'.join([str(int(x)) for x in last_date])
+
+            # We start the next day
+            start_date = get_next_date(last_date)
+            df = pd.DataFrame(columns=['day', 'month', 'year', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load', 'output'])
+            print(f'Starting from {start_date}')
+
         except:
             print('Creating new file')
             df = pd.DataFrame(columns=['day', 'month', 'year', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load', 'output'])
             df.to_csv(path, index=False)
+            start_date = '01/01' + year
         stations = self.llh.get_all_stations()
         directions = ['EB', 'WB']
-
         ntods_per_year = nb_days_per_tod(year)
-        dates = get_dates_between('01/01/'+year, '31/12/'+year)
-        already_done_dates = (df['day'].astype(str) + '/' + df['month'].astype(str) + '/' + year).tolist()
-        print(already_done_dates)
-        dates_to_do = [date for date in dates if date not in already_done_dates]
-        print(dates_to_do)
-        for date in dates_to_do:
+        dates = get_dates_between(start_date, '31/12/'+year)
+        for date in dates:
+            print(date)
             begin = time.time()
             day_of_week = get_day_of_week(date)
             type_of_day = get_type_of_day(day_of_week, include_friday=True)
@@ -90,6 +96,9 @@ class Model(ModelClass):
                         b = time.time()
                         for hour in range(24):
                             for minute in [0, 15, 30, 45]:
+                                # Check it has not been done already
+                                if len(df[(df['day'] == day) & (df['month'] == month) & (df['year'] == year) & (df['tod_id'] == tod_id) & (df['start_station_id'] == start_id) & (df['end_station_id'] == end_id) & (df['direction_id'] == dir_id) & (df['hour'] == hour) & (df['min'] == minute)]) > 0:
+                                    continue
                                 quarter_hour = str(hour).zfill(2) + str(minute).zfill(2)
                                 avg_link_load = self.llh.get_avg_link_load(start_station, end_station, quarter_hour, type_of_day, year)
                                 output = avg_link_load * ntods_per_year[type_of_day]
@@ -104,10 +113,10 @@ class Model(ModelClass):
                                                 'min': minute,
                                                 'link_load': avg_link_load,
                                                 'output': output}, ignore_index=True)
-                    d2 = pd.read_csv(path)
-                    df = pd.concat([d2, df])
-                    df.to_csv(path, index=False)
-                    df = pd.DataFrame(columns=['day', 'month', 'year', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load', 'output'])
+            d2 = pd.read_csv(path)
+            df = pd.concat([d2, df])
+            df.to_csv(path, index=False)
+            df = pd.DataFrame(columns=['day', 'month', 'year', 'tod_id', 'start_station_id', 'end_station_id', 'direction_id', 'hour', 'min', 'link_load', 'output'])
 
             print(f'{date} done, time taken: {time.time() - begin}')
     

@@ -70,3 +70,11 @@ def nb_days_per_tod(year:str) -> int:
     for date in dates:
         count[get_type_of_day(get_day_of_week(date), include_friday=True)] += 1
     return count
+
+def get_next_date(date: str) -> str:
+    """
+    Returns the next date
+    """
+    date = datetime.strptime(date, '%d/%m/%Y')
+    date += timedelta(days=1)
+    return date.strftime('%d/%m/%Y')
