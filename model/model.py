@@ -19,6 +19,8 @@ class Model(ModelClass):
     def __init__(self, embedding_dim, scale_data = True):
         super().__init__()
 
+        wandb.init(project='underground_research', name='simple_model')
+
         self.embedding_dim = embedding_dim
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.scaler = None
@@ -49,7 +51,6 @@ class Model(ModelClass):
             nn.LazyLinear(1)
         )
         self.to(self.device)
-        wandb.init(project='underground_research', entity='underground', name='simple_model')
 
     def create_data(self, year:str, path: str) -> None:
         """

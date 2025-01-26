@@ -7,3 +7,4 @@ data/NUMBAT/2022/xlsx/*
 data/NUMBAT/2023/xlsx/*
 data/model_data/*
 model/models/*
+wandb/*
