@@ -10,6 +10,7 @@ print("Starting...")
 #day = '17/09/2019'
 model = Model(10)
 model.train(epochs=1, lr=0.001)
+model.test()
 #df = model.create_data('2019', 'data/model_data/2019_data_no_taps.csv')
 #dataset = CustomUndergroundDataset()
 #print(dataset.train_data)

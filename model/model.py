@@ -5,7 +5,9 @@ import numpy as np
 from data import *
 from model.model_class import ModelClass
 from model.data_handler import CustomUndergroundDataset
+from sklearn.preprocessing import StandardScaler
 from torch.utils.data import DataLoader, Dataset
+import wandb
 
 
 
@@ -14,11 +16,23 @@ class Model(ModelClass):
     """
     This is the is the simplest model we try, just a bunch of linear layers
     """
-    def __init__(self, embedding_dim):
+    def __init__(self, embedding_dim, scale_data = True):
         super().__init__()
 
         self.embedding_dim = embedding_dim
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.scaler = None
+        if scale_data:
+            self.scaler = StandardScaler()
+        
+        train_dataset = CustomUndergroundDataset()
+        train_dataset.prep_data(['2019', '2020', '2021'], 'train', self.scaler)
+        self.train_dl = DataLoader(train_dataset, batch_size=1, shuffle=True)
+
+        test_dataset = CustomUndergroundDataset()
+        test_dataset.prep_data(['2022'], 'test', self.scaler)
+        self.test_dl = DataLoader(test_dataset, batch_size=1, shuffle=True)
+
 
         # 49 stations
         self.station_embedding = nn.Embedding(49, self.embedding_dim)
@@ -35,6 +49,7 @@ class Model(ModelClass):
             nn.LazyLinear(1)
         )
         self.to(self.device)
+        wandb.init(project='underground_research', entity='underground', name='simple_model')
 
     def create_data(self, year:str, path: str) -> None:
         """
@@ -122,7 +137,7 @@ class Model(ModelClass):
     
     def forward(self, continuous_inputs, embedding_inputs):
 
-        print(continuous_inputs.shape)
+        #print(continuous_inputs.shape)
         embedded = [self.tod_embedding(embedding_inputs[:, 0]),
                     self.station_embedding(embedding_inputs[:, 1]),
                     self.station_embedding(embedding_inputs[:, 2])]
@@ -142,25 +157,52 @@ class Model(ModelClass):
         self.epochs = epochs
         self.criterion = nn.MSELoss()
         self.optimizer = torch.optim.Adam(self.parameters(), lr=self.lr)
-        dataset = CustomUndergroundDataset()
-        dataloader = DataLoader(dataset, batch_size=1, shuffle=True)
+
         for epoch in range(epochs):
-            for batch in dataloader:
+            for batch in self.train_dl:
                 #print(batch)
                 continuous_inputs, embedding_inputs, label = batch
+
+                # De batch to tensor because our batch is of size 365
+                continuous_inputs = continuous_inputs[0]
+                embedding_inputs = embedding_inputs[0]
+                label = label[0]
+
                 continuous_inputs = continuous_inputs.to(self.device)
                 embedding_inputs = embedding_inputs.to(self.device)
+
                 label = label.to(self.device)
                 self.optimizer.zero_grad()
-                output = self.forward(continuous_inputs, embedding_inputs)
+                output = self.forward(continuous_inputs, embedding_inputs).sum()
+                #print(output.shape)
+                #print("FORWARD DONE")
                 loss = self.criterion(output, label)
+                wandb.log({'train_loss': loss.item()})
                 loss.backward()
                 self.optimizer.step()
-                break
             print(f'Epoch {epoch} done, loss: {loss.item()}')
-            torch.save(self.state_dict(), path)
-            print('Model saved')
+        torch.save(self.state_dict(), "model/models/model.pth")
+        print('Model saved')
         
+    def test(self):
+        for batch in self.train_dl:
+            #print(batch)
+            continuous_inputs, embedding_inputs, label = batch
+
+            # De batch to tensor because our batch is of size 365
+            continuous_inputs = continuous_inputs[0]
+            embedding_inputs = embedding_inputs[0]
+            label = label[0]
+
+            continuous_inputs = continuous_inputs.to(self.device)
+            embedding_inputs = embedding_inputs.to(self.device)
+
+            label = label.to(self.device)
+            self.optimizer.zero_grad()
+            output = self.forward(continuous_inputs, embedding_inputs).sum()
+            loss = self.criterion(output, label)
+            wandb.log({'test_loss': loss.item()})
+            print(loss.item())
 
 
 

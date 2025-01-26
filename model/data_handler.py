@@ -4,22 +4,31 @@ import torch.nn as nn
 import pandas as pd
 import numpy as np
 from data import *
+from sklearn.preprocessing import StandardScaler
 from model.model_class import ModelClass
 from torch.utils.data import DataLoader, Dataset
 
 class CustomUndergroundDataset(Dataset):
     def __init__(self):
+        self.inputs = []
+        self.embedding_inputs = []
+        self.outputs = []
+        
+
+    def prep_data(self, years : List[str], mode: str, scaler = None|StandardScaler) -> None:
         """
         # We do the back prop on the sum over the year of the output for each quarter of an hour
         # So we group together the data by the input for 1 output
         # We ll have 365 inputs for 1 output
         + we are using embeddings for the stations (for now the same embedding for the start and end station)
+        args:
+        - years : list of years to use
+        - mode : 'train' or 'test' (useful for the scaler)
+        - scaler : if we want to scale the output then StandardScaler object
         """
-        self.inputs = []
-        self.embedding_inputs = []
-        self.outputs = []
 
-        for year in ['2019', '2020', '2021']:
+        for year in years:
+            assert year in ['2019', '2020', '2021', '2022'], 'Invalid year'
             df = pd.read_csv(f'data/model_data/{year}_data_no_taps.csv')
 
             # Feature engineering : ajout des colonnes cos/sin
@@ -35,9 +44,6 @@ class CustomUndergroundDataset(Dataset):
 
             # Boucle sur chaque quaterhour
             for groupby, group in df.groupby('groupby'):
-                print('group ' + str(len(group)))
-                print(group)
-                break
                 continuous_inputs = group[['cos_day', 
                                            'sin_day', 
                                            'cos_month', 
@@ -57,6 +63,14 @@ class CustomUndergroundDataset(Dataset):
                 self.inputs.append(torch.tensor(continuous_inputs))
                 self.embedding_inputs.append(torch.tensor(embedding_inputs))
                 self.outputs.append(torch.tensor(output))
+        self.outputs = np.array(self.outputs)
+        if scaler is not None:
+            if mode == 'train':
+                print(f'Scaling output for {mode}')
+                self.outputs = scaler.fit_transform(self.outputs.reshape(-1, 1)).flatten()
+            else:
+                print(f'Scaling output for {mode}')
+                self.outputs = scaler.transform(self.outputs.reshape(-1, 1)).flatten()
 
     def __len__(self):
         return len(self.outputs)
