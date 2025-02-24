@@ -28,13 +28,15 @@ class tapsHandler():
         df_full.to_csv(self.path, index=False)
     
     def get_entries_exits(self, station:str, date:str) -> Dict[str, int]:
+        print(f"Getting entries and exits for {station} on {date}")
         """
             Returns the entries and exits for the given station and date
             date format : dd/mm/yyyy
         """
-        if station in self.entries_exits:
-            return {'entries' : self.entries_exits[station]['entries'], 
-                    'exits' : self.entries_exits[station]['exits']}
+        if (station, date) in self.entries_exits:
+            print("Already in memory")
+            return {'entries' : self.entries_exits[(station, date)]['entries'], 
+                    'exits' : self.entries_exits[(station, date)]['exits']}
         else:
             #Station and date
             filtered_df = self.df[(self.df['Station'] == station) & (self.df['TravelDate'] == date)]
@@ -43,6 +45,7 @@ class tapsHandler():
             entries_df = filtered_df[filtered_df['EntryExit'] == 'Entry']
             exits_df = filtered_df[filtered_df['EntryExit'] == 'Exit']
             if len(entries_df['TapCount'].values) == 0 or len(exits_df['TapCount'].values) == 0:
+                print(f"No data for {date}, returning data for 7 days before : {station}")
                 # if for some reason there are no data for this day, we return the data
                 # for 7 days before (to have the same type of day (weekday or weekend))
                 previous_date = pd.to_datetime(date, format='%d/%m/%Y') - pd.DateOffset(days=7)
@@ -50,6 +53,7 @@ class tapsHandler():
                 #print(f"No data for {date}, returning data for {previous_date} : {station}")
                 return self.get_entries_exits(station, previous_date)
             else:
+                print(f"Data found for {date} : {station}")
                 entries = entries_df['TapCount'].values[0]
                 exits = exits_df['TapCount'].values[0]
 
@@ -57,7 +61,7 @@ class tapsHandler():
             entries = int(entries.replace(',', ''))
             exits = int(exits.replace(',', ''))
 
-            self.entries_exits[station] = {'entries' : entries, 'exits' : exits}
+            self.entries_exits[(station, date)] = {'entries' : entries, 'exits' : exits}
 
             return {'entries' : entries, 'exits' : exits}
 
@@ -71,7 +75,4 @@ class tapsHandler():
         return total_outputs
 
 
-
-#taps = tapsHandler()
-#print(taps.get_entries_exits('Notting Hill Gate', '01/01/2019'))
 
