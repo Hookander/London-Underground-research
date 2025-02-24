@@ -1,0 +1,45 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.11.5",
+    "heartbeatAt": "2025-01-26T12:22:44.630704",
+    "startedAt": "2025-01-26T12:22:44.007103",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/balthazarmartin/Documents/ICL/Individual Project/programs/main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/Hookander/programs.git",
+        "commit": "47247d188477a2dcc337ce8ba0151808cbb407a3"
+    },
+    "email": "balthazar.martin123@gmail.com",
+    "root": "/Users/balthazarmartin/Documents/ICL/Individual Project/programs",
+    "host": "dyn899-216.eduroam.ic.ac.uk",
+    "username": "balthazarmartin",
+    "executable": "/Users/balthazarmartin/anaconda3/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1400,
+        "min": 1400,
+        "max": 1400
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1400,
+            "min": 1400,
+            "max": 1400
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 233.46913528442383,
+            "used": 213.5953140258789
+        }
+    },
+    "memory": {
+        "total": 8.0
+    }
+}
