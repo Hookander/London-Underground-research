@@ -116,6 +116,7 @@ class TimetablesHandler():
         else:
             plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day}')
         plt.xlabel('Delay (s)')
+        plt.ylabel('Density')
         plt.show()
 
     
