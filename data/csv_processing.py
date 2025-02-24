@@ -200,7 +200,7 @@ class CSVProcesser():
         for station, next_station, link_load in estimated_flows:
             # Get the average daily link load between station and next_station
             #! need to adapt the type of day to the date ! (really easy)
-            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day)
+            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day, date[-4:])
             # Calculate the relative error to the average
             error = abs(link_load - daily_mean) / daily_mean * 100
             errors[(station, next_station)] = error
@@ -218,14 +218,17 @@ class CSVProcesser():
         for station, next_station, link_load in estimated_flows:
             # Get the average daily link load between station and next_station
             #! need to adapt the type of day to the date ! (really easy)
-            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day)
+            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day, date[-4:])
             # Calculate the relative error to the average
             error = abs(link_load - daily_mean) / daily_mean * 100
             errors.append(error)
             link_data.append((station, next_station, link_load, daily_mean, error))
             print(station, next_station, link_load, daily_mean, error)
-        print(link_data)
         plt.scatter(range(len(errors)), errors)
+        plt.xlabel('Link')
+        plt.ylabel('Error (%)')
+        plt.title(f'Error between the estimated link load and the yearly mean on {date} in direction {direction}')
+        plt.ylim(0, 100)
         plt.show()
     
 

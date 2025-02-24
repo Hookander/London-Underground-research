@@ -150,7 +150,7 @@ class LineGraphist():
 
         patches = [mpatches.Patch(color=color, label=label) for color, label in legend_labels.items()]
         plt.legend(handles=patches)
-        plt.title(f'London Underground Central Line at date {date}, direction {direction}')
+        #plt.title(f'London Underground Central Line at date {date}, direction {direction}')
         plt.show()
 
         
