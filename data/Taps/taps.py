@@ -20,13 +20,37 @@ class tapsHandler():
         only need to be done if it doens't already exit
         """
         df_full = pd.DataFrame(columns=['TravelDate','Station','EntryExit','TapCount', 'ServedBy'])
-
-        for year in range(2019, 2023):
+        """
+        for year in range(2020, 2023):
             df = pd.read_csv(f'./data/Taps/TAPS-daily-rail-station-entryexit-{year}.csv')
             df = df[df['ServedBy'].str.contains('Tube', na=False)]
             df['TapCount'] = df['TapCount'].str.replace(',', '').astype(int)
             df_full = pd.concat([df_full, df], ignore_index=True)
-        # Handle the 2023 year since it is not fully in the TAPS file (lack of data)
+        """
+        # Handle the years 2019 and 2023 since it is not fully in the TAPS file (lack of data)
+
+
+        # 2019-2020
+        df_2019 = pd.read_csv(f'./data/Taps/taps_alternate_2019-2020.csv')
+        # TravelDate,Station,EntryExit,TapCount,ServedBy
+        df_2019 = df_2019.rename(columns={'TravelDateSk': 'TravelDate', 'StationName': 'Station', 'EntryOrExit': 'EntryExit', 'Count': 'TapCount'})
+        df_2019['ServedBy'] = 'Tube'
+        df_2019['TravelDate'] = pd.to_datetime(df_2019['TravelDate'], format='%Y%m%d').dt.strftime('%d/%m/%Y')
+        df_2019 = df_2019[df_2019['ServedBy'].str.contains('Tube', na=False)]
+        df_2019['Station'] = df_2019['Station'].str.replace(' LU', '')
+        df_full = pd.concat([df_full, df_2019], ignore_index=True)
+
+        # 2021-2022
+        df_2021 = pd.read_csv(f'./data/Taps/taps_alternate_2021-2022.csv')
+        # TravelDate,Station,EntryExit,TapCount,ServedBy
+        df_2021 = df_2021.rename(columns={'TravelDateSk': 'TravelDate', 'StationName': 'Station', 'EntryOrExit': 'EntryExit', 'Count': 'TapCount'})
+        df_2021['ServedBy'] = 'Tube'
+        df_2021['TravelDate'] = pd.to_datetime(df_2021['TravelDate'], format='%Y%m%d').dt.strftime('%d/%m/%Y')
+        df_2021 = df_2021[df_2021['ServedBy'].str.contains('Tube', na=False)]
+        df_2021['Station'] = df_2021['Station'].str.replace(' LU', '')
+        df_full = pd.concat([df_full, df_2021], ignore_index=True)
+
+        # 2023
         df_2023 = pd.read_csv(f'./data/Taps/taps_alternate_2023-present.csv')
         # TravelDate,Station,EntryExit,TapCount,ServedBy
         df_2023 = df_2023.rename(columns={'TravelDateSk': 'TravelDate', 'StationName': 'Station', 'EntryOrExit': 'EntryExit', 'Count': 'TapCount'})
@@ -35,6 +59,7 @@ class tapsHandler():
         df_2023 = df_2023[df_2023['ServedBy'].str.contains('Tube', na=False)]
         df_2023['Station'] = df_2023['Station'].str.replace(' LU', '')
         df_full = pd.concat([df_full, df_2023], ignore_index=True)
+
         df_full.to_csv(self.path, index=False)
     
     def get_entries_exits(self, station:str, date:str) -> Dict[str, int]:
@@ -81,6 +106,7 @@ class tapsHandler():
         for station in stations:
             total_outputs += self.get_entries_exits(station, date)['exits']
         return total_outputs
+    
 
 
 

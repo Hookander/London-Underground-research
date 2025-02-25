@@ -230,5 +230,6 @@ class CSVProcesser():
         plt.title(f'Error between the estimated link load and the yearly mean on {date} in direction {direction}')
         plt.ylim(0, 100)
         plt.show()
+        
     
 
