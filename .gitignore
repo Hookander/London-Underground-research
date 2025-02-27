@@ -6,6 +6,9 @@ data/NUMBAT/2021/xlsx/*
 data/NUMBAT/2022/xlsx/*
 data/NUMBAT/2023/xlsx/*
 data/model_data/*
+data/Taps/taps_alternate_2019-2020.csv
+data/Taps/taps_alternate_2021-2022.csv
+data/Taps/taps_alternate_2023-present.csv
 model/models/*
 wandb/*
 data/Taps/*.csv
