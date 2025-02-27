@@ -8,3 +8,4 @@ data/NUMBAT/2023/xlsx/*
 data/model_data/*
 model/models/*
 wandb/*
+data/Taps/*.csv

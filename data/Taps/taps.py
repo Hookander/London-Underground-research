@@ -1,5 +1,6 @@
 import pandas as pd
 from typing import Dict, List
+from tools import *
 
 class tapsHandler():
     def __init__(self):
@@ -28,7 +29,7 @@ class tapsHandler():
             df_full = pd.concat([df_full, df], ignore_index=True)
         """
         # Handle the years 2019 and 2023 since it is not fully in the TAPS file (lack of data)
-
+        stations = get_all_stations()
 
         # 2019-2020
         df_2019 = pd.read_csv(f'./data/Taps/taps_alternate_2019-2020.csv')
@@ -60,6 +61,13 @@ class tapsHandler():
         df_2023['Station'] = df_2023['Station'].str.replace(' LU', '')
         df_full = pd.concat([df_full, df_2023], ignore_index=True)
 
+        for year in range(2019, 2024):
+            df = pd.read_csv(f'./data/Taps/TAPS-daily-rail-station-entryexit-{year}.csv')
+            df = df[df['ServedBy'].str.contains('Tube', na=False)]
+            df['TapCount'] = df['TapCount'].str.replace(',', '').astype(int)
+            df_full = pd.concat([df_full, df], ignore_index=True)
+        df_full = df_full.drop_duplicates()
+        df_full = df_full[df_full['Station'].isin(stations)]
         df_full.to_csv(self.path, index=False)
     
     def get_entries_exits(self, station:str, date:str) -> Dict[str, int]:

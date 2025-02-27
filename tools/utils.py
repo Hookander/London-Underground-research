@@ -37,6 +37,19 @@ def reverser_direction(direction: str) -> str:
         return 'EB'
     raise ValueError('Invalid direction')
 
+def get_all_stations():
+    return ['West Ruislip', 'Ruislip Gardens', 'South Ruislip', 'Northolt', 'Greenford',
+            'Perivale', 'Hanger Lane', 'Ealing Broadway', 'West Acton', 'North Acton',
+            'East Acton', 'White City', 'Shepherds Bush', 'Holland Park',
+            'Notting Hill Gate', 'Queensway', 'Lancaster Gate', 'Marble Arch',
+            'Bond Street', 'Oxford Circus', 'Tottenham Court Road', 'Holborn',
+            'Chancery Lane', 'St Pauls', 'Bank', 'Liverpool Street', 'Bethnal Green',
+            'Mile End', 'Stratford', 'Leyton', 'Leytonstone', 'Snaresbrook',
+            'South Woodford', 'Woodford', 'Buckhurst Hill', 'Loughton', 'Debden',
+            'Theydon Bois', 'Wanstead', 'Redbridge', 'Gants Hill', 'Newbury Park',
+            'Barkingside', 'Fairlop', 'Hainault', 'Grange Hill', 'Chigwell',
+            'Roding Valley', 'Epping']
+
 def get_destinations_ids_from_direction(direction: str) -> str:
     """
     Returns the destination from the direction

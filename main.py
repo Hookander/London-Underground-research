@@ -6,6 +6,7 @@ import pandas as pd
 import time
 
 print("Starting...")
+taps = tapsHandler()
 #csvp = CSVProcesser()
 #csvp.plot_dist_to_daily_mean('17/09/2019', 'WB')
 #tth = TimetablesHandler()
