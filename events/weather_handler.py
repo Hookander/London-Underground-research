@@ -16,7 +16,8 @@ class WeatherHandler:
         self.taps = tapsHandler()
         self.llh = LinkLoadHandler()
     
-    def station_weather_influence(self, station, start_date, end_date, threshold = 5, weather_days: Optional[Dict[str, int]] = None):
+    def station_weather_influence(self, station, start_date, end_date, threshold = 5, weather_days: Optional[Dict[str, int]] = None)\
+            -> Tuple[Dict, Dict]:
         """
         Calculate the average number of entries at a station on dry and rainy days within a specified date range.
         Parameters:
@@ -27,9 +28,9 @@ class WeatherHandler:
         weather_days (Dict[str, int], optional): A dictionary containing the rainy days for each date in the period. Defaults to None.
                 Useful if the rainy days have already been calculated.
         Returns:
-        tuple: A tuple containing two floats:
-            - dry_avg (float): The average number of entries on dry days.
-            - rainy_avg (float): The average number of entries on rainy days.
+        tuple: A tuple containing two dicts:
+            - The first dict contains the average number of entries on dry days and rainy days.
+            - The second dict contains the average number of exits on dry days and rainy days.
         """
         if weather_days is not None: # If the rainy/dry days have already been calculated
             rainy_days = weather_days['rainy']
@@ -45,27 +46,32 @@ class WeatherHandler:
             dry_days = precipitations[precipitations < threshold].index
             dry_days = [date.strftime('%d/%m/%Y') for date in dry_days]
 
-        dry_avg = 0
-        rainy_avg = 0
+
+        entries_avg = {'dry': 0, 'rainy': 0}
+        exits_avg = {'dry': 0, 'rainy': 0}
         got_data = 0
         if len(dry_days) > 0:
             for date in dry_days:
                 avg, not_missing = self.taps.get_entries_exits(station, date, handle_missing=False)
                 if not_missing:
-                    dry_avg += avg['entries']
+                    entries_avg['dry'] += avg['entries']
+                    exits_avg['dry'] += avg['exits']
                     got_data += 1
-            dry_avg /= got_data
+            entries_avg['dry'] /= got_data
+            exits_avg['dry'] /= got_data
         got_data = 0
         for date in rainy_days:
             avg, not_missing = self.taps.get_entries_exits(station, date, handle_missing=False)
             if not_missing:
-                rainy_avg += avg['entries']
+                entries_avg['rainy'] += avg['entries']
+                exits_avg['rainy'] += avg['exits']
                 got_data += 1
-        rainy_avg /= got_data
+        entries_avg['rainy'] /= got_data
+        exits_avg['rainy'] /= got_data
 
-        return dry_avg, rainy_avg
+        return entries_avg, exits_avg
     
-    def get_best_threshold(self, station, start_date, end_date):
+    def station_best_thresholds(self, station, start_date, end_date) -> Tuple[float, float]:
         """
         Find the precipitation threshold that maximizes the coef between the average number of entries on dry and rainy days.
         Parameters:
@@ -73,36 +79,56 @@ class WeatherHandler:
         start_date (str): The start date of the period in 'dd/mm/YYYY' format.
         end_date (str): The end date of the period in 'dd/mm/YYYY'
         Returns:
-        float: The best precipitation threshold.
+        tuple: A tuple containing the best precipitation thresholds for entries and exits.
         """
         thresholds = [i/2 for i in range(1, 30, 1)]
-        best_threshold = 0
-        best_coef = 0
+        best_entry_threshold = 0
+        best_exit_threshold = 0
+        best_entry_coef = 0
+        best_exit_coef = 0
         for threshold in thresholds:
-            dry_avg, rainy_avg = self.station_weather_influence(station, start_date, end_date, threshold)
-            coef = rainy_avg / dry_avg
-            if coef > best_coef:
-                best_coef = coef
-                best_threshold = threshold
-        return best_threshold
+            entries_dict, exits_dict = self.station_weather_influence(station, start_date, end_date, threshold)
+            entry_coef = entries_dict['rainy'] / entries_dict['dry']
+            exit_coef = exits_dict['rainy'] / exits_dict['dry']
+            if entry_coef > best_entry_coef:
+                best_entry_coef = entry_coef
+                best_entry_threshold = threshold
+            if exit_coef > best_exit_coef:
+                best_exit_coef = exit_coef
+                best_exit_threshold = threshold
+        return best_entry_threshold, best_exit_threshold
 
-    def plot_best_thresholds(self, start_date, end_date):
+    def plot_best_thresholds(self, start_date, end_date, test = False):
+        """
+        Plot the best precipitation threshold for each station within a specified date range.
+        Parameters:
+        start_date (str): The start date of the period in 'dd/mm/YYYY' format.
+        end_date (str): The end date of the period in 'dd/mm/YYYY'
+        test (bool, optional): If True, only plot the first 5 stations. Defaults to False.
+        """
         stations = get_all_stations()
-        best_thresholds = [self.get_best_threshold(station, start_date, end_date) for station in stations]
-        plt.plot(stations, best_thresholds)
+        if test:
+            stations = stations[15:20]
+        best_thresholds = [self.station_best_thresholds(station, start_date, end_date) for station in stations]
+        best_entries = [threshold[0] for threshold in best_thresholds]
+        best_exits = [threshold[1] for threshold in best_thresholds]
+        plt.plot(stations, best_entries, label='Entries')
+        plt.plot(stations,best_exits, label='Exits')
+        plt.legend()
         plt.xlabel('Station')
         plt.ylabel('Best precipitation threshold (mm)')
         plt.title('Best precipitation threshold for each station')
         plt.show()
 
 
-    def plot_diff_rainy_days(self, start_date, end_date, threshold = 5, test = False):
+    def plot_diff_rainy_days(self, start_date, end_date, threshold = 5, type = 'entries', test = False):
         """
         Plot the average number of entries at each station on dry and rainy days within a specified date range.
         Parameters:
         start_date (str): The start date of the period in 'dd/mm/YYYY' format.
         end_date (str): The end date of the period in 'dd/mm/YYYY' format.
         threshold (int, optional): The precipitation threshold to classify a day as rainy. Defaults to 5.
+        type (str, optional): The type of data to plot. Can be 'entries' or 'exits'. Defaults to 'entries'.        
         test (bool, optional): If True, only plot the first 5 stations. Defaults to False.
         """
         start = datetime.strptime(start_date, '%d/%m/%Y')
@@ -121,7 +147,13 @@ class WeatherHandler:
         dry_avg_stations = []
         rainy_avg_stations = []
         for station in all_stations:
-            dry_avg, rainy_avg = self.station_weather_influence(station, start_date, end_date, threshold, {'dry': dry_days, 'rainy': rainy_days})
+            ent_dict, ex_dict = self.station_weather_influence(station, start_date, end_date, threshold, {'dry': dry_days, 'rainy': rainy_days})
+            if type == 'entries':
+                dry_avg = ent_dict['dry']
+                rainy_avg = ent_dict['rainy']
+            else:
+                dry_avg = ex_dict['dry']
+                rainy_avg = ex_dict['rainy']
             dry_avg_stations.append(dry_avg)
             rainy_avg_stations.append(rainy_avg)
             print(f'{station} : dry avg = {dry_avg}, rainy avg = {rainy_avg}')
@@ -152,16 +184,20 @@ class WeatherHandler:
         end_date (str): The end date of the period in 'dd/mm/YYYY' format.
         """
         thresholds = [i for i in range(0, 20, 2)]
-        rainy_avgs = []
+        entries_rainy_avgs = []
+        exits_rainy_avgs = []
         for threshold in thresholds:
-            _, rainy_avg = self.station_weather_influence(station, start_date, end_date, threshold)
-            rainy_avgs.append(rainy_avg)
-        plt.plot(thresholds, rainy_avgs)
-        plt.axhline(y=rainy_avgs[0], color='r', linestyle='--', label='total avg')
+            entries_dict, exits_dict = self.station_weather_influence(station, start_date, end_date, threshold)
+            entries_rainy_avgs.append(entries_dict['rainy'])
+            exits_rainy_avgs.append(exits_dict['rainy'])
+        plt.plot(thresholds, entries_rainy_avgs, label='Entries', color='b')
+        plt.plot(thresholds, exits_rainy_avgs, label='Exits', color='r')
+        plt.axhline(y=entries_rainy_avgs[0], color='b', linestyle='--', label='total entries avg')
+        plt.axhline(y=exits_rainy_avgs[0], color='r', linestyle='--', label='total exits avg')
         plt.legend()
         plt.xlabel('Precipitation threshold (mm)')
-        plt.ylabel('Avg entries on rainy days')
-        plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}')
+        plt.ylabel('Avg entries/exits on rainy days')
+        plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
         plt.show()
 
 
