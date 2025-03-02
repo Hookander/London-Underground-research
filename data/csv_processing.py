@@ -39,15 +39,15 @@ class CSVProcesser():
         next_stations = [station for station in next_stations if station != from_station]
 
         # We want all the stations other than from station (londoners don't make mistakes.)
-        total_output = self.total_outputs - self.tapsHandler.get_entries_exits(from_station, date)['exits']
+        total_output = self.total_outputs - self.tapsHandler.get_entries_exits(from_station, date)[0]['exits']
 
         # The entries at from_station
-        inputs = self.tapsHandler.get_entries_exits(from_station, date)['entries']
+        inputs = self.tapsHandler.get_entries_exits(from_station, date)[0]['entries']
 
         estimated_outputs = {}
 
         for station in next_stations:
-            estimated_outputs[station] = inputs * self.tapsHandler.get_entries_exits(station, date)['exits'] / total_output
+            estimated_outputs[station] = inputs * self.tapsHandler.get_entries_exits(station, date)[0]['exits'] / total_output
        
 
         return estimated_outputs

@@ -7,6 +7,8 @@ import time
 from datetime import datetime
 import matplotlib.pyplot as plt
 from meteostat import Stations, Daily, Point
+import numpy as np
+from typing import Optional, Dict
 
 class WeatherHandler:
     def __init__(self):
@@ -14,7 +16,7 @@ class WeatherHandler:
         self.taps = tapsHandler()
         self.llh = LinkLoadHandler()
     
-    def station_weather_influence(self, station, start_date, end_date, threshold = 5):
+    def station_weather_influence(self, station, start_date, end_date, threshold = 5, weather_days: Optional[Dict[str, int]] = None):
         """
         Calculate the average number of entries at a station on dry and rainy days within a specified date range.
         Parameters:
@@ -22,30 +24,44 @@ class WeatherHandler:
         start_date (str): The start date of the period in 'dd/mm/YYYY' format.
         end_date (str): The end date of the period in 'dd/mm/YYYY' format.
         threshold (int, optional): The precipitation threshold to classify a day as rainy. Defaults to 5.
+        weather_days (Dict[str, int], optional): A dictionary containing the rainy days for each date in the period. Defaults to None.
+                Useful if the rainy days have already been calculated.
         Returns:
         tuple: A tuple containing two floats:
             - dry_avg (float): The average number of entries on dry days.
             - rainy_avg (float): The average number of entries on rainy days.
         """
-        start = datetime.strptime(start_date, '%d/%m/%Y')
-        end = datetime.strptime(end_date, '%d/%m/%Y')
-        precipitations = Daily(self.ICL, start, end)
-        precipitations = precipitations.fetch()
-        precipitations = precipitations['prcp']
-        rainy_days = precipitations[precipitations >= threshold].index
-        rainy_days = [date.strftime('%d/%m/%Y') for date in rainy_days]
-        dry_days = precipitations[precipitations < threshold].index
-        dry_days = [date.strftime('%d/%m/%Y') for date in dry_days]
+        if weather_days is not None: # If the rainy/dry days have already been calculated
+            rainy_days = weather_days['rainy']
+            dry_days = weather_days['dry']
+        else:
+            start = datetime.strptime(start_date, '%d/%m/%Y')
+            end = datetime.strptime(end_date, '%d/%m/%Y')
+            precipitations = Daily(self.ICL, start, end)
+            precipitations = precipitations.fetch()
+            precipitations = precipitations['prcp']
+            rainy_days = precipitations[precipitations >= threshold].index
+            rainy_days = [date.strftime('%d/%m/%Y') for date in rainy_days]
+            dry_days = precipitations[precipitations < threshold].index
+            dry_days = [date.strftime('%d/%m/%Y') for date in dry_days]
 
         dry_avg = 0
         rainy_avg = 0
+        got_data = 0
         if len(dry_days) > 0:
             for date in dry_days:
-                dry_avg += self.taps.get_entries_exits(station, date)['entries']
-            dry_avg /= len(dry_days)
+                avg, not_missing = self.taps.get_entries_exits(station, date, handle_missing=False)
+                if not_missing:
+                    dry_avg += avg['entries']
+                    got_data += 1
+            dry_avg /= got_data
+        got_data = 0
         for date in rainy_days:
-            rainy_avg += self.taps.get_entries_exits(station, date)['entries']
-        rainy_avg /= len(rainy_days)
+            avg, not_missing = self.taps.get_entries_exits(station, date, handle_missing=False)
+            if not_missing:
+                rainy_avg += avg['entries']
+                got_data += 1
+        rainy_avg /= got_data
 
         return dry_avg, rainy_avg
     
@@ -80,7 +96,15 @@ class WeatherHandler:
         plt.show()
 
 
-    def plot_diff_rainy_days(self, start_date, end_date, threshold = 5):
+    def plot_diff_rainy_days(self, start_date, end_date, threshold = 5, test = False):
+        """
+        Plot the average number of entries at each station on dry and rainy days within a specified date range.
+        Parameters:
+        start_date (str): The start date of the period in 'dd/mm/YYYY' format.
+        end_date (str): The end date of the period in 'dd/mm/YYYY' format.
+        threshold (int, optional): The precipitation threshold to classify a day as rainy. Defaults to 5.
+        test (bool, optional): If True, only plot the first 5 stations. Defaults to False.
+        """
         start = datetime.strptime(start_date, '%d/%m/%Y')
         end = datetime.strptime(end_date, '%d/%m/%Y')
         precipitations = Daily(self.ICL, start, end)
@@ -92,27 +116,31 @@ class WeatherHandler:
 
         # For now we only study the daily correlation with the avg entries
         all_stations = self.llh.get_all_stations()
+        if test:
+            all_stations = all_stations[15:20]
         dry_avg_stations = []
         rainy_avg_stations = []
         for station in all_stations:
-            dry_avg = 0
-            rainy_avg = 0
-            for date in dry_days:
-                dry_avg += self.taps.get_entries_exits(station, date)['entries']
-            dry_avg /= len(dry_days)
-            for date in rainy_days:
-                rainy_avg += self.taps.get_entries_exits(station, date)['entries']
-            rainy_avg /= len(rainy_days)
+            dry_avg, rainy_avg = self.station_weather_influence(station, start_date, end_date, threshold, {'dry': dry_days, 'rainy': rainy_days})
             dry_avg_stations.append(dry_avg)
             rainy_avg_stations.append(rainy_avg)
             print(f'{station} : dry avg = {dry_avg}, rainy avg = {rainy_avg}')
         ind_stations = [i for i in range(len(all_stations))]
-        plt.bar(all_stations, dry_avg_stations, color='b', label='Dry days')
-        plt.bar(all_stations, rainy_avg_stations, color='r', label='Rainy days')
-        plt.xlabel('Station')
-        plt.ylabel('Avg entries')
-        plt.title(f'Avg entries for dry and rainy days with a threshold of {threshold} mm')
-        plt.legend()
+        ind = np.arange(len(all_stations))  # the x locations for the groups
+        width = 0.35  # the width of the bars
+
+        fig, ax = plt.subplots()
+        bar1 = ax.bar(ind - width/2, dry_avg_stations, width, label='Dry days', color='b')
+        bar2 = ax.bar(ind + width/2, rainy_avg_stations, width, label='Rainy days', color='r')
+
+        ax.set_xlabel('Station')
+        ax.set_ylabel('Avg entries')
+        ax.set_title(f'Avg entries for dry and rainy days with a threshold of {threshold} mm, from {start_date} to {end_date}')
+        ax.set_xticks(ind)
+        ax.set_xticklabels(all_stations, rotation=45)
+        ax.legend()
+
+        fig.tight_layout()
         plt.show()
     
     def plot_threshold_influence(self, station, start_date, end_date):

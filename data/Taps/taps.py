@@ -1,5 +1,5 @@
 import pandas as pd
-from typing import Dict, List
+from typing import Dict, List, Tuple
 from tools import *
 
 class tapsHandler():
@@ -70,16 +70,24 @@ class tapsHandler():
         df_full = df_full[df_full['Station'].isin(stations)]
         df_full.to_csv(self.path, index=False)
     
-    def get_entries_exits(self, station:str, date:str, print_missing = True) -> Dict[str, int]:
+    def get_entries_exits(self, station:str, date:str, handle_missing = True, print_missing = True) -> Tuple[Dict[str, int], bool]:
         """
             Returns the entries and exits for the given station and date
             date format : dd/mm/yyyy
+            args:
+                station (str): The station for which to get the entries and exits
+                date (str): The date for which to get the entries and exits
+                handle_missing (bool): If True, returns the data for 7 days before if there is no data for the given date
+                                    If False, returns 0 for entries and exits if there is no data for the given date
+                print_missing (bool): If True, prints a message when there is no data for the given date
+            returns:
+                Tuple(Dict[str, int], bool): The entries and exits for the given station and date, and a boolean indicating if the data was found
         """
         if station not in get_all_stations():
             raise ValueError(f"Station {station} not found")
         if (station, date) in self.entries_exits:
             return {'entries' : self.entries_exits[(station, date)]['entries'], 
-                    'exits' : self.entries_exits[(station, date)]['exits']}
+                    'exits' : self.entries_exits[(station, date)]['exits']}, True
         else:
             #Station and date
             filtered_df = self.df[(self.df['Station'] == station) & (self.df['TravelDate'] == date)]
@@ -88,6 +96,8 @@ class tapsHandler():
             entries_df = filtered_df[filtered_df['EntryExit'] == 'Entry']
             exits_df = filtered_df[filtered_df['EntryExit'] == 'Exit']
             if len(entries_df['TapCount'].values) == 0 or len(exits_df['TapCount'].values) == 0:
+                if not handle_missing:
+                    return {'entries' : 0, 'exits' : 0}, False
                 if print_missing:
                     print(f"No data for {date}, returning data for 7 days before (to have the same type of day (weekday or weekend)) : {station}")
                 # if for some reason there are no data for this day, we return the data
@@ -95,7 +105,7 @@ class tapsHandler():
                 previous_date = pd.to_datetime(date, format='%d/%m/%Y') - pd.DateOffset(days=7)
                 previous_date = previous_date.strftime('%d/%m/%Y')
                 #print(f"No data for {date}, returning data for {previous_date} : {station}")
-                return self.get_entries_exits(station, previous_date, print_missing=False)
+                return self.get_entries_exits(station, previous_date, print_missing=False)[0], False
             else:
                 
                 entries = entries_df['TapCount'].values[0]
@@ -103,7 +113,7 @@ class tapsHandler():
 
             self.entries_exits[(station, date)] = {'entries' : entries, 'exits' : exits}
 
-            return {'entries' : entries, 'exits' : exits}
+            return {'entries' : entries, 'exits' : exits}, True
 
     def get_total_output(self, stations: List[str], date:str) -> int:
         """
@@ -111,7 +121,7 @@ class tapsHandler():
         """
         total_outputs = 0
         for station in stations:
-            total_outputs += self.get_entries_exits(station, date)['exits']
+            total_outputs += self.get_entries_exits(station, date)['exits'][0]
         return total_outputs
     
 
