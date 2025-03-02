@@ -70,11 +70,13 @@ class tapsHandler():
         df_full = df_full[df_full['Station'].isin(stations)]
         df_full.to_csv(self.path, index=False)
     
-    def get_entries_exits(self, station:str, date:str) -> Dict[str, int]:
+    def get_entries_exits(self, station:str, date:str, print_missing = True) -> Dict[str, int]:
         """
             Returns the entries and exits for the given station and date
             date format : dd/mm/yyyy
         """
+        if station not in get_all_stations():
+            raise ValueError(f"Station {station} not found")
         if (station, date) in self.entries_exits:
             return {'entries' : self.entries_exits[(station, date)]['entries'], 
                     'exits' : self.entries_exits[(station, date)]['exits']}
@@ -86,21 +88,18 @@ class tapsHandler():
             entries_df = filtered_df[filtered_df['EntryExit'] == 'Entry']
             exits_df = filtered_df[filtered_df['EntryExit'] == 'Exit']
             if len(entries_df['TapCount'].values) == 0 or len(exits_df['TapCount'].values) == 0:
-                print(f"No data for {date}, returning data for 7 days before (to have the same type of day (weekday or weekend)) : {station}")
+                if print_missing:
+                    print(f"No data for {date}, returning data for 7 days before (to have the same type of day (weekday or weekend)) : {station}")
                 # if for some reason there are no data for this day, we return the data
                 # for 7 days before (to have the same type of day (weekday or weekend))
                 previous_date = pd.to_datetime(date, format='%d/%m/%Y') - pd.DateOffset(days=7)
                 previous_date = previous_date.strftime('%d/%m/%Y')
                 #print(f"No data for {date}, returning data for {previous_date} : {station}")
-                return self.get_entries_exits(station, previous_date)
+                return self.get_entries_exits(station, previous_date, print_missing=False)
             else:
                 
                 entries = entries_df['TapCount'].values[0]
                 exits = exits_df['TapCount'].values[0]
-
-            #we want ints, now they are strings like 1,391
-            #entries = int(entries.replace(',', ''))
-            #exits = int(exits.replace(',', ''))
 
             self.entries_exits[(station, date)] = {'entries' : entries, 'exits' : exits}
 
