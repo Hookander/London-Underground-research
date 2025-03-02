@@ -12,3 +12,4 @@ data/Taps/taps_alternate_2023-present.csv
 model/models/*
 wandb/*
 data/Taps/*.csv
+data/api_ticketmaster.txt

@@ -91,3 +91,59 @@ def get_next_date(date: str) -> str:
     date = datetime.strptime(date, '%d/%m/%Y')
     date += timedelta(days=1)
     return date.strftime('%d/%m/%Y')
+
+def station_coordinates(station):
+    """
+    Returns the coordinates of a station
+    """
+    central_line_stations = {
+    "West Ruislip": (51.5696, -0.4371),
+    "Ruislip Gardens": (51.5608, -0.4104),
+    "South Ruislip": (51.5569, -0.3988),
+    "Northolt": (51.5483, -0.3687),
+    "Greenford": (51.5423, -0.3458),
+    "Perivale": (51.5367, -0.3232),
+    "Hanger Lane": (51.5302, -0.2933),
+    "Ealing Broadway": (51.5152, -0.3015),
+    "West Acton": (51.5179, -0.2807),
+    "North Acton": (51.5237, -0.2597),
+    "East Acton": (51.5173, -0.2479),
+    "White City": (51.5121, -0.2240),
+    "Shepherds Bush": (51.5048, -0.2187),
+    "Holland Park": (51.5072, -0.2063),
+    "Notting Hill Gate": (51.5087, -0.1965),
+    "Queensway": (51.5105, -0.1877),
+    "Lancaster Gate": (51.5119, -0.1758),
+    "Marble Arch": (51.5136, -0.1586),
+    "Bond Street": (51.5142, -0.1494),
+    "Oxford Circus": (51.5152, -0.1415),
+    "Tottenham Court Road": (51.5165, -0.1310),
+    "Holborn": (51.5174, -0.1201),
+    "Chancery Lane": (51.5183, -0.1111),
+    "St Pauls": (51.5146, -0.0973),
+    "Bank": (51.5133, -0.0886),
+    "Liverpool Street": (51.5178, -0.0823),
+    "Bethnal Green": (51.5270, -0.0549),
+    "Mile End": (51.5253, -0.0332),
+    "Stratford": (51.5417, -0.0037),
+    "Leyton": (51.5566, -0.0054),
+    "Leytonstone": (51.5683, 0.0083),
+    "Snaresbrook": (51.5803, 0.0216),
+    "South Woodford": (51.5914, 0.0275),
+    "Woodford": (51.6065, 0.0341),
+    "Buckhurst Hill": (51.6266, 0.0471),
+    "Loughton": (51.6415, 0.0558),
+    "Debden": (51.6453, 0.0838),
+    "Theydon Bois": (51.6717, 0.1032),
+    "Wanstead": (51.5755, 0.0288),
+    "Redbridge": (51.5763, 0.0454),
+    "Gants Hill": (51.5765, 0.0663),
+    "Newbury Park": (51.5756, 0.0899),
+    "Barkingside": (51.5851, 0.0889),
+    "Fairlop": (51.5955, 0.0912),
+    "Hainault": (51.6030, 0.0934),
+    "Grange Hill": (51.6132, 0.0925),
+    "Chigwell": (51.6180, 0.0745),
+    "Roding Valley": (51.6171, 0.0445),
+    "Epping": (51.6937, 0.1139)}
+    return central_line_stations[station]
