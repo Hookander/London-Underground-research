@@ -1,1 +1,2 @@
 from events.weather_handler import WeatherHandler
+from events.premier_league import FootballData

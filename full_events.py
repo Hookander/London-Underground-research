@@ -114,11 +114,12 @@ def get_events_near_station(station_name, radius_km, start_date, end_date, max_r
 
 # Example usage
 
-dates = get_dates_between('01/03/2025', '30/03/2025')
+dates = get_dates_between('15/03/2025', '20/03/2025')
 formatted_dates = [datetime.strptime(date, '%d/%m/%Y').strftime('%Y-%m-%d') for date in dates]
 station = "Queensway"
 for date in formatted_dates:
-    events = get_events_near_station(station, radius_km=2, start_date=date, end_date=date, max_results=1)
+    events = get_events_near_station(station, radius_km=10, start_date=date, end_date=date, max_results=1)
+    time.sleep(0.1)
     for event in events:
         print(f"- {event['name']} at {event['venue']['name']} ({event['distance_km']} km away)")
         print(f"  {event['url']}")

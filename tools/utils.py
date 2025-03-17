@@ -1,6 +1,7 @@
 from datetime import datetime
 from datetime import timedelta
 from typing import List
+from math import radians, sin, cos, sqrt, atan2
 
 def get_day_of_week(date: str) -> str:
     """
@@ -147,3 +148,16 @@ def station_coordinates(station):
     "Roding Valley": (51.6171, 0.0445),
     "Epping": (51.6937, 0.1139)}
     return central_line_stations[station]
+
+def haversine(lat1, lon1, lat2, lon2):
+    """
+    Calculate the great-circle distance between two points 
+    on the Earth (in kilometers)
+    """
+    R = 6371  # Earth radius in kilometers
+    dLat = radians(lat2 - lat1)
+    dLon = radians(lon2 - lon1)
+    a = (sin(dLat/2) * sin(dLat/2) +
+         cos(radians(lat1)) * cos(radians(lat2)) *
+         sin(dLon/2) * sin(dLon/2))
+    return R * 2 * atan2(sqrt(a), sqrt(1-a))

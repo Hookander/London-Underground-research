@@ -13,3 +13,4 @@ model/models/*
 wandb/*
 data/Taps/*.csv
 data/api_ticketmaster.txt
+data/football/*
