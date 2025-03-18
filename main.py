@@ -19,6 +19,7 @@ print("Starting...")
 #wh.plot_best_thresholds('01/01/2019', '31/12/2019', test=True)
 
 fb = FootballData()
-#print(fb.get_closest_team('Stratford'))
+
+fb.plot_match_influence('01/01/2023', '31/12/2023')
 #print(fb.get_match_influence('Stratford', '01/01/2022', '31/12/2022'))
-fb.plot_match_influence('01/01/2019', '31/12/2023')
+#fb.plot_match_influence('01/01/2023', '31/12/2023')
