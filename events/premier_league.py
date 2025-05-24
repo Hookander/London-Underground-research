@@ -161,7 +161,7 @@ class FootballData:
             distance = haversine(lat, lon, station_lat, station_lon)
             distances[station] = distance
         return min(distances, key=distances.get), round(distances[min(distances, key=distances.get)], 3)
-        
+    
     def plot_match_influence(self, start_date: str, end_date: str, league = None):
         """
             Plots the % augmentation of entries/exits on match days compared to non-match days

@@ -186,7 +186,7 @@ class Model(ModelClass):
         print('Model saved')
         
     def test(self):
-        for batch in self.train_dl:
+        for batch in self.test_dl:
             #print(batch)
             continuous_inputs, embedding_inputs, label = batch
 

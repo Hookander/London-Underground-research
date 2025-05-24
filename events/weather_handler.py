@@ -59,6 +59,7 @@ class WeatherHandler:
                     got_data += 1
             entries_avg['dry'] /= got_data
             exits_avg['dry'] /= got_data
+
         got_data = 0
         for date in rainy_days:
             avg, not_missing = self.taps.get_entries_exits(station, date, handle_missing=False)
@@ -69,7 +70,33 @@ class WeatherHandler:
         entries_avg['rainy'] /= got_data
         exits_avg['rainy'] /= got_data
 
+
         return entries_avg, exits_avg
+    
+    def plot_best_theshold_evolution(self, station):
+        """
+        Plot the evolution of the best precipitation threshold for a station over a few years.
+        Is useful to check the steadiness of the threshold.
+        Parameters:
+        station (str): The station for which to plot the evolution of the best threshold.
+        """
+        years = [i for i in range(2019, 2025)]
+        best_entry_thresholds = []
+        best_exit_thresholds = []
+        for year in years:
+            start_date = f'01/01/{year}'
+            end_date = f'31/12/{year}'
+            best_entry_threshold, best_exit_threshold = self.station_best_thresholds(station, start_date, end_date)
+            best_entry_thresholds.append(best_entry_threshold)
+            best_exit_thresholds.append(best_exit_threshold)
+        
+        plt.plot(years, best_entry_thresholds, label='Entries', color='b')
+        plt.plot(years, best_exit_thresholds, label='Exits', color='r')
+        plt.legend()
+        plt.xlabel('Precipitation threshold (mm)')
+        plt.ylabel('Average number of entries/exits')
+        plt.title(f'Evolution of the best precipitation threshold for {station}')
+        plt.show()
     
     def station_best_thresholds(self, station, start_date, end_date) -> Tuple[float, float]:
         """
@@ -98,7 +125,7 @@ class WeatherHandler:
                 best_exit_threshold = threshold
         return best_entry_threshold, best_exit_threshold
 
-    def plot_best_thresholds(self, start_date, end_date, test = False):
+    def plot_best_thresholds(self, start_date, end_date, test = False, all_years = False):
         """
         Plot the best precipitation threshold for each station within a specified date range.
         Parameters:
@@ -107,14 +134,26 @@ class WeatherHandler:
         test (bool, optional): If True, only plot the first 5 stations. Defaults to False.
         """
         stations = get_all_stations()
+        years = [i for i in range(2019, 2025)]
         if test:
             stations = stations[15:20]
-        best_thresholds = [self.station_best_thresholds(station, start_date, end_date) for station in stations]
-        best_entries = [threshold[0] for threshold in best_thresholds]
-        best_exits = [threshold[1] for threshold in best_thresholds]
-        plt.plot(stations, best_entries, label='Entries')
-        plt.plot(stations,best_exits, label='Exits')
-        plt.legend()
+        if all_years:
+            for year in years:
+                start_date = f'01/01/{year}'
+                end_date = f'31/12/{year}'
+                best_thresholds = [self.station_best_thresholds(station, start_date, end_date) for station in stations]
+                best_entries = [threshold[0] for threshold in best_thresholds]
+                best_exits = [threshold[1] for threshold in best_thresholds]
+                plt.plot(stations, best_entries, label='Entries')
+                plt.plot(stations,best_exits, label='Exits')
+                plt.legend()
+        else:
+            best_thresholds = [self.station_best_thresholds(station, start_date, end_date) for station in stations]
+            best_entries = [threshold[0] for threshold in best_thresholds]
+            best_exits = [threshold[1] for threshold in best_thresholds]
+            plt.plot(stations, best_entries, label='Entries')
+            plt.plot(stations,best_exits, label='Exits')
+            plt.legend()
         plt.xlabel('Station')
         plt.ylabel('Best precipitation threshold (mm)')
         plt.title('Best precipitation threshold for each station')
@@ -175,29 +214,83 @@ class WeatherHandler:
         fig.tight_layout()
         plt.show()
     
-    def plot_threshold_influence(self, station, start_date, end_date):
+    def get_threshold_influence(self, station, start_date, end_date, relative = False, plot = True, precision = 2):
         """
-        Plot the average number of entries at a station on rainy days for different precipitation thresholds.
+        Plot the average number of entries/exits at a station on rainy days for different precipitation thresholds.
         Parameters:
         station (str): The station for which to plot the influence of the precipitation threshold.
         start_date (str): The start date of the period in 'dd/mm/YYYY' format.
         end_date (str): The end date of the period in 'dd/mm/YYYY' format.
+        relative (bool, optional): If True, plot the relative influence of the threshold, 
+                ie the number of entries/exits on rainy days / number on dry days. Defaults to False.
         """
-        thresholds = [i for i in range(0, 20, 2)]
+        thresholds = [i for i in range(0, 20, precision)]
         entries_rainy_avgs = []
         exits_rainy_avgs = []
+        entris_coefs = []
+        exits_coefs = []
         for threshold in thresholds:
             entries_dict, exits_dict = self.station_weather_influence(station, start_date, end_date, threshold)
             entries_rainy_avgs.append(entries_dict['rainy'])
             exits_rainy_avgs.append(exits_dict['rainy'])
-        plt.plot(thresholds, entries_rainy_avgs, label='Entries', color='b')
-        plt.plot(thresholds, exits_rainy_avgs, label='Exits', color='r')
-        plt.axhline(y=entries_rainy_avgs[0], color='b', linestyle='--', label='total entries avg')
-        plt.axhline(y=exits_rainy_avgs[0], color='r', linestyle='--', label='total exits avg')
+            if entries_dict['dry'] != 0:
+                entris_coefs.append(entries_dict['rainy'] / entries_dict['dry'])
+            else:
+                entris_coefs.append(1)
+            if exits_dict['dry'] != 0:
+                exits_coefs.append(exits_dict['rainy'] / exits_dict['dry'])
+            else:
+                exits_coefs.append(1)
+        if plot:
+            if relative:
+                plt.plot(thresholds, entris_coefs, label='Entries', color='b')
+                plt.plot(thresholds, exits_coefs, label='Exits', color='r')
+                plt.axhline(y=1, color='b', linestyle='--')
+                plt.legend()
+                plt.xlabel('Precipitation threshold (mm)')
+                plt.ylabel('Relative evolution of entries/exits on rainy days')
+                plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
+            else:
+                plt.plot(thresholds, entries_rainy_avgs, label='Entries', color='b')
+                plt.plot(thresholds, exits_rainy_avgs, label='Exits', color='r')
+                plt.axhline(y=entries_rainy_avgs[0], color='b', linestyle='--', label='total entries avg')
+                plt.axhline(y=exits_rainy_avgs[0], color='r', linestyle='--', label='total exits avg')
+                plt.legend()
+                plt.xlabel('Precipitation threshold (mm)')
+                plt.ylabel('Avg entries/exits on rainy days')
+                plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
+            plt.show()
+        if relative:
+            return {'entries': entris_coefs, 'exits': exits_coefs}
+        else:
+            return {'entries': entries_rainy_avgs, 'exits': exits_rainy_avgs}
+        
+
+    def plot_threshold_influence_evolution(self, station, type = 'entries', precision = 2):
+        """
+        Plot the average number of entries/exits at a station on rainy days for different precipitation thresholds
+        on different years. Helpful to check the evolution of the influence of the thresholds, and to get a sense of
+        the steadiness of the thresholds.
+
+        Parameters:
+        station (str): The station for which to plot the influence of the precipitation threshold.
+        type (str, optional): The type of data to plot. Can be 'entries' or 'exits'. Defaults to 'entries'.
+        """
+        assert type in ['entries', 'exits'], "plot_threshold_influence_evolution : type must be 'entries' or 'exits'"
+        years = [i for i in range(2019, 2025) if i not in [2020, 2021]]
+        years = [i for i in range(2019, 2025)]
+        thresholds = [i for i in range(0, 20, precision)]
+
+        for year in years:
+            start_date = f'01/01/{year}'
+            end_date = f'31/12/{year}'
+            coefs = self.get_threshold_influence(station, start_date, end_date, relative=True, plot=False, precision = precision)[type]
+            plt.plot(thresholds, coefs, label=year)
+        plt.axhline(y=1, color='b', linestyle='--')
         plt.legend()
         plt.xlabel('Precipitation threshold (mm)')
-        plt.ylabel('Avg entries/exits on rainy days')
-        plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
+        plt.ylabel(f'Relative evolution of {type} on rainy days')
+        plt.title(f'Influence of the precipitation threshold on the average number of {type} at {station}, from 2019 to 2024')
         plt.show()
 
 

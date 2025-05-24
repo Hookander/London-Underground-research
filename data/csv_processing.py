@@ -122,12 +122,12 @@ class CSVProcesser():
         estimated_outputs = {}
         for station in stations: 
 
-            # get the stricly next stations (we'll use those for the farther stations, rather than the current station,
+            # get the stricly next stations (we'll use those for the farthest stations, rather than the current station,
             # because otherwise the stations in a other branch might be considered as next stations, but we don't want that)
             # For example, with this, we won't consider Wanstead, ... when we are at Leytonstone going to Snaresbrook
 
             next_consecutive_stations = self.LinkLoadHandler.get_next_consecutive_stations(station, direction)
-            #print(station, next_consecutive_stations)
+
             for next_consecutive in next_consecutive_stations:
 
                 link_load = 0
