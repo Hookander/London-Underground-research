@@ -28,6 +28,19 @@ def get_type_of_day(day_of_week: str, include_friday = False) -> str:
         case _:
             raise ValueError('Invalid day of the week')
 
+def get_dates_of_tod(tod, year: str) -> str:
+    """
+    Returns the dates for a given type of day and year
+    """
+    date = datetime.strptime('01/01/' + year, '%d/%m/%Y')
+    end_date = datetime.strptime('31/12/' + year, '%d/%m/%Y')
+    dates = []
+    while date <= end_date:
+        if get_type_of_day(date.strftime('%A'), include_friday=True) == tod:
+            dates.append(date.strftime('%d/%m/%Y'))
+        date += timedelta(days=1)
+    return dates
+
 def reverser_direction(direction: str) -> str:
     """
     Returns the opposite direction

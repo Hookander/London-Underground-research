@@ -121,7 +121,7 @@ class tapsHandler():
         """
         total_outputs = 0
         for station in stations:
-            total_outputs += self.get_entries_exits(station, date)['exits'][0]
+            total_outputs += self.get_entries_exits(station, date)[0]['exits']
         return total_outputs
     
 

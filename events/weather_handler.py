@@ -98,7 +98,7 @@ class WeatherHandler:
         plt.title(f'Evolution of the best precipitation threshold for {station}')
         plt.show()
     
-    def station_best_thresholds(self, station, start_date, end_date) -> Tuple[float, float]:
+    def station_best_thresholds(self, station, start_date, end_date, coefs = False, precision = 2) -> Tuple[float, float]:
         """
         Find the precipitation threshold that maximizes the coef between the average number of entries on dry and rainy days.
         Parameters:
@@ -108,22 +108,26 @@ class WeatherHandler:
         Returns:
         tuple: A tuple containing the best precipitation thresholds for entries and exits.
         """
-        thresholds = [i/2 for i in range(1, 30, 1)]
+        thresholds = [i for i in range(0, 20, precision)]
         best_entry_threshold = 0
         best_exit_threshold = 0
         best_entry_coef = 0
         best_exit_coef = 0
         for threshold in thresholds:
             entries_dict, exits_dict = self.station_weather_influence(station, start_date, end_date, threshold)
-            entry_coef = entries_dict['rainy'] / entries_dict['dry']
-            exit_coef = exits_dict['rainy'] / exits_dict['dry']
+
+            entry_coef = entries_dict['rainy'] / entries_dict['dry'] if entries_dict['dry'] != 0 else 1
+            exit_coef = exits_dict['rainy'] / exits_dict['dry'] if exits_dict['dry'] != 0 else 1
             if entry_coef > best_entry_coef:
                 best_entry_coef = entry_coef
                 best_entry_threshold = threshold
             if exit_coef > best_exit_coef:
                 best_exit_coef = exit_coef
                 best_exit_threshold = threshold
-        return best_entry_threshold, best_exit_threshold
+        if coefs:
+            return (best_entry_threshold, best_entry_coef), (best_exit_threshold, best_exit_coef)
+        else:
+            return best_entry_threshold, best_exit_threshold
 
     def plot_best_thresholds(self, start_date, end_date, test = False, all_years = False):
         """
@@ -225,6 +229,7 @@ class WeatherHandler:
                 ie the number of entries/exits on rainy days / number on dry days. Defaults to False.
         """
         thresholds = [i for i in range(0, 20, precision)]
+        #print(len(thresholds))
         entries_rainy_avgs = []
         exits_rainy_avgs = []
         entris_coefs = []
@@ -245,11 +250,11 @@ class WeatherHandler:
             if relative:
                 plt.plot(thresholds, entris_coefs, label='Entries', color='b')
                 plt.plot(thresholds, exits_coefs, label='Exits', color='r')
-                plt.axhline(y=1, color='b', linestyle='--')
+                plt.axhline(y=1, color='b', linestyle='--', label = 'Dry days avg')
                 plt.legend()
                 plt.xlabel('Precipitation threshold (mm)')
-                plt.ylabel('Relative evolution of entries/exits on rainy days')
-                plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
+                plt.ylabel('Relative increase entries/exits (%)')
+                #plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
             else:
                 plt.plot(thresholds, entries_rainy_avgs, label='Entries', color='b')
                 plt.plot(thresholds, exits_rainy_avgs, label='Exits', color='r')
@@ -258,7 +263,7 @@ class WeatherHandler:
                 plt.legend()
                 plt.xlabel('Precipitation threshold (mm)')
                 plt.ylabel('Avg entries/exits on rainy days')
-                plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
+                #plt.title(f'Influence of the precipitation threshold on the average number of entries at {station}, from {start_date} to {end_date}')
             plt.show()
         if relative:
             return {'entries': entris_coefs, 'exits': exits_coefs}
@@ -266,7 +271,7 @@ class WeatherHandler:
             return {'entries': entries_rainy_avgs, 'exits': exits_rainy_avgs}
         
 
-    def plot_threshold_influence_evolution(self, station, type = 'entries', precision = 2):
+    def plot_threshold_influence_evolution(self, station, type = 'entries', precision = 1):
         """
         Plot the average number of entries/exits at a station on rainy days for different precipitation thresholds
         on different years. Helpful to check the evolution of the influence of the thresholds, and to get a sense of
@@ -288,9 +293,44 @@ class WeatherHandler:
             plt.plot(thresholds, coefs, label=year)
         plt.axhline(y=1, color='b', linestyle='--')
         plt.legend()
-        plt.xlabel('Precipitation threshold (mm)')
-        plt.ylabel(f'Relative evolution of {type} on rainy days')
-        plt.title(f'Influence of the precipitation threshold on the average number of {type} at {station}, from 2019 to 2024')
+        plt.xlabel('Precipitation (mm)')
+        plt.ylabel(f'Relative inscrease (%)')
+        #plt.title(f'Influence of the precipitation threshold on the average number of {type} at {station}, from 2019 to 2024')
         plt.show()
+
+    def find_steadiest_thresholh(self, station, precision):
+        """
+        Find the steadiest threshold for the given station over a range of years.
+        The steadiness is measured by the standard deviation of the relative increase of entries/exits on rainy days
+        for different precipitation thresholds (ie of the coefficients)
+
+        Parameters:
+        station (list): station to consider.
+        precision (int): The precision of the thresholds to consider.
+        """
+        
+        # years = [i for i in range(2019, 2025) if i not in [2020, 2021]]
+        years = [i for i in range(2019, 2025) if i not in [2020]]
+        thresholds = [i for i in range(0, 20, precision)][1:]  # Remove the first threshold (0 mm) as it is not useful
+
+        entries_coefs = []
+        exits_coefs = []
+        for year in years:
+            start_date = f'01/01/{year}'
+            end_date = f'31/12/{year}'
+            entries_coefs.append(self.get_threshold_influence(station, start_date, end_date, relative=True, plot=False, precision=precision)['entries'])
+            exits_coefs.append(self.get_threshold_influence(station, start_date, end_date, relative=True, plot=False, precision=precision)['exits'])
+        entries_coefs = np.array(entries_coefs)
+        exits_coefs = np.array(exits_coefs)
+        # Remove threshold 0 -> useless
+        entries_coefs = entries_coefs[:, 1:]
+        exits_coefs = exits_coefs[:, 1:]
+        entries_std = np.std(entries_coefs, axis=0)
+        exits_std = np.std(exits_coefs, axis=0)
+        best_entry_threshold = thresholds[np.argmin(entries_std) + 1]  # +1 because we removed the first threshold (0)
+        best_exit_threshold = thresholds[np.argmin(exits_std) + 1]
+        print(f'Best entry threshold: {best_entry_threshold} mm, std: {np.min(entries_std)}')
+        print(f'Best exit threshold: {best_exit_threshold} mm, std: {np.min(exits_std)}')
+        return best_entry_threshold, best_exit_threshold, entries_std, exits_std
 
 

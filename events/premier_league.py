@@ -162,7 +162,7 @@ class FootballData:
             distances[station] = distance
         return min(distances, key=distances.get), round(distances[min(distances, key=distances.get)], 3)
     
-    def plot_match_influence(self, start_date: str, end_date: str, league = None):
+    def get_all_match_influence(self, start_date: str, end_date: str, league = None, plot = False):
         """
             Plots the % augmentation of entries/exits on match days compared to non-match days
             with respect to the distance to the closest station
@@ -177,25 +177,31 @@ class FootballData:
             if match_days > 0 and non_match_days > 0 and entries_avg['non_match'] > 0 and exits_avg['non_match'] > 0:
                 entries_diff = (entries_avg['match'] - entries_avg['non_match']) / entries_avg['non_match'] * 100
                 exits_diff = (exits_avg['match'] - exits_avg['non_match']) / exits_avg['non_match'] * 100
+                entries_coef = (entries_avg['match']) / entries_avg['non_match']
+                exits_coef = (exits_avg['match']) / exits_avg['non_match']
             else:
                 entries_diff = 0
                 exits_diff = 0
+                entries_coef = 1
+                exits_coef = 1
             
-            distances[team] = {'distance': distance, 'entries_diff': entries_diff, 'exits_diff': exits_diff, 'match_days': match_days, 'non_match_days': non_match_days}
+            distances[team] = {'distance': distance, 'entries_diff': entries_diff, 'exits_diff': exits_diff, 'entries_coef':entries_coef, 'exits_coef':exits_coef, 'match_days': match_days, 'non_match_days': non_match_days}
         
         distances = pd.DataFrame(distances).T
         distances = distances.sort_values(by='distance')
-        plt.figure(figsize=(10, 5))
-        plt.plot(distances['distance'], distances['entries_diff'], label='Entries')
-        plt.plot(distances['distance'], distances['exits_diff'], label='Exits')
-        for i, row in distances.iterrows():
-            plt.annotate(f"{round(row['match_days'])}/{round(row['non_match_days'])}", (row['distance'], row['entries_diff']), textcoords="offset points", xytext=(0,10), ha='center')
-        plt.xlabel('Distance to the closest station (km)')
-        plt.ylabel('% Augmentation')
-        league = 'all leagues' if league is None else league
-        plt.title(f'Match Influence on Entries/Exits of the closest station, {start_date} to {end_date}, {league}')
-        plt.legend()
-        plt.show()
+        if plot:
+            plt.figure(figsize=(10, 5), dpi=500)
+            plt.plot(distances['distance'], distances['entries_diff'], label='Entries')
+            plt.plot(distances['distance'], distances['exits_diff'], label='Exits')
+            for i, row in distances.iterrows():
+                plt.annotate(f"{round(row['match_days'])}/{round(row['non_match_days'])}", (row['distance'], row['entries_diff']), textcoords="offset points", xytext=(0,10), ha='center')
+            plt.xlabel('Distance to the closest station (km)')
+            plt.ylabel('% Augmentation')
+            league = 'all leagues' if league is None else league
+            plt.title(f'Match Influence on Entries/Exits of the closest station, {start_date} to {end_date}, {league}')
+            plt.legend()
+            plt.show()
+        return distances
 
     def clean_csvs(self, league: str):
         """

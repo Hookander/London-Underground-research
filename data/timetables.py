@@ -107,14 +107,16 @@ class TimetablesHandler():
             elif plot == 'Normal':
                 # Calculate the maximum likelihood for a normal distribution
                 mu, std = np.mean(delays), np.std(delays)
+                print(f'Mean: {mu}, Std: {std}')
                 x = np.linspace(min(delays), max(delays), 100)
                 y = 1/(std * np.sqrt(2 * np.pi)) * np.exp(- (x - mu)**2 / (2 * std**2))
-                plt.plot(x, y, label='Normal distribution')
-        plt.hist(delays, bins=n_bins, density=True, alpha=0.6, color='g')
-        if interval is not None:
-            plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day} between {interval[0]} and {interval[1]}')
-        else:
-            plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day}')
+                plt.plot(x, y, label='Max Likelihood Normal distribution')
+        plt.hist(delays, bins=n_bins, density=True, alpha=0.6, color='g', label='Delays histogram')
+        plt.legend()
+        #if interval is not None:
+        #    plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day} between {interval[0]} and {interval[1]}')
+        #else:
+        #    plt.title(f'Delays for {station_name} in direction {direction} on {type_of_day}')
         plt.xlabel('Delay (s)')
         plt.ylabel('Density')
         plt.show()

@@ -14,7 +14,7 @@ import wandb
 
 class Model(ModelClass):
     """
-    This is the is the simplest model we try, just a bunch of linear layers
+    This is the is the simplest model we try, just a bunch of embedding and linear layers.
     """
     def __init__(self, embedding_dim, scale_data = True):
         super().__init__()
@@ -22,6 +22,8 @@ class Model(ModelClass):
         wandb.init(project='underground_research', name='simple_model')
 
         self.embedding_dim = embedding_dim
+
+        # use the GPU if available
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.scaler = None
         if scale_data:

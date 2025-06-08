@@ -188,7 +188,7 @@ class CSVProcesser():
     def get_linkload_error_to_daily_mean(self, date:str, direction:str) -> Dict[Tuple[str, str], float]:
         """
         Returns the error (in %) between : 
-            - the estimated link load between stations for a given day (see estimate_flow__line), this is the model
+            - the estimated link load between stations for a given day (see estimate_flow__line), this is the uniform model
             - the average daily link load between stations, obtained by summing over all the quarter hours of the day, 
                 there is no model here, it is the real data
         
@@ -199,12 +199,43 @@ class CSVProcesser():
         errors = {}
         for station, next_station, link_load in estimated_flows:
             # Get the average daily link load between station and next_station
-            #! need to adapt the type of day to the date ! (really easy)
             daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day, date[-4:])
             # Calculate the relative error to the average
             error = abs(link_load - daily_mean) / daily_mean * 100
             errors[(station, next_station)] = error
         return errors
+    
+    def get_avg_linkload_error_to_daily_mean(self, type_of_day:str, year, direction:str) -> Dict[Tuple[str, str], float]:
+        """
+        Returns the error (in %) between : 
+            - the estimated link load between stations AVERAGED BETWEEN ALL DAYS OF TOD IN YEAR (see estimate_flow__line), this is the uniform model
+            - the average daily link load between stations, obtained by summing over all the quarter hours of the day, 
+                there is no model here, it is the real data
+        
+        Returns {(from_station, to_station) : error, ...}
+        """
+        dates = get_dates_of_tod(type_of_day, year) #[:20]
+        full_estimated_flows = self.estimate_flow__line(dates[0], direction)  # Get the first date to initialize the structure
+        for date in dates[1:]:
+            print(f"Estimating flows for {date} in {type_of_day} direction {direction}")
+            estimated_flows = self.estimate_flow__line(date, direction)
+            for i, (station, next_station, link_load) in enumerate(full_estimated_flows):
+                # Sum the link loads for each station pair across all dates
+                full_estimated_flows[i] = (station, next_station, estimated_flows[i][2] + link_load)
+        print(f"Estimated flows for {len(dates)} dates in {type_of_day} direction {direction} done")
+        errors = {}
+        for station, next_station, link_load in full_estimated_flows:
+
+            avg_link_load = link_load / len(dates)  # Average the link load across all dates
+            # Get the average daily link load between station and next_station
+            daily_mean = self.LinkLoadHandler.get_avg_daily_link_load(station, next_station, type_of_day, date[-4:])
+            # Calculate the relative error to the average
+            error = abs(avg_link_load - daily_mean) / daily_mean * 100
+            errors[(station, next_station)] = error
+        return errors
+            
+
+
 
     def plot_dist_to_daily_mean(self, date:str, direction:str):
         """
